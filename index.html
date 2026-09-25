@@ -138,6 +138,16 @@
   <div class="copyright">© 2026 Sri Meenakshi Crackers. All rights reserved. <span>For product enquiries only.</span></div>
 </footer>
 <script>
+  function closeNotice() {
+    document.getElementById("noticePopup").style.display = "none";
+    localStorage.setItem("meenkshiNoticeAccepted", "true");
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("meenkshiNoticeAccepted") === "true") {
+        document.getElementById("noticePopup").style.display = "none";
+    }
+});
 document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('open'));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
 </script>
