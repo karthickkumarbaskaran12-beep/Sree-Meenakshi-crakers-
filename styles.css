@@ -244,16 +244,17 @@ h2{
 }
 
 .hero-art{
-  border:1px solid var(--line);
-  padding:7px;
-  background:#11101a;
-  box-shadow:0 25px 70px rgba(0,0,0,.45);
+  border: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-art img{
-  display:block;
-  width:100%;
-  height:auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
 }
 
 /* =========================================
