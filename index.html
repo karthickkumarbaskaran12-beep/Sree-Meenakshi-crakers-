@@ -270,7 +270,7 @@
 
       <!-- COMBO 1 -->
 
-      <article class="product">
+      <article class="product combo-clickable" onclick="openComboModal('family')">
 
         <div class="icon">
           ✦
@@ -288,6 +288,7 @@
           A carefully selected combination of popular crackers
           for family celebrations.
         </p>
+        <small class="combo-view-hint">Click to view full combo details</small>
 
         <a href="#enquiry">
           Enquire Now →
@@ -298,7 +299,7 @@
 
       <!-- COMBO 2 -->
 
-      <article class="product">
+      <article class="product combo-clickable" onclick="openComboModal('celebration')">
 
         <div class="icon">
           ✺
@@ -316,6 +317,7 @@
           A festive assortment with a variety of colourful
           and exciting fireworks.
         </p>
+        <small class="combo-view-hint">Click to view full combo details</small>
 
         <a href="#enquiry">
           Enquire Now →
@@ -610,9 +612,7 @@
      ENQUIRY CTA
 ========================= -->
 
-<section class="cta" id="enquiry">
-
-  <!-- =========================
+<!-- =========================
      ENQUIRY FORM
 ========================= -->
 
@@ -755,6 +755,157 @@
 
 </main>
 
+
+
+<!-- =========================
+     COMBO IMAGE MODAL
+========================= -->
+<div id="comboModal" class="combo-modal" aria-hidden="true">
+  <div class="combo-modal-backdrop" onclick="closeComboModal()"></div>
+
+  <div class="combo-modal-box" role="dialog" aria-modal="true" aria-labelledby="comboModalTitle">
+    <button class="combo-modal-close" type="button" onclick="closeComboModal()" aria-label="Close">
+      &times;
+    </button>
+
+    <p class="eyebrow" id="comboModalEyebrow">SONNY COMBO</p>
+    <h2 id="comboModalTitle">Combo Details</h2>
+
+    <div class="combo-modal-image-wrap">
+      <img id="comboModalImage" src="" alt="SONNY Combo details">
+    </div>
+
+    <a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="closeComboModal()">
+      Submit Enquiry <span>→</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .combo-clickable {
+    cursor: pointer;
+  }
+
+  .combo-clickable:hover {
+    transform: translateY(-5px);
+  }
+
+  .combo-view-hint {
+    display: block;
+    margin: 2px 0 12px;
+    color: #d8b84e;
+    font-size: 11px;
+    letter-spacing: .3px;
+  }
+
+  .combo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .combo-modal.open {
+    display: flex;
+  }
+
+  .combo-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 2, 8, .92);
+    backdrop-filter: blur(8px);
+  }
+
+  .combo-modal-box {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 100%);
+    max-height: 94vh;
+    overflow: auto;
+    padding: 22px;
+    border: 1px solid rgba(232,191,85,.55);
+    border-radius: 14px;
+    background: #11101b;
+    box-shadow: 0 30px 100px rgba(0,0,0,.65);
+    text-align: center;
+  }
+
+  .combo-modal-box h2 {
+    margin: 0 0 15px;
+    color: #ffd96b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .combo-modal-box .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .combo-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(232,191,85,.4);
+    border-radius: 50%;
+    background: #090812;
+    color: #ffd96b;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .combo-modal-image-wrap {
+    width: 100%;
+    max-height: 70vh;
+    overflow: auto;
+    border: 1px solid rgba(232,191,85,.25);
+    border-radius: 8px;
+    background: #090812;
+  }
+
+  .combo-modal-image-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .combo-modal-enquiry {
+    margin-top: 18px;
+  }
+
+  body.combo-modal-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 560px) {
+    .combo-modal {
+      padding: 10px;
+    }
+
+    .combo-modal-box {
+      padding: 14px;
+      max-height: 96vh;
+    }
+
+    .combo-modal-box h2 {
+      font-size: 30px;
+    }
+
+    .combo-modal-image-wrap,
+    .combo-modal-image-wrap img {
+      max-height: 72vh;
+    }
+  }
+</style>
 
 <!-- =========================
      FOOTER
@@ -1070,6 +1221,59 @@ Thank you.`;
     );
 
 });
+
+
+/* =========================
+   COMBO IMAGE MODAL
+========================= */
+const comboModalData = {
+  family: {
+    title: "SONNY Family Combo",
+    eyebrow: "SONNY FAMILY COMBO",
+    image: "family-combo.jpeg",
+    alt: "SONNY Family Combo details"
+  },
+  celebration: {
+    title: "SONNY Celebration Combo",
+    eyebrow: "SONNY CELEBRATION COMBO",
+    image: "celebration-combo.jpeg",
+    alt: "SONNY Celebration Combo details"
+  }
+};
+
+function openComboModal(type) {
+  const data = comboModalData[type];
+  const modal = document.getElementById("comboModal");
+
+  if (!data || !modal) return;
+
+  document.getElementById("comboModalTitle").textContent = data.title;
+  document.getElementById("comboModalEyebrow").textContent = data.eyebrow;
+
+  const image = document.getElementById("comboModalImage");
+  image.src = data.image;
+  image.alt = data.alt;
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("combo-modal-open");
+}
+
+function closeComboModal() {
+  const modal = document.getElementById("comboModal");
+  if (!modal) return;
+
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("combo-modal-open");
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeComboModal();
+  }
+});
+
 </script>
 
 
