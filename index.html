@@ -618,37 +618,143 @@
 
 <section class="cta" id="enquiry">
 
+  <!-- =========================
+     ENQUIRY FORM
+========================= -->
+
+<section class="cta enquiry-section" id="enquiry">
+
   <p class="eyebrow">
-    LET'S CELEBRATE TOGETHER
+    GET IN TOUCH
   </p>
 
   <h2>
-    Ready to Celebrate?
+    Submit Your Enquiry
   </h2>
 
   <p>
-    Browse our collection, submit your enquiry and
-    let us make your celebration brighter.
+    Fill in the form below and our team will contact you
+    via WhatsApp or phone within 24 hours with availability
+    and pricing details.
   </p>
 
+  <div class="enquiry-form-wrapper">
 
-  <div class="actions center-actions">
+    <form id="enquiryForm">
 
-    <a class="btn light" href="#products">
-      ✦ Browse Products
-    </a>
+      <!-- FULL NAME -->
+
+      <div class="form-group">
+        <label for="fullName">
+          Full Name <span>*</span>
+        </label>
+
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Your full name"
+          required
+        >
+      </div>
 
 
-    <a
-      class="btn light-outline"
-      href="https://wa.me/918610546638?text=Hello%20Sri%20Meenakshi%20Crackers,%20I%20would%20like%20to%20make%20an%20enquiry."
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp Enquiry
-    </a>
+      <!-- PHONE NUMBER -->
+
+      <div class="form-group">
+        <label for="phoneNumber">
+          Phone Number <span>*</span>
+        </label>
+
+        <input
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          placeholder="+91 XXXXX XXXXX"
+          required
+        >
+      </div>
+
+
+      <!-- WHATSAPP NUMBER -->
+
+      <div class="form-group">
+        <label for="whatsappNumber">
+          WhatsApp Number
+        </label>
+
+        <input
+          type="tel"
+          id="whatsappNumber"
+          name="whatsappNumber"
+          placeholder="+91 XXXXX XXXXX (if different from phone)"
+        >
+      </div>
+
+
+      <!-- PRODUCTS -->
+
+      <div class="form-group">
+        <label for="productsRequired">
+          Products / Combos Required <span>*</span>
+        </label>
+
+        <input
+          type="text"
+          id="productsRequired"
+          name="productsRequired"
+          placeholder="e.g. Family Diwali Combo, Grand Celebration Combo"
+          required
+        >
+      </div>
+
+
+      <!-- QUANTITY -->
+
+      <div class="form-group">
+        <label for="quantity">
+          Approximate Quantity
+        </label>
+
+        <input
+          type="text"
+          id="quantity"
+          name="quantity"
+          placeholder="e.g. 2 packs, 5 boxes"
+        >
+      </div>
+
+
+      <!-- ADDITIONAL REQUIREMENTS -->
+
+      <div class="form-group">
+        <label for="additionalRequirements">
+          Additional Requirements
+        </label>
+
+        <textarea
+          id="additionalRequirements"
+          name="additionalRequirements"
+          rows="5"
+          placeholder="Any specific requests, delivery location, or other details..."
+        ></textarea>
+      </div>
+
+
+      <!-- SUBMIT -->
+
+      <button
+        type="submit"
+        class="enquiry-submit"
+      >
+        ✨ Submit Enquiry
+      </button>
+
+    </form>
 
   </div>
+
+</section>
 
 </section>
 
@@ -910,7 +1016,66 @@ document.documentElement.style.setProperty(
     "--firework-y",
     randomFirework.y
 );
+/* =========================
+   ENQUIRY FORM → WHATSAPP
+========================= */
 
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const fullName =
+        document.getElementById("fullName").value.trim();
+
+    const phoneNumber =
+        document.getElementById("phoneNumber").value.trim();
+
+    const whatsappNumber =
+        document.getElementById("whatsappNumber").value.trim();
+
+    const productsRequired =
+        document.getElementById("productsRequired").value.trim();
+
+    const quantity =
+        document.getElementById("quantity").value.trim();
+
+    const additionalRequirements =
+        document.getElementById("additionalRequirements").value.trim();
+
+    const message =
+`Hello Sri Meenakshi Crackers,
+
+I would like to make a product enquiry.
+
+Name: ${fullName}
+
+Phone Number: ${phoneNumber}
+
+WhatsApp Number: ${whatsappNumber || "Same as phone number"}
+
+Products / Combos Required:
+${productsRequired}
+
+Approximate Quantity:
+${quantity || "Not specified"}
+
+Additional Requirements:
+${additionalRequirements || "None"}
+
+Please share the available options and pricing.
+
+Thank you.`;
+
+    const whatsappURL =
+        "https://wa.me/918610546638?text=" +
+        encodeURIComponent(message);
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
 </script>
 
 
