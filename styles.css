@@ -152,7 +152,23 @@ textarea{
   gap:35px;
   padding:55px 24px;
 }
+.hero-art{
+  border:none;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
+.hero-art img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:none;
+  background:transparent;
+}
 .hero-copy{
   position:relative;
   padding:20px 0;
