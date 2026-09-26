@@ -256,108 +256,232 @@ h2{
   height:auto;
 }
 
-
 /* =========================================
-   HERO FIREWORKS
+   DIWALI SKY FIREWORKS
 ========================================= */
 
+.hero-copy{
+    position:relative;
+    overflow:hidden;
+}
+
 .fireworks-bg{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  overflow:hidden;
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    overflow:hidden;
 }
 
 .firework{
-  position:absolute;
-  left:var(--firework-x,-100px);
-  top:var(--firework-y,-80px);
-  width:5px;
-  height:5px;
-  border-radius:50%;
-  background:#ffd95a;
-  box-shadow:
-    0 0 8px #ffd95a,
-    0 0 18px #ffd95a,
-    0 0 35px rgba(255,217,90,.8);
-  opacity:0;
-  animation:fireworkBurst 2.8s ease-out infinite;
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#ffd95a;
+    opacity:0;
+
+    box-shadow:
+        0 0 6px #ffd95a,
+        0 0 15px #ffd95a,
+        0 0 30px rgba(255,210,70,.8);
+
+    animation:
+        fireworkExplosion 3.8s ease-out infinite;
 }
 
+
+/* Firework positions */
+
 .firework:nth-child(1){
-  animation-delay:0s;
+    left:12%;
+    top:18%;
+    animation-delay:0s;
 }
 
 .firework:nth-child(2){
-  animation-delay:.55s;
+    left:72%;
+    top:10%;
+    animation-delay:1.1s;
 }
 
 .firework:nth-child(3){
-  animation-delay:1.1s;
+    left:48%;
+    top:42%;
+    animation-delay:2.2s;
 }
 
 .firework:nth-child(4){
-  animation-delay:1.65s;
+    left:88%;
+    top:55%;
+    animation-delay:3s;
 }
 
 .firework:nth-child(5){
-  animation-delay:2.2s;
+    left:25%;
+    top:70%;
+    animation-delay:1.8s;
 }
 
-.firework::before,
-.firework::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:50%;
-  width:3px;
-  height:65px;
-  transform-origin:center bottom;
-  background:linear-gradient(
-    to top,
-    transparent,
-    #ffd95a,
-    #fff
-  );
-  filter:drop-shadow(0 0 5px #ffd95a);
-}
+
+/* Main explosion */
 
 .firework::before{
-  transform:translate(-50%,-100%) rotate(0deg);
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            #fff 0px,
+            #ffd95a 2px,
+            transparent 4px
+        );
+
+    background-size:18px 18px;
+
+    border-radius:50%;
+
+    animation:
+        sparkleRotate 3.8s linear infinite;
 }
+
+
+/* Bright cross rays */
 
 .firework::after{
-  transform:translate(-50%,-100%) rotate(90deg);
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    width:180px;
+    height:180px;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        linear-gradient(
+            0deg,
+            transparent 48%,
+            rgba(255,220,100,.9) 49%,
+            rgba(255,255,255,.95) 50%,
+            rgba(255,220,100,.9) 51%,
+            transparent 52%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 48%,
+            rgba(255,220,100,.9) 49%,
+            rgba(255,255,255,.95) 50%,
+            rgba(255,220,100,.9) 51%,
+            transparent 52%
+        );
+
+    border-radius:50%;
+
+    animation:
+        rayExplosion 3.8s ease-out infinite;
 }
 
-@keyframes fireworkBurst{
 
-  0%{
-    opacity:0;
-    transform:scale(.2);
-  }
+/* Explosion animation */
 
-  15%{
-    opacity:1;
-    transform:scale(.5);
-  }
+@keyframes fireworkExplosion{
 
-  45%{
-    opacity:1;
-    transform:scale(1);
-  }
+    0%{
+        opacity:0;
+        transform:scale(.1);
+    }
 
-  75%{
-    opacity:.7;
-    transform:scale(1.25);
-  }
+    8%{
+        opacity:1;
+        transform:scale(.5);
+    }
 
-  100%{
-    opacity:0;
-    transform:scale(1.6);
-  }
+    18%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    45%{
+        opacity:.9;
+        transform:scale(1.15);
+    }
+
+    70%{
+        opacity:.35;
+        transform:scale(1.3);
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1.5);
+    }
 }
+
+
+@keyframes sparkleRotate{
+
+    0%{
+        transform:translate(-50%,-50%) scale(.1) rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    45%{
+        transform:translate(-50%,-50%) scale(1) rotate(90deg);
+        opacity:1;
+    }
+
+    75%{
+        transform:translate(-50%,-50%) scale(1.2) rotate(180deg);
+        opacity:.5;
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(1.4) rotate(270deg);
+        opacity:0;
+    }
+}
+
+
+@keyframes rayExplosion{
+
+    0%{
+        transform:translate(-50%,-50%) scale(.1) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    40%{
+        transform:translate(-50%,-50%) scale(1) rotate(45deg);
+        opacity:.9;
+    }
+
+    70%{
+        transform:translate(-50%,-50%) scale(1.25) rotate(90deg);
+        opacity:.35;
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(1.5) rotate(135deg);
+        opacity:0;
+    }
+}
+
 
 
 /* =========================================
