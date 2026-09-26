@@ -736,15 +736,11 @@ footer{
   padding:20px;
 }
 
-.notice-box{
-  width:100%;
-  max-width:500px;
-  background:#11101a;
-  border:1px solid #d8ad42;
-  border-radius:12px;
-  padding:35px 25px;
-  text-align:center;
-  box-shadow:0 20px 70px rgba(0,0,0,.6);
+.notice-box .notice-title {
+    color: #ff3b30 !important;
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .notice-icon{
