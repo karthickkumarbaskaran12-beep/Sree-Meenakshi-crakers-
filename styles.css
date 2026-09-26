@@ -168,7 +168,93 @@ h2{
   color:var(--gold2);
   font-style:normal;
 }
+/* Animated fireworks behind hero heading */
+.hero-copy{
+  position:relative;
+  overflow:hidden;
+}
 
+.hero-copy > *{
+  position:relative;
+  z-index:2;
+}
+
+.fireworks-bg{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.firework{
+  position:absolute;
+  left:var(--firework-x, -100px);
+  top:var(--firework-y, -80px);
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#ffd95a;
+  box-shadow:
+    0 0 8px #ffd95a,
+    0 0 18px #ffd95a,
+    0 0 35px rgba(255,217,90,.8);
+  opacity:0;
+  animation:fireworkBurst 2.8s ease-out infinite;
+}
+
+.firework::before,
+.firework::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:4px;
+  height:70px;
+  transform-origin:center bottom;
+  background:linear-gradient(
+    to top,
+    transparent,
+    #ffd95a,
+    #fff
+  );
+  filter:drop-shadow(0 0 5px #ffd95a);
+}
+
+.firework::before{
+  transform:translate(-50%,-100%) rotate(0deg);
+}
+
+.firework::after{
+  transform:translate(-50%,-100%) rotate(90deg);
+}
+
+@keyframes fireworkBurst{
+  0%{
+    opacity:0;
+    transform:scale(.2);
+  }
+
+  15%{
+    opacity:1;
+    transform:scale(.5);
+  }
+
+  45%{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  75%{
+    opacity:.7;
+    transform:scale(1.25);
+  }
+
+  100%{
+    opacity:0;
+    transform:scale(1.6);
+  }
+}
 .lead{
   color:#c8c4bc;
   max-width:520px;
