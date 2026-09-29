@@ -1247,9 +1247,11 @@ footer{
 ========================= */
 
 .vip-king-box {
+    width: min(900px, calc(100% - 30px)) !important;
     max-width: 900px !important;
     max-height: 90vh;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .vip-king-intro {
@@ -1263,61 +1265,154 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
     text-align: left;
 }
 
 .vip-product {
     display: flex;
     align-items: center;
-    gap: 18px;
-    padding: 12px;
-    background: linear-gradient(135deg, #171521, #0d0b14);
-    border: 1px solid rgba(232,191,85,.25);
-    border-radius: 10px;
-}
-
-.vip-product img {
+    gap: 20px;
     width: 100%;
-    height: 180px;
-    object-fit: contain;
-    background: transparent;
-    display: block;
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #171521,
+        #0d0b14
+    );
+
+    border: 1px solid rgba(232, 191, 85, 0.25);
+    border-radius: 10px;
+
+    overflow: hidden;
 }
 
-.vip-product span {
+
+/* PRODUCT IMAGE CONTAINER */
+
+.vip-product-image {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    overflow: hidden;
+}
+
+
+/* ACTUAL PRODUCT IMAGE */
+
+.vip-product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+    background: transparent;
+
+    border: none;
+}
+
+
+/* PRODUCT DETAILS */
+
+.vip-product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.vip-product-info span {
+    display: block;
+
     color: #d9af3d;
     font-size: 11px;
     letter-spacing: 1.5px;
     font-weight: 700;
 }
 
-.vip-product h3 {
+.vip-product-info h3 {
     color: #f5d36a;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 24px;
-    margin: 4px 0 0;
+    line-height: 1.2;
+
+    margin: 5px 0 0;
+
+    word-break: normal;
+    overflow-wrap: break-word;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 560px) {
 
     .vip-king-box {
         width: calc(100% - 20px) !important;
         max-height: 88vh;
-        padding: 25px 15px !important;
+
+        padding: 20px 12px !important;
+
+        overflow-x: hidden;
+    }
+
+    .vip-king-products {
+        gap: 10px;
     }
 
     .vip-product {
         gap: 12px;
         padding: 9px;
+
+        width: 100%;
     }
 
-    .vip-product img {
+    .vip-product-image {
+        flex: 0 0 82px;
         width: 82px;
-        height: 82px;
+        height: 100px;
     }
 
-    .vip-product h3 {
+    .vip-product-info {
+        min-width: 0;
+    }
+
+    .vip-product-info h3 {
         font-size: 20px;
+        line-height: 1.15;
     }
 
+    .vip-product-info span {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .vip-product-image {
+        flex: 0 0 70px;
+        width: 70px;
+        height: 90px;
+    }
+
+    .vip-product-info h3 {
+        font-size: 18px;
+    }
 }
