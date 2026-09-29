@@ -14,6 +14,119 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
+
+<style id="vip-queen-large-images">
+/* VIP Queen – larger, more attractive product display */
+#vipQueenModal .vip-product {
+  grid-template-columns: minmax(260px, 42%) 1fr;
+  min-height: 230px;
+}
+
+#vipQueenModal .vip-product-image {
+  min-height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+
+#vipQueenModal .vip-product-image img {
+  width: 100%;
+  max-width: 360px;
+  height: 190px;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+#vipQueenModal .vip-product-info h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+}
+
+@media (max-width: 700px) {
+  #vipQueenModal .vip-product {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  #vipQueenModal .vip-product-image {
+    min-height: 220px;
+  }
+
+  #vipQueenModal .vip-product-image img {
+    max-width: 92%;
+    height: 210px;
+  }
+
+  #vipQueenModal .vip-product-info {
+    text-align: center;
+    padding-bottom: 18px;
+  }
+}
+</style>
+
+
+<style id="combo-large-product-images">
+/* VIP King + VIP Queen – large, premium product display */
+#vipKingModal .vip-product,
+#vipQueenModal .vip-product {
+  grid-template-columns: minmax(260px, 42%) 1fr;
+  min-height: 230px;
+}
+
+#vipKingModal .vip-product-image,
+#vipQueenModal .vip-product-image {
+  min-height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+
+#vipKingModal .vip-product-image img,
+#vipQueenModal .vip-product-image img {
+  width: 100%;
+  max-width: 360px;
+  height: 190px;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+#vipKingModal .vip-product-info h3,
+#vipQueenModal .vip-product-info h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+}
+
+@media (max-width: 700px) {
+  #vipKingModal .vip-product,
+  #vipQueenModal .vip-product {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  #vipKingModal .vip-product-image,
+  #vipQueenModal .vip-product-image {
+    min-height: 220px;
+  }
+
+  #vipKingModal .vip-product-image img,
+  #vipQueenModal .vip-product-image img {
+    max-width: 92%;
+    height: 210px;
+  }
+
+  #vipKingModal .vip-product-info {
+    text-align: center;
+    padding-bottom: 18px;
+  }
+}
+</style>
+
 </head>
 
 <body>
