@@ -1277,13 +1277,11 @@ footer{
 }
 
 .vip-product img {
-    width: 105px;
-    height: 105px;
+    width: 100%;
+    height: 180px;
     object-fit: contain;
+    background: transparent;
     display: block;
-    background: #08070c;
-    border-radius: 7px;
-    flex-shrink: 0;
 }
 
 .vip-product span {
