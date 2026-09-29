@@ -1266,7 +1266,6 @@ footer{
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    text-align: left;
 }
 
 .vip-product {
@@ -1274,6 +1273,7 @@ footer{
     align-items: center;
     gap: 20px;
     width: 100%;
+    min-width: 0;
     box-sizing: border-box;
 
     padding: 12px;
@@ -1286,12 +1286,7 @@ footer{
 
     border: 1px solid rgba(232, 191, 85, 0.25);
     border-radius: 10px;
-
-    overflow: hidden;
 }
-
-
-/* PRODUCT IMAGE CONTAINER */
 
 .vip-product-image {
     flex: 0 0 120px;
@@ -1302,27 +1297,21 @@ footer{
     align-items: center;
     justify-content: center;
 
-    background: transparent;
     overflow: hidden;
+    border-radius: 8px;
+    background: transparent;
 }
-
-
-/* ACTUAL PRODUCT IMAGE */
 
 .vip-product-image img {
     width: 100%;
     height: 100%;
 
     object-fit: contain;
+    object-position: center;
 
     display: block;
     background: transparent;
-
-    border: none;
 }
-
-
-/* PRODUCT DETAILS */
 
 .vip-product-info {
     flex: 1;
@@ -1342,11 +1331,10 @@ footer{
     color: #f5d36a;
 
     font-family: "Cormorant Garamond", serif;
-
     font-size: 24px;
-    line-height: 1.2;
 
-    margin: 5px 0 0;
+    margin: 4px 0 0;
+    line-height: 1.2;
 
     word-break: normal;
     overflow-wrap: break-word;
@@ -1362,10 +1350,7 @@ footer{
     .vip-king-box {
         width: calc(100% - 20px) !important;
         max-height: 88vh;
-
         padding: 20px 12px !important;
-
-        overflow-x: hidden;
     }
 
     .vip-king-products {
@@ -1375,44 +1360,20 @@ footer{
     .vip-product {
         gap: 12px;
         padding: 9px;
-
-        width: 100%;
     }
 
     .vip-product-image {
         flex: 0 0 82px;
         width: 82px;
-        height: 100px;
-    }
-
-    .vip-product-info {
-        min-width: 0;
-    }
-
-    .vip-product-info h3 {
-        font-size: 20px;
-        line-height: 1.15;
+        height: 105px;
     }
 
     .vip-product-info span {
         font-size: 10px;
     }
-}
-
-
-/* =========================
-   VERY SMALL PHONES
-========================= */
-
-@media (max-width: 380px) {
-
-    .vip-product-image {
-        flex: 0 0 70px;
-        width: 70px;
-        height: 90px;
-    }
 
     .vip-product-info h3 {
-        font-size: 18px;
+        font-size: 19px;
+        line-height: 1.15;
     }
 }
