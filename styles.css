@@ -1377,3 +1377,87 @@ footer{
         line-height: 1.15;
     }
 }
+/* =========================================================
+   VIP KING + VIP QUEEN COMBO - LARGE PRODUCT IMAGES
+   ========================================================= */
+
+.vip-king-box .vip-product-image,
+.vip-queen-box .vip-product-image {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+}
+
+.vip-king-box .vip-product-image img,
+.vip-queen-box .vip-product-image img {
+  display: block !important;
+  width: auto !important;
+  max-width: 85% !important;
+  height: 270px !important;
+  max-height: 270px !important;
+  min-width: 0 !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+}
+
+/* Product card */
+.vip-king-box .vip-product,
+.vip-queen-box .vip-product {
+  min-height: 360px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+}
+
+/* Product information */
+.vip-king-box .vip-product-info,
+.vip-queen-box .vip-product-info {
+  text-align: center;
+}
+
+/* Product number */
+.vip-king-box .vip-product-info span,
+.vip-queen-box .vip-product-info span {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* Product name */
+.vip-king-box .vip-product-info h3,
+.vip-queen-box .vip-product-info h3 {
+  font-size: 25px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .vip-king-box .vip-product,
+  .vip-queen-box .vip-product {
+    grid-template-columns: 1fr;
+    min-height: 400px;
+    padding: 25px 15px;
+  }
+
+  .vip-king-box .vip-product-image,
+  .vip-queen-box .vip-product-image {
+    height: 250px;
+  }
+
+  .vip-king-box .vip-product-image img,
+  .vip-queen-box .vip-product-image img {
+    height: 220px !important;
+    max-height: 220px !important;
+    max-width: 90% !important;
+  }
+
+  .vip-king-box .vip-product-info h3,
+  .vip-queen-box .vip-product-info h3 {
+    font-size: 21px;
+  }
+}
