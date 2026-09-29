@@ -217,7 +217,7 @@
     </h2>
 
     <p>
-      Browse our SONNY Combo Deals and submit an enquiry —
+      Browse our premium combo deals and submit an enquiry —
       our team will get back to you within 24 hours.
     </p>
 
@@ -297,13 +297,13 @@
       </article>
 
 
-      <!-- COMBO 2 -->
+      <!-- COMBO 2 - VIP QUEEN -->
 
       <article class="product combo-clickable"
-               onclick="openComboModal('celebration')">
+               onclick="openVipQueenModal()">
 
         <div class="icon">
-          ✺
+          ♕
         </div>
 
         <span class="product-tag">
@@ -311,16 +311,16 @@
         </span>
 
         <h3>
-          SONNY Celebration Combo
+          VIP Queen Combo
         </h3>
 
         <p>
-          A festive assortment with a variety of colourful
-          and exciting fireworks.
+          35 products included in the VIP Queen Combo.
+          Explore the complete product collection.
         </p>
 
-        <a href="#enquiry">
-          Enquire Now →
+        <a href="#" onclick="openVipQueenModal(); return false;">
+          View VIP Queen Combo →
         </a>
 
       </article>
@@ -1093,6 +1093,25 @@ function closeVipKingModal() {
 }
 
 /* =========================
+   VIP QUEEN COMBO CATALOGUE
+========================= */
+function openVipQueenModal() {
+  const modal = document.getElementById("vipQueenModal");
+  if (!modal) return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("combo-modal-open");
+}
+
+function closeVipQueenModal() {
+  const modal = document.getElementById("vipQueenModal");
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("combo-modal-open");
+}
+
+/* =========================
    SONNY COMBO IMAGE POPUP
 ========================= */
 
@@ -1103,12 +1122,6 @@ const comboModalData = {
     image: "family-combo.jpeg",
     alt: "SONNY Family Combo details"
   },
-  celebration: {
-    title: "SONNY Celebration Combo",
-    eyebrow: "SONNY CELEBRATION COMBO",
-    image: "celebration-combo.jpeg",
-    alt: "SONNY Celebration Combo details"
-  }
 };
 
 function openComboModal(type) {
@@ -1145,6 +1158,7 @@ document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") {
     closeComboModal();
     closeVipKingModal();
+    closeVipQueenModal();
   }
 });
 
@@ -1572,16 +1586,538 @@ document.addEventListener("keydown", function(event) {
 </div>
 
 
-    <!-- ENQUIRY BUTTON -->
+<!-- =========================
+     VIP QUEEN COMBO POPUP
+========================= -->
+<div id="vipQueenModal" class="combo-modal" aria-hidden="true">
+
+  <div class="combo-modal-backdrop" onclick="closeVipQueenModal()"></div>
+
+  <div class="combo-modal-box vip-king-box vip-queen-box"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="vipQueenModalTitle">
+
+    <button class="combo-modal-close"
+            type="button"
+            onclick="closeVipQueenModal()"
+            aria-label="Close">
+      &times;
+    </button>
+
+    <p class="eyebrow">VIP QUEEN COMBO</p>
+
+    <h2 id="vipQueenModalTitle">
+      VIP Queen Combo
+    </h2>
+
+    <p class="vip-king-intro">
+      Explore our complete VIP Queen Combo collection — 35 products
+    </p>
+
+    <div class="vip-king-products">
+
+      <!-- 01 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/01.jpeg"
+               alt="Ant Man"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>01</span>
+          <h3>Ant Man</h3>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/02.jpeg"
+               alt="Sizzling Star"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>02</span>
+          <h3>Sizzling Star</h3>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/03.jpeg"
+               alt="Drizzling Raker"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>03</span>
+          <h3>Drizzling Raker</h3>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/04.jpeg"
+               alt="Hulk Warrior"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>04</span>
+          <h3>Hulk Warrior</h3>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/05.jpeg"
+               alt="Rock and Roll"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>05</span>
+          <h3>Rock and Roll</h3>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/06.jpeg"
+               alt="Sweet Sixteen"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>06</span>
+          <h3>Sweet Sixteen</h3>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/07.jpeg"
+               alt="Princess and the Frog"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>07</span>
+          <h3>Princess and the Frog</h3>
+        </div>
+      </div>
+
+      <!-- 08 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/08.jpeg"
+               alt="777 Crackers"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>08</span>
+          <h3>777 Crackers</h3>
+        </div>
+      </div>
+
+      <!-- 09 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/09.jpeg"
+               alt="Velvet Touches"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>09</span>
+          <h3>Velvet Touches</h3>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-queen/10.jpeg"
+               alt="Dancing Queen"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>10</span>
+          <h3>Dancing Queen</h3>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/01.png"
+               alt="Max 100 Gun"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>11</span>
+          <h3>Max 100 Gun</h3>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/02.png"
+               alt="Chakkar Big (10 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>12</span>
+          <h3>Chakkar Big (10 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/03.png"
+               alt="Chakkar Special (10 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>13</span>
+          <h3>Chakkar Special (10 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/04.png"
+               alt="Electric Sparkle (30 cm)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>14</span>
+          <h3>Electric Sparkle (30 cm)</h3>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/05.png"
+               alt="Electric Sparkle (15 cm)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>15</span>
+          <h3>Electric Sparkle (15 cm)</h3>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/06.png"
+               alt="Flower Pot Big (10 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>16</span>
+          <h3>Flower Pot Big (10 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/07.png"
+               alt="Violet Color Koti (10 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>17</span>
+          <h3>Violet Color Koti (10 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/08.png"
+               alt="Cosmic Kids"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>18</span>
+          <h3>Cosmic Kids</h3>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/09.png"
+               alt="Cluster (1*5)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>19</span>
+          <h3>Cluster (1*5)</h3>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/10.png"
+               alt="Siren (2 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>20</span>
+          <h3>Siren (2 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/11.png"
+               alt="12 Sky Digital"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>21</span>
+          <h3>12 Sky Digital</h3>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/12.png"
+               alt="Troy 25 Shots"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>22</span>
+          <h3>Troy 25 Shots</h3>
+        </div>
+      </div>
+
+      <!-- 23 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/13.png"
+               alt="King Crown 50 Shots"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>23</span>
+          <h3>King Crown 50 Shots</h3>
+        </div>
+      </div>
+
+      <!-- 24 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/14.png"
+               alt="Pixels New"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>24</span>
+          <h3>Pixels New</h3>
+        </div>
+      </div>
+
+      <!-- 25 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/15.png"
+               alt="Pink Octopus (2 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>25</span>
+          <h3>Pink Octopus (2 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 26 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/16.png"
+               alt="Purple Palm Sky Shot (1 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>26</span>
+          <h3>Purple Palm Sky Shot (1 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 27 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/17.png"
+               alt="Thanos Sky Shot (1 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>27</span>
+          <h3>Thanos Sky Shot (1 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 28 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/18.png"
+               alt="X-Mas Tree (5 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>28</span>
+          <h3>X-Mas Tree (5 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 29 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/19.png"
+               alt="Rainbow Smoke (2 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>29</span>
+          <h3>Rainbow Smoke (2 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 30 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/20.png"
+               alt="Whistling Piper (2 pcs)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>30</span>
+          <h3>Whistling Piper (2 pcs)</h3>
+        </div>
+      </div>
+
+      <!-- 31 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/21.png"
+               alt="1 1/2 Twinkle Star (5 box)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>31</span>
+          <h3>1 1/2 Twinkle Star (5 box)</h3>
+        </div>
+      </div>
+
+      <!-- 32 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/22.png"
+               alt="Red Bijili (1 pkt)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>32</span>
+          <h3>Red Bijili (1 pkt)</h3>
+        </div>
+      </div>
+
+      <!-- 33 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/23.png"
+               alt="Emerald Foil (1 box)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>33</span>
+          <h3>Emerald Foil (1 box)</h3>
+        </div>
+      </div>
+
+      <!-- 34 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/24.png"
+               alt="2 3/4 Bird Joker (5 pkts)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>34</span>
+          <h3>2 3/4 Bird Joker (5 pkts)</h3>
+        </div>
+      </div>
+
+      <!-- 35 -->
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/25.png"
+               alt="4 Bird Joker (5 pkts)"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>35</span>
+          <h3>4 Bird Joker (5 pkts)</h3>
+        </div>
+      </div>
+
+    </div>
 
     <a class="btn primary combo-modal-enquiry"
        href="#enquiry"
-       onclick="closeVipKingModal()">
+       onclick="closeVipQueenModal()">
       Submit Enquiry <span>→</span>
     </a>
 
   </div>
 </div>
+
 
 <!-- =========================
      SONNY COMBO IMAGE POPUP
