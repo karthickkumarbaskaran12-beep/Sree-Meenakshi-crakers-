@@ -271,7 +271,7 @@
       <!-- COMBO 1 -->
 
       <article class="product combo-clickable"
-               onclick="openComboModal('family')">
+               onclick="openVipKingModal()">
 
         <div class="icon">
           ✦
@@ -282,16 +282,16 @@
         </span>
 
         <h3>
-          SONNY Family Combo
+          VIP King Combo
         </h3>
 
         <p>
-          A carefully selected combination of popular crackers
-          for family celebrations.
+          24 products included in the VIP King Combo.
+          Scroll through the complete product collection.
         </p>
 
-        <a href="#enquiry">
-          Enquire Now →
+        <a href="#" onclick="openVipKingModal(); return false;">
+          View VIP King Combo →
         </a>
 
       </article>
@@ -1072,6 +1072,25 @@ Thank you.`;
     );
 
 });
+
+/* =========================
+   VIP KING COMBO CATALOGUE
+========================= */
+function openVipKingModal() {
+  const modal = document.getElementById("vipKingModal");
+  if (!modal) return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("combo-modal-open");
+}
+
+function closeVipKingModal() {
+  const modal = document.getElementById("vipKingModal");
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("combo-modal-open");
+}
 
 /* =========================
    SONNY COMBO IMAGE POPUP
