@@ -286,7 +286,7 @@
         </h3>
 
         <p>
-          24 products included in the VIP King Combo.
+          25 products included in the VIP King Combo.
           Scroll through the complete product collection.
         </p>
 
@@ -1144,6 +1144,7 @@ function closeComboModal() {
 document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") {
     closeComboModal();
+    closeVipKingModal();
   }
 });
 
@@ -1153,7 +1154,6 @@ document.addEventListener("keydown", function(event) {
      VIP KING COMBO POPUP
 ========================= -->
 <div id="vipKingModal" class="combo-modal" aria-hidden="true">
-
   <div class="combo-modal-backdrop" onclick="closeVipKingModal()"></div>
 
   <div class="combo-modal-box vip-king-box"
@@ -1161,414 +1161,243 @@ document.addEventListener("keydown", function(event) {
        aria-modal="true"
        aria-labelledby="vipKingModalTitle">
 
-    <button class="combo-modal-close"
-            type="button"
-            onclick="closeVipKingModal()"
-            aria-label="Close">
+    <button class="combo-modal-close" type="button" onclick="closeVipKingModal()" aria-label="Close">
       &times;
     </button>
 
-    <p class="eyebrow">
-      VIP KING COMBO
-    </p>
-
-    <h2 id="vipKingModalTitle">
-      VIP King Combo
-    </h2>
-
-    <p class="vip-king-intro">
-      Explore our complete VIP King Combo collection
-    </p>
+    <p class="eyebrow">VIP KING COMBO</p>
+    <h2 id="vipKingModalTitle">VIP King Combo</h2>
+    <p class="vip-king-intro">Explore our complete VIP King Combo collection</p>
 
     <div class="vip-king-products">
-
       <div class="vip-product">
-    <img src="vip-king/01.png" alt="Max 100 Gun">
-    <div>
-        <span>01</span>
-        <h3>Max 100 Gun</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/02.png" alt="Chakkar">
-    <div>
-        <span>02</span>
-        <h3>Chakkar Big(10 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/03.png" alt="Chakkar Special (10 pcs)">
-    <div>
-        <span>03</span>
-        <h3>Chakkar Special (10 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/04.png" alt="Electric Sparkle (30 cm)">
-    <div>
-        <span>04</span>
-        <h3>Electric Sparkle (30 cm)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/05.png" alt="Electric Sparkle (15 cm)">
-    <div>
-        <span>05</span>
-        <h3>Electric Sparkle (15 cm)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/06.png" alt="Flower Pot Big (10 pcs)">
-    <div>
-        <span>06</span>
-        <h3>Flower Pot Big (10 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/07.png" alt="Violet Color Koti (10 pcs)">
-    <div>
-        <span>07</span>
-        <h3>Violet Color Koti (10 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/08.png" alt="Cosmic Kids">
-    <div>
-        <span>08</span>
-        <h3>Cosmic Kids</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/09.png" alt="Cluster (1*5)">
-    <div>
-        <span>09</span>
-        <h3>Cluster (1*5)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/10.png" alt="Siren (2 pcs)">
-    <div>
-        <span>10</span>
-        <h3>Siren (2 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/11.png" alt="12 Sky Digital">
-    <div>
-        <span>11</span>
-        <h3>12 Sky Digital</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/12.png" alt="Troy 25 Shots">
-    <div>
-        <span>12</span>
-        <h3>Troy 25 Shots</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/13.png" alt="King Crown 50 Shots">
-    <div>
-        <span>13</span>
-        <h3>King Crown 50 Shots</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/14.png" alt="Pixels New">
-    <div>
-        <span>14</span>
-        <h3>Pixels New</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/15.png" alt="Pink Octopus Sky Shot (2 pcs)">
-    <div>
-        <span>15</span>
-        <h3>Pink Octupus (2 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/16.png" alt="Purple Palm Sky Shot (1 pcs)">
-    <div>
-        <span>16</span>
-        <h3>Purple Palm Sky Shot(1 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/17.png" alt="Thanos Sky Shot (1 pcs)">
-    <div>
-        <span>17</span>
-        <h3>Thanos Sky Shot (1 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/18.png" alt="X-Mas Tree (5 pcs)">
-    <div>
-        <span>18</span>
-        <h3>X-Mas Tree (5 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/19.png" alt="Rainbow Smoke (2 pcs)">
-    <div>
-        <span>19</span>
-        <h3>Rainbow Smoke (2 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/20.png" alt="Whistling Piper (2 pcs)">
-    <div>
-        <span>20</span>
-        <h3>Whistling Piper (2 pcs)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/21.png" alt="1 1/2 Twinkle Star (5 box)">
-    <div>
-        <span>21</span>
-        <h3>1 1/2 Twinkle Star (5 box)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/22.png" alt="Red Bijili (1 pkt)">
-    <div>
-        <span>22</span>
-        <h3>Red Bijili (1 pkt)</h3>
-    </div>
-</div>
-
-<div class="vip-product">
-    <img src="vip-king/23.png" alt="Emerald Foil (1 box)">
-    <div>
-        <span>23</span>
-        <div class="vip-king-products">
-
-    <div class="vip-product">
-        <img src="vip-king/01.png" alt="Max 100 Gun">
-        <div>
-            <span>01</span>
-            <h3>Max 100 Gun</h3>
+        <div class="vip-product-image">
+          <img src="vip-king/01.png" alt="Max 100 Gun" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/02.png" alt="Chakkar">
-        <div>
-            <span>02</span>
-            <h3>Chakkar Big(10 pcs)</h3>
+        <div class="vip-product-info">
+          <span>01</span>
+          <h3>Max 100 Gun</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/03.png" alt="Chakkar Special (10 pcs)">
-        <div>
-            <span>03</span>
-            <h3>Chakkar Special (10 pcs)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/02.png" alt="Chakkar Big (10 pcs)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/04.png" alt="Electric Sparkle (30 cm)">
-        <div>
-            <span>04</span>
-            <h3>Electric Sparkle (30 cm)</h3>
+        <div class="vip-product-info">
+          <span>02</span>
+          <h3>Chakkar Big (10 pcs)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/05.png" alt="Electric Sparkle (15 cm)">
-        <div>
-            <span>05</span>
-            <h3>Electric Sparkle (15 cm)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/03.png" alt="Chakkar Special (10 pcs)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/06.png" alt="Flower Pot Big (10 pcs)">
-        <div>
-            <span>06</span>
-            <h3>Flower Pot Big (10 pcs)</h3>
+        <div class="vip-product-info">
+          <span>03</span>
+          <h3>Chakkar Special (10 pcs)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/07.png" alt="Violet Color Koti (10 pcs)">
-        <div>
-            <span>07</span>
-            <h3>Violet Color Koti (10 pcs)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/04.png" alt="Electric Sparkle (30 cm)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/08.png" alt="Cosmic Kids">
-        <div>
-            <span>08</span>
-            <h3>Cosmic Kids</h3>
+        <div class="vip-product-info">
+          <span>04</span>
+          <h3>Electric Sparkle (30 cm)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/09.png" alt="Cluster (1*5)">
-        <div>
-            <span>09</span>
-            <h3>Cluster (1*5)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/05.png" alt="Electric Sparkle (15 cm)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/10.png" alt="Siren (2 pcs)">
-        <div>
-            <span>10</span>
-            <h3>Siren (2 pcs)</h3>
+        <div class="vip-product-info">
+          <span>05</span>
+          <h3>Electric Sparkle (15 cm)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/11.png" alt="12 Sky Digital">
-        <div>
-            <span>11</span>
-            <h3>12 Sky Digital</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/06.png" alt="Flower Pot Big (10 pcs)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/12.png" alt="Troy 25 Shots">
-        <div>
-            <span>12</span>
-            <h3>Troy 25 Shots</h3>
+        <div class="vip-product-info">
+          <span>06</span>
+          <h3>Flower Pot Big (10 pcs)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/13.png" alt="King Crown 50 Shots">
-        <div>
-            <span>13</span>
-            <h3>King Crown 50 Shots</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/07.png" alt="Violet Color Koti (10 pcs)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/14.png" alt="Pixels New">
-        <div>
-            <span>14</span>
-            <h3>Pixels New</h3>
+        <div class="vip-product-info">
+          <span>07</span>
+          <h3>Violet Color Koti (10 pcs)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/15.png" alt="Pink Octopus Sky Shot (2 pcs)">
-        <div>
-            <span>15</span>
-            <h3>Pink Octupus (2 pcs)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/08.png" alt="Cosmic Kids" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/16.png" alt="Purple Palm Sky Shot (1 pcs)">
-        <div>
-            <span>16</span>
-            <h3>Purple Palm Sky Shot(1 pcs)</h3>
+        <div class="vip-product-info">
+          <span>08</span>
+          <h3>Cosmic Kids</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/17.png" alt="Thanos Sky Shot (1 pcs)">
-        <div>
-            <span>17</span>
-            <h3>Thanos Sky Shot (1 pcs)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/09.png" alt="Cluster (1*5)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/18.png" alt="X-Mas Tree (5 pcs)">
-        <div>
-            <span>18</span>
-            <h3>X-Mas Tree (5 pcs)</h3>
+        <div class="vip-product-info">
+          <span>09</span>
+          <h3>Cluster (1*5)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/19.png" alt="Rainbow Smoke (2 pcs)">
-        <div>
-            <span>19</span>
-            <h3>Rainbow Smoke (2 pcs)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/10.png" alt="Siren (2 pcs)" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/20.png" alt="Whistling Piper (2 pcs)">
-        <div>
-            <span>20</span>
-            <h3>Whistling Piper (2 pcs)</h3>
+        <div class="vip-product-info">
+          <span>10</span>
+          <h3>Siren (2 pcs)</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/21.png" alt="1 1/2 Twinkle Star (5 box)">
-        <div>
-            <span>21</span>
-            <h3>1 1/2 Twinkle Star (5 box)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/11.png" alt="12 Sky Digital" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/22.png" alt="Red Bijili (1 pkt)">
-        <div>
-            <span>22</span>
-            <h3>Red Bijili (1 pkt)</h3>
+        <div class="vip-product-info">
+          <span>11</span>
+          <h3>12 Sky Digital</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/23.png" alt="Emerald Foil (1 box)">
-        <div>
-            <span>23</span>
-            <h3>Emerald Foil (1 box)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/12.png" alt="Troy 25 Shots" loading="lazy" decoding="async">
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/24.png" alt="2 3/4 Bird Joker (5 pkts)">
-        <div>
-            <span>24</span>
-            <h3>2 3/4 Bird Joker (5 pkts)</h3>
+        <div class="vip-product-info">
+          <span>12</span>
+          <h3>Troy 25 Shots</h3>
         </div>
-    </div>
-
-    <div class="vip-product">
-        <img src="vip-king/25.png" alt="4 Bird Joker (5 pkts)">
-        <div>
-            <span>25</span>
-            <h3>4 Bird Joker (5 pkts)</h3>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/13.png" alt="King Crown 50 Shots" loading="lazy" decoding="async">
         </div>
+        <div class="vip-product-info">
+          <span>13</span>
+          <h3>King Crown 50 Shots</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/14.png" alt="Pixels New" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>14</span>
+          <h3>Pixels New</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/15.png" alt="Pink Octopus (2 pcs)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>15</span>
+          <h3>Pink Octopus (2 pcs)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/16.png" alt="Purple Palm Sky Shot (1 pcs)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>16</span>
+          <h3>Purple Palm Sky Shot (1 pcs)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/17.png" alt="Thanos Sky Shot (1 pcs)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>17</span>
+          <h3>Thanos Sky Shot (1 pcs)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/18.png" alt="X-Mas Tree (5 pcs)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>18</span>
+          <h3>X-Mas Tree (5 pcs)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/19.png" alt="Rainbow Smoke (2 pcs)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>19</span>
+          <h3>Rainbow Smoke (2 pcs)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/20.png" alt="Whistling Piper (2 pcs)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>20</span>
+          <h3>Whistling Piper (2 pcs)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/21.png" alt="1 1/2 Twinkle Star (5 box)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>21</span>
+          <h3>1 1/2 Twinkle Star (5 box)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/22.png" alt="Red Bijili (1 pkt)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>22</span>
+          <h3>Red Bijili (1 pkt)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/23.png" alt="Emerald Foil (1 box)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>23</span>
+          <h3>Emerald Foil (1 box)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/24.png" alt="2 3/4 Bird Joker (5 pkts)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>24</span>
+          <h3>2 3/4 Bird Joker (5 pkts)</h3>
+        </div>
+      </div>
+      <div class="vip-product">
+        <div class="vip-product-image">
+          <img src="vip-king/25.png" alt="4 Bird Joker (5 pkts)" loading="lazy" decoding="async">
+        </div>
+        <div class="vip-product-info">
+          <span>25</span>
+          <h3>4 Bird Joker (5 pkts)</h3>
+        </div>
+      </div>
     </div>
 
-</div>
-
-    <a class="btn primary combo-modal-enquiry"
-       href="#enquiry"
-       onclick="closeVipKingModal()">
+    <a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="closeVipKingModal()">
       Submit Enquiry <span>→</span>
     </a>
 
@@ -1617,6 +1446,88 @@ document.addEventListener("keydown", function(event) {
 </div>
 
 <style>
+/* =========================
+   VIP KING PRODUCT CATALOGUE
+========================= */
+.vip-king-box {
+  text-align: left;
+}
+
+.vip-king-products {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.vip-product {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  min-height: 110px;
+  padding: 12px;
+  border: 1px solid rgba(232, 191, 85, 0.30);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  box-sizing: border-box;
+}
+
+.vip-product-image {
+  width: 105px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.vip-product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.vip-product-info span {
+  display: block;
+  margin-bottom: 6px;
+  color: #e8bf55;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.vip-product-info h3 {
+  margin: 0;
+  color: #f7d774;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+@media (max-width: 560px) {
+  .vip-product {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 88px;
+    padding: 9px;
+  }
+
+  .vip-product-image {
+    width: 82px;
+    height: 82px;
+  }
+
+  .vip-product-info h3 {
+    font-size: 23px;
+  }
+}
+
 .combo-clickable {
   cursor: pointer;
 }
