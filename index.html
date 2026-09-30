@@ -1259,20 +1259,167 @@ footer a{color:#fff !important}
 </button>
 
 
-<!-- CART DRAWER -->
-<div class="msc-cart-overlay" id="mscCartOverlay" onclick="mscCloseCart()"></div>
-<aside class="msc-cart" id="mscCart" aria-hidden="true">
+<!-- =========================
+     MY ENQUIRY CART
+========================= -->
+
+<div class="msc-cart-overlay"
+     id="mscCartOverlay"
+     onclick="mscCloseCart()">
+</div>
+
+<aside class="msc-cart"
+       id="mscCart"
+       aria-hidden="true">
+
+  <!-- HEADER -->
   <div class="msc-cart-head">
-    <div><p class="eyebrow">YOUR ENQUIRY</p><h2>Selected Products</h2></div>
-    <button type="button" onclick="mscCloseCart()" aria-label="Close">&times;</button>
+
+    <div>
+      <p class="eyebrow">YOUR ENQUIRY</p>
+      <h2>Select Your Combo</h2>
+    </div>
+
+    <button type="button"
+            onclick="mscCloseCart()"
+            aria-label="Close">
+      &times;
+    </button>
+
   </div>
-  <div class="msc-cart-items" id="mscCartItems"></div>
-  <div class="msc-cart-empty" id="mscCartEmpty">Your enquiry list is empty.<br>Add products from the catalogue.</div>
+
+
+  <!-- COMBO SELECTION -->
+  <div class="msc-combo-selector">
+
+    <div class="msc-combo-selector-head">
+
+      <div>
+        <strong>Choose Your Combo</strong>
+        <span>
+          You can select VIP King, VIP Queen, or both.
+        </span>
+      </div>
+
+      <small id="mscComboSelectionStatus">
+        No combo selected
+      </small>
+
+    </div>
+
+
+    <div class="msc-combo-choice-grid">
+
+      <!-- VIP KING -->
+      <button type="button"
+              class="msc-combo-choice"
+              id="mscKingChoice"
+              onclick="mscSelectCombo('VIP King Combo')">
+
+        <span class="msc-combo-choice-icon">
+          ♛
+        </span>
+
+        <span>
+          <b>VIP King Combo</b>
+          <small>25 products included</small>
+        </span>
+
+        <span class="msc-combo-choice-check">
+          Select
+        </span>
+
+      </button>
+
+
+      <!-- VIP QUEEN -->
+      <button type="button"
+              class="msc-combo-choice"
+              id="mscQueenChoice"
+              onclick="mscSelectCombo('VIP Queen Combo')">
+
+        <span class="msc-combo-choice-icon">
+          ♕
+        </span>
+
+        <span>
+          <b>VIP Queen Combo</b>
+          <small>35 products included</small>
+        </span>
+
+        <span class="msc-combo-choice-check">
+          Select
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <div class="msc-notice-inline">
+
+      <span class="msc-notice-icon">✓</span>
+
+      <span>
+        Select either one combo or both combos before sending your enquiry.
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- SELECTED COMBOS -->
+  <div class="msc-cart-items"
+       id="mscCartItems">
+  </div>
+
+
+  <!-- EMPTY MESSAGE -->
+  <div class="msc-cart-empty"
+       id="mscCartEmpty">
+
+    Please select
+    <strong>VIP King Combo</strong>,
+    <strong>VIP Queen Combo</strong>,
+    or both.
+
+  </div>
+
+
+  <!-- FOOTER -->
   <div class="msc-cart-foot">
-    <div class="msc-cart-summary"><span>Selected items</span><strong id="mscCartTotalQty">0</strong></div>
-    <button type="button" class="msc-whatsapp" onclick="mscSendWhatsApp()">💬 Send Enquiry on WhatsApp</button>
-    <button type="button" class="msc-clear" onclick="mscClearCart()">Clear Selection</button>
+
+    <div class="msc-cart-summary">
+
+      <span>Selected Combos</span>
+
+      <strong id="mscCartTotalQty">
+        0
+      </strong>
+
+    </div>
+
+
+    <button type="button"
+            class="msc-whatsapp"
+            onclick="mscSendWhatsApp()">
+
+      💬 Send Enquiry on WhatsApp
+
+    </button>
+
+
+    <button type="button"
+            class="msc-clear"
+            onclick="mscClearCart()">
+
+      Clear Selection
+
+    </button>
+
   </div>
+
 </aside>
 
 <!-- =========================
