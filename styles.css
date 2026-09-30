@@ -1473,3 +1473,286 @@ footer{
         font-size: 28px !important;
     }
 }
+/* =========================================================
+   ENQUIRY SECTION - PREMIUM CATALOGUE STYLE
+   ========================================================= */
+
+#enquiry {
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(230, 0, 100, 0.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 75% 70%, rgba(245, 180, 40, 0.10) 0 2px, transparent 3px),
+    linear-gradient(135deg, #fffaf5 0%, #fff7f0 45%, #fffdf8 100%);
+  background-size: 34px 34px, 42px 42px, 100% 100%;
+  padding: 70px 20px 90px;
+  overflow: hidden;
+}
+
+/* Soft decorative glow */
+#enquiry::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(226, 0, 116, 0.09),
+    transparent 70%
+  );
+  top: -180px;
+  left: -120px;
+  pointer-events: none;
+}
+
+#enquiry::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 196, 65, 0.12),
+    transparent 70%
+  );
+  bottom: -180px;
+  right: -100px;
+  pointer-events: none;
+}
+
+/* Enquiry heading */
+#enquiry h2 {
+  position: relative;
+  z-index: 1;
+  color: #142b62 !important;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 5vw, 64px);
+  margin-bottom: 12px;
+}
+
+#enquiry > p {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto 35px;
+  text-align: center;
+  color: #5d6475 !important;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Form card */
+#enquiry form,
+.enquiry-form {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 38px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(210, 0, 100, 0.14);
+  box-shadow:
+    0 20px 60px rgba(35, 24, 55, 0.10),
+    0 4px 15px rgba(210, 0, 100, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+/* Labels */
+#enquiry label {
+  color: #172c61;
+  font-weight: 700;
+}
+
+/* Inputs */
+#enquiry input,
+#enquiry textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #eadbe3;
+  border-radius: 12px;
+  background: #fff;
+  color: #182653;
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease;
+}
+
+#enquiry input:focus,
+#enquiry textarea:focus {
+  outline: none;
+  border-color: #d90070;
+  box-shadow: 0 0 0 4px rgba(217, 0, 112, 0.08);
+}
+
+/* =========================================================
+   COMBO DROPDOWN
+   ========================================================= */
+
+.combo-select-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.combo-select-button {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 48px 14px 16px;
+  border: 1px solid #eadbe3;
+  border-radius: 12px;
+  background: #fff;
+  color: #182653;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.combo-select-button:hover,
+.combo-select-button.active {
+  border-color: #d90070;
+  box-shadow: 0 0 0 4px rgba(217, 0, 112, 0.07);
+}
+
+.combo-select-button::after {
+  content: "⌄";
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-55%);
+  font-size: 22px;
+  color: #d90070;
+  font-weight: 700;
+}
+
+.combo-select-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: calc(100% + 7px);
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #eadbe3;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(30, 20, 50, 0.16);
+}
+
+.combo-select-dropdown.open {
+  display: block;
+}
+
+.combo-option {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #172c61 !important;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.combo-option:hover {
+  background: #fff1f7;
+}
+
+.combo-option input[type="checkbox"] {
+  width: 19px !important;
+  height: 19px;
+  margin: 0;
+  accent-color: #d90070;
+  cursor: pointer;
+}
+
+.combo-option .combo-icon {
+  font-size: 18px;
+}
+
+.combo-option small {
+  display: block;
+  margin-top: 3px;
+  color: #7c8190;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.combo-selected {
+  color: #172c61;
+}
+
+.combo-placeholder {
+  color: #8b8f9c;
+}
+
+/* Selected combo tags */
+.combo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.combo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #fff0f7;
+  border: 1px solid #f2c4da;
+  color: #c60066;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Submit button */
+#enquiry button[type="submit"] {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d90070, #b5005c);
+  color: #fff;
+  padding: 15px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(217, 0, 112, 0.22);
+  transition: all 0.2s ease;
+}
+
+#enquiry button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(217, 0, 112, 0.30);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  #enquiry {
+    padding: 50px 14px 70px;
+  }
+
+  #enquiry form,
+  .enquiry-form {
+    padding: 22px 17px;
+    border-radius: 18px;
+  }
+
+  #enquiry h2 {
+    font-size: 42px;
+  }
+
+  #enquiry > p {
+    font-size: 15px;
+  }
+}
