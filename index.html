@@ -1082,20 +1082,72 @@ footer a{color:#fff !important}
 
       <!-- PRODUCTS -->
 
-      <div class="form-group">
-        <label for="productsRequired">
-          Products / Combos Required <span>*</span>
-        </label>
+     <div class="form-group">
+  <label>
+    Products / Combos Required <span>*</span>
+  </label>
 
+  <div class="combo-select-wrapper">
+
+    <button
+      type="button"
+      class="combo-select-button"
+      id="comboSelectButton"
+    >
+      <span id="comboSelectText" class="combo-placeholder">
+        Select VIP Combo
+      </span>
+    </button>
+
+    <div
+      class="combo-select-dropdown"
+      id="comboSelectDropdown"
+    >
+
+      <label class="combo-option">
         <input
-          type="text"
-          id="productsRequired"
-          name="productsRequired"
-          placeholder="e.g. Family Diwali Combo, Grand Celebration Combo"
-          required
+          type="checkbox"
+          name="combo_selection"
+          value="VIP King Combo"
         >
-      </div>
 
+        <span>
+          <span class="combo-icon">👑</span>
+          VIP King Combo
+          <small>25 products</small>
+        </span>
+      </label>
+
+      <label class="combo-option">
+        <input
+          type="checkbox"
+          name="combo_selection"
+          value="VIP Queen Combo"
+        >
+
+        <span>
+          <span class="combo-icon">♛</span>
+          VIP Queen Combo
+          <small>35 products</small>
+        </span>
+      </label>
+
+    </div>
+  </div>
+
+  <div
+    class="combo-tags"
+    id="comboTags"
+  ></div>
+
+  <!-- Hidden field used when submitting the enquiry -->
+  <input
+    type="hidden"
+    name="products_combos_required"
+    id="productsCombosRequired"
+    required
+  >
+</div>
 
       <!-- QUANTITY -->
 
@@ -2941,6 +2993,90 @@ document.addEventListener('DOMContentLoaded',()=>{
   mscRenderCart();
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const button = document.getElementById("comboSelectButton");
+  const dropdown = document.getElementById("comboSelectDropdown");
+  const text = document.getElementById("comboSelectText");
+  const hiddenInput = document.getElementById("productsCombosRequired");
+  const tagsContainer = document.getElementById("comboTags");
+
+  if (!button || !dropdown) return;
+
+  const checkboxes = dropdown.querySelectorAll(
+    'input[type="checkbox"]'
+  );
+
+  /* Open / close dropdown */
+  button.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    dropdown.classList.toggle("open");
+    button.classList.toggle(
+      "active",
+      dropdown.classList.contains("open")
+    );
+  });
+
+  /* Handle selection */
+  checkboxes.forEach(function (checkbox) {
+
+    checkbox.addEventListener("change", function () {
+
+      const selected = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+      /* Update button text */
+      if (selected.length === 0) {
+
+        text.textContent = "Select VIP Combo";
+        text.className = "combo-placeholder";
+
+      } else if (selected.length === 1) {
+
+        text.textContent = selected[0];
+        text.className = "combo-selected";
+
+      } else {
+
+        text.textContent = "VIP King + VIP Queen";
+        text.className = "combo-selected";
+      }
+
+      /* Update hidden form field */
+      hiddenInput.value = selected.join(", ");
+
+      /* Update tags */
+      tagsContainer.innerHTML = "";
+
+      selected.forEach(function (item) {
+
+        const tag = document.createElement("span");
+
+        tag.className = "combo-tag";
+        tag.textContent = "✓ " + item;
+
+        tagsContainer.appendChild(tag);
+      });
+    });
+
+  });
+
+  /* Close when clicking outside */
+  document.addEventListener("click", function (event) {
+
+    if (!event.target.closest(".combo-select-wrapper")) {
+
+      dropdown.classList.remove("open");
+      button.classList.remove("active");
+
+    }
+
+  });
+
+});
+</script>
 </body>
 </html>
