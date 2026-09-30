@@ -1529,31 +1529,53 @@ document.documentElement.style.setProperty(
     "--firework-y",
     randomFirework.y
 );
+
 /* =========================
    ENQUIRY FORM → WHATSAPP
 ========================= */
 
-document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+document.addEventListener("DOMContentLoaded", function () {
+
+  const enquiryForm = document.getElementById("enquiryForm");
+
+  if (!enquiryForm) {
+    console.error("Enquiry form not found.");
+    return;
+  }
+
+  enquiryForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
     const fullName =
-        document.getElementById("fullName").value.trim();
+      document.getElementById("fullName")?.value.trim() || "";
 
     const phoneNumber =
-        document.getElementById("phoneNumber").value.trim();
+      document.getElementById("phoneNumber")?.value.trim() || "";
 
     const whatsappNumber =
-        document.getElementById("whatsappNumber").value.trim();
+      document.getElementById("whatsappNumber")?.value.trim() || "";
 
-    const productsRequired =
-        document.getElementById("productsRequired").value.trim();
+    /*
+      IMPORTANT:
+      Your new combo dropdown uses this ID.
+    */
+    const productsCombosRequired =
+      document.getElementById("productsCombosRequired")?.value.trim() || "";
 
     const quantity =
-        document.getElementById("quantity").value.trim();
+      document.getElementById("quantity")?.value.trim() || "";
 
     const additionalRequirements =
-        document.getElementById("additionalRequirements").value.trim();
+      document.getElementById("additionalRequirements")?.value.trim() || "";
+
+    /* Check combo selection */
+    if (!productsCombosRequired) {
+      alert("Please select VIP King Combo, VIP Queen Combo, or both.");
+      return;
+    }
+
+    /* Build WhatsApp message */
 
     const message =
 `Hello Sri Meenakshi Crackers,
@@ -1567,7 +1589,7 @@ Phone Number: ${phoneNumber}
 WhatsApp Number: ${whatsappNumber || "Same as phone number"}
 
 Products / Combos Required:
-${productsRequired}
+${productsCombosRequired}
 
 Approximate Quantity:
 ${quantity || "Not specified"}
@@ -1579,14 +1601,17 @@ Please share the available options and pricing.
 
 Thank you.`;
 
-    const whatsappURL =
-        "https://wa.me/918610546638?text=" +
-        encodeURIComponent(message);
+    /* Sri Meenakshi WhatsApp number */
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+    const whatsappURL =
+      "https://wa.me/918610546638?text=" +
+      encodeURIComponent(message);
+
+    /* Open WhatsApp */
+
+    window.open(whatsappURL, "_blank");
+
+  });
 
 });
 
