@@ -3629,5 +3629,37 @@ document.addEventListener(
   }
 );
 </script>
+  <script>
+/* ==========================================
+   VIP KING / VIP QUEEN COMBO SELECTION
+   Reliable click handler
+========================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const kingButton = document.getElementById("mscKingChoice");
+  const queenButton = document.getElementById("mscQueenChoice");
+
+  if (kingButton) {
+    kingButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      mscSelectCombo("VIP King Combo");
+    });
+  }
+
+  if (queenButton) {
+    queenButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      mscSelectCombo("VIP Queen Combo");
+    });
+
+  }
+
+});
+</script>
 </body>
 </html>
