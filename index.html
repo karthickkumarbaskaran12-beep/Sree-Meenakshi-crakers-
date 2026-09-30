@@ -140,7 +140,7 @@
 .msc-toolbar{display:flex;gap:16px;align-items:center;margin:0 0 18px}
 .msc-search-wrap{flex:1;display:flex;align-items:center;gap:10px;border:1px solid rgba(232,191,85,.28);border-radius:14px;background:#12111b;padding:0 15px;min-height:50px}
 .msc-search-wrap span{font-size:24px;color:#ffd96b}.msc-search-wrap input{width:100%;border:0;outline:0;background:transparent;color:#fff;font:inherit;font-size:16px}.msc-search-wrap input::placeholder{color:rgba(255,255,255,.45)}
-.msc-result-count{color:rgba(255,255,255,.62);white-space:nowrap}.msc-result-count span{color:#ffd96b;font-weight:700}.msc-filters{display:flex;gap:8px;flex-wrap:wrap}.msc-filter{border:1px solid rgba(232,191,85,.28);background:#12111b;color:rgba(255,255,255,.72);border-radius:999px;padding:9px 13px;font-weight:700;cursor:pointer}.msc-filter.active,.msc-filter:hover{background:#ffd96b;color:#0c0b12;border-color:#ffd96b}.msc-combo-tag{display:inline-block;margin:0 0 7px;padding:4px 8px;border:1px solid rgba(232,191,85,.25);border-radius:999px;color:#ffd96b;font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.msc-result-count{color:rgba(255,255,255,.62);white-space:nowrap}.msc-result-count span{color:#ffd96b;font-weight:700}
 .msc-notice{padding:14px 17px;border:1px solid rgba(232,191,85,.25);border-radius:13px;background:rgba(232,191,85,.06);color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.6}.msc-notice strong{color:#ffd96b}
 .msc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .msc-product-card{background:#13121d;border:1px solid rgba(232,191,85,.22);border-radius:18px;overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.msc-product-card:hover{transform:translateY(-4px);border-color:rgba(232,191,85,.5);box-shadow:0 18px 45px rgba(0,0,0,.28)}
@@ -151,7 +151,50 @@
 .msc-cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(4px);z-index:120000;opacity:0;pointer-events:none;transition:opacity .2s}.msc-cart{position:fixed;top:0;right:-460px;width:min(460px,94vw);height:100vh;background:#11101b;border-left:1px solid rgba(232,191,85,.45);z-index:120001;display:flex;flex-direction:column;transition:right .25s ease;box-shadow:-25px 0 80px rgba(0,0,0,.5)}.msc-cart.open{right:0}.msc-cart-overlay.open{opacity:1;pointer-events:auto}.msc-cart-head{display:flex;justify-content:space-between;align-items:flex-start;padding:24px;border-bottom:1px solid rgba(232,191,85,.18)}.msc-cart-head h2{margin:0;color:#ffd96b;font-family:"Cormorant Garamond",serif;font-size:30px}.msc-cart-head .eyebrow{margin:0 0 5px}.msc-cart-head>button{border:1px solid rgba(232,191,85,.35);background:#090812;color:#ffd96b;border-radius:50%;width:38px;height:38px;font-size:25px;cursor:pointer}
 .msc-cart-items{flex:1;overflow:auto;padding:16px 20px}.msc-cart-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}.msc-cart-row h3{margin:0 0 5px;color:#fff;font-size:16px}.msc-cart-row p{margin:0;color:rgba(255,255,255,.5);font-size:12px}.msc-cart-row-right{display:flex;align-items:center;gap:8px}.msc-cart-row-right button{border:1px solid rgba(232,191,85,.25);background:#171521;color:#ffd96b;border-radius:7px;width:28px;height:28px;cursor:pointer}.msc-cart-row-right strong{min-width:22px;text-align:center;color:#fff}.msc-cart-remove{border:0!important;background:transparent!important;color:#aaa!important;font-size:16px}.msc-cart-empty{text-align:center;color:rgba(255,255,255,.55);padding:45px 20px;line-height:1.8}.msc-cart-foot{padding:18px 20px;border-top:1px solid rgba(232,191,85,.18);background:#0d0c14}.msc-cart-summary{display:flex;justify-content:space-between;color:rgba(255,255,255,.6);margin-bottom:12px}.msc-cart-summary strong{color:#ffd96b}.msc-whatsapp{width:100%;height:48px;border:0;border-radius:12px;background:#ffd96b;color:#0b0a11;font-weight:800;cursor:pointer}.msc-clear{width:100%;margin-top:8px;border:0;background:transparent;color:rgba(255,255,255,.5);cursor:pointer;padding:8px}
 @media(max-width:900px){.msc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.msc-head{align-items:flex-start;flex-direction:column}.msc-cart-button{align-self:stretch}}
-@media(max-width:620px){.msc-filters{width:100%}.msc-filter{flex:1}.msc-section{padding:58px 0}.msc-grid{grid-template-columns:1fr}.msc-toolbar{align-items:stretch;flex-direction:column}.msc-product-image{height:220px}.msc-card-actions{flex-direction:row}.msc-add{min-width:0}.msc-head h2{font-size:2.5rem}}
+@media(max-width:620px){.msc-section{padding:58px 0}.msc-grid{grid-template-columns:1fr}.msc-toolbar{align-items:stretch;flex-direction:column}.msc-product-image{height:220px}.msc-card-actions{flex-direction:row}.msc-add{min-width:0}.msc-head h2{font-size:2.5rem}}
+</style>
+
+<style id="meenkshi-shopping-catalogue-premium">
+/* Premium shopping catalogue UI */
+.msc-section{padding:82px 0 105px;position:relative}
+.msc-catalogue-shell{position:relative}
+.msc-head-premium{align-items:end;margin-bottom:30px}
+.msc-head-premium h2{margin:0 0 9px;font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,4rem);line-height:.95;color:#ffd96b}
+.msc-head-premium h2 em{font-style:normal;color:#fff}
+.msc-lead{max-width:700px!important;font-size:15px!important}
+.msc-head-stat{min-width:145px;text-align:right;padding:13px 0 4px}
+.msc-head-stat strong{display:block;font-family:"Cormorant Garamond",serif;font-size:38px;color:#ffd96b;line-height:1}
+.msc-head-stat span{color:rgba(255,255,255,.48);font-size:12px;text-transform:uppercase;letter-spacing:1.3px}
+.msc-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.msc-tab{position:relative;display:flex;align-items:center;gap:13px;min-height:76px;padding:13px 17px;border:1px solid rgba(232,191,85,.2);border-radius:16px;background:linear-gradient(145deg,#171522,#100f18);color:#fff;text-align:left;cursor:pointer;transition:.22s ease;overflow:hidden}
+.msc-tab:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,217,107,.08),transparent 60%);opacity:0;transition:.22s}
+.msc-tab:hover,.msc-tab.active{border-color:rgba(255,217,107,.7);transform:translateY(-2px);box-shadow:0 14px 35px rgba(0,0,0,.24)}
+.msc-tab.active:before{opacity:1}
+.msc-tab-icon{position:relative;z-index:1;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:rgba(255,217,107,.09);color:#ffd96b;font-size:24px;flex:none}
+.msc-tab span:last-child{position:relative;z-index:1;display:flex;flex-direction:column;gap:3px}
+.msc-tab b{font-size:15px}.msc-tab small{color:rgba(255,255,255,.45);font-size:11px}.msc-tab.active small{color:rgba(255,217,107,.7)}
+.msc-toolbar-premium{margin:0 0 17px;gap:12px;align-items:stretch}
+.msc-search-wrap{min-height:54px;border-radius:15px;background:#12111b;box-shadow:inset 0 0 0 1px rgba(255,255,255,.015)}
+.msc-category-pills{display:flex;align-items:center;gap:7px;padding:5px;border:1px solid rgba(232,191,85,.2);border-radius:15px;background:#12111b}
+.msc-pill{border:0;border-radius:10px;padding:0 13px;background:transparent;color:rgba(255,255,255,.55);font-weight:700;cursor:pointer;white-space:nowrap}.msc-pill:hover,.msc-pill.active{background:#ffd96b;color:#0b0a11}
+.msc-notice-premium{display:flex;align-items:center;gap:13px;margin-bottom:25px;padding:14px 17px;border-radius:15px;background:linear-gradient(90deg,rgba(232,191,85,.1),rgba(232,191,85,.035));border-color:rgba(232,191,85,.24)}
+.msc-notice-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#ffd96b;color:#0b0a11;font-weight:900;flex:none}.msc-notice-premium strong{color:#ffd96b}.msc-notice-premium span{color:rgba(255,255,255,.62);font-size:13px;line-height:1.45}
+.msc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.msc-product-card{position:relative;background:linear-gradient(145deg,#171622,#11101a);border:1px solid rgba(232,191,85,.19);border-radius:20px;box-shadow:0 12px 35px rgba(0,0,0,.16)}
+.msc-product-card:hover{border-color:rgba(255,217,107,.6);box-shadow:0 22px 50px rgba(0,0,0,.3)}
+.msc-product-image{height:245px;padding:18px;background:#fff;border-bottom:1px solid rgba(232,191,85,.18)}
+.msc-product-image img{transition:transform .28s ease}.msc-product-card:hover .msc-product-image img{transform:scale(1.055)}
+.msc-product-body{padding:17px 18px 18px}.msc-product-number{display:flex;justify-content:space-between;align-items:center}
+.msc-product-number:after{content:"";width:7px;height:7px;border-radius:50%;background:#ffd96b;box-shadow:0 0 12px rgba(255,217,107,.45)}
+.msc-combo-tag{display:inline-block;margin:0 0 8px;padding:4px 8px;border:1px solid rgba(255,217,107,.22);border-radius:999px;color:#ffd96b;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.msc-product-body h3{font-size:26px;min-height:58px}.msc-pack{min-height:18px}
+.msc-card-actions{margin-top:5px}.msc-add{box-shadow:0 8px 20px rgba(255,217,107,.1)}
+.msc-empty-results{padding:60px 20px;text-align:center;color:rgba(255,255,255,.5);border:1px dashed rgba(232,191,85,.2);border-radius:18px}
+.msc-floating-cart{position:fixed;right:24px;bottom:24px;z-index:119900;display:flex;align-items:center;gap:10px;min-width:180px;padding:11px 13px;border:1px solid rgba(255,217,107,.7);border-radius:18px;background:linear-gradient(145deg,#1d1a2a,#0d0c14);color:#fff;box-shadow:0 15px 45px rgba(0,0,0,.5),0 0 0 1px rgba(255,217,107,.06);cursor:pointer;backdrop-filter:blur(12px);transition:.2s ease}
+.msc-floating-cart:hover{transform:translateY(-3px);box-shadow:0 20px 55px rgba(0,0,0,.55),0 0 25px rgba(255,217,107,.08)}
+.msc-floating-cart-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#ffd96b;font-size:20px}.msc-floating-cart-text{display:flex;flex-direction:column;align-items:flex-start;gap:2px}.msc-floating-cart-text small{font-size:8px;letter-spacing:1.4px;color:rgba(255,255,255,.42);font-weight:800}.msc-floating-cart-text strong{font-size:14px;color:#ffd96b}.msc-floating-cart>b{display:grid;place-items:center;min-width:25px;height:25px;padding:0 6px;border-radius:999px;background:#ffd96b;color:#0b0a11;font-size:12px;margin-left:auto}
+@media(max-width:900px){.msc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.msc-tabs{grid-template-columns:repeat(3,1fr)}.msc-head-stat{display:none}.msc-toolbar-premium{flex-direction:column}.msc-category-pills{justify-content:center;min-height:50px}}
+@media(max-width:620px){.msc-section{padding:62px 0 90px}.msc-tabs{grid-template-columns:1fr 1fr}.msc-tab-all{grid-column:1/-1}.msc-tab{min-height:68px}.msc-grid{grid-template-columns:1fr}.msc-product-image{height:255px}.msc-floating-cart{right:14px;bottom:14px;min-width:165px}.msc-category-pills{width:100%}.msc-pill{flex:1;padding:0 8px}.msc-notice-premium{align-items:flex-start}}
 </style>
 
 </head>
@@ -357,7 +400,7 @@
     </h2>
 
     <p>
-      Browse our premium combo deals and submit an enquiry —
+      Browse our VIP King and VIP Queen collections and build an enquiry —
       our team will get back to you within 24 hours.
     </p>
 
@@ -464,37 +507,7 @@
         </a>
 
       </article>
-
-
-      <!-- COMBO 3 -->
-
-      <article class="product">
-
-        <div class="icon">
-          ◆
-        </div>
-
-        <span class="product-tag">
-          Value Pack
-        </span>
-
-        <h3>
-          SONNY Grand Combo
-        </h3>
-
-        <p>
-          A larger assortment designed for families and
-          bigger Diwali celebrations.
-        </p>
-
-        <a href="#enquiry">
-          Enquire Now →
-        </a>
-
-      </article>
-
-
-    </div>
+</div>
 
   </div>
 
@@ -903,632 +916,57 @@
      SHOPPING CATALOGUE
 ========================= -->
 <section class="msc-section" id="shopping-catalogue">
-  <div class="msc-head">
-    <div>
-      <p class="eyebrow">SHOPPING CATALOGUE</p>
-      <h2>Build Your Crackers Enquiry</h2>
-      <p>Browse VIP King and VIP Queen products, choose quantities, and build one enquiry list. This is an enquiry catalogue — no online payment or sale is performed on the website.</p>
+  <div class="msc-catalogue-shell">
+    <div class="msc-head msc-head-premium">
+      <div>
+        <p class="eyebrow">PREMIUM SHOPPING CATALOGUE</p>
+        <h2>Choose Your <em>Combo</em></h2>
+        <p class="msc-lead">Browse the VIP King and VIP Queen collections, select quantities, and build your enquiry in seconds.</p>
+      </div>
+      <div class="msc-head-stat"><strong id="mscResultCount">25</strong><span>products shown</span></div>
     </div>
-    <button type="button" class="msc-cart-button" onclick="mscOpenCart()">
-      🛒 <span>My Enquiry</span> <b id="mscCartCount">0</b>
-    </button>
-  </div>
 
-  <div class="msc-toolbar">
-    <div class="msc-search-wrap">
-      <span>⌕</span>
-      <input id="mscSearch" type="search" placeholder="Search products..." autocomplete="off">
+    <div class="msc-tabs" role="tablist" aria-label="Combo collections">
+      <button type="button" class="msc-tab active" data-filter="VIP King Combo" role="tab" aria-selected="true">
+        <span class="msc-tab-icon">♛</span><span><b>VIP King</b><small>25 products</small></span>
+      </button>
+      <button type="button" class="msc-tab" data-filter="VIP Queen Combo" role="tab" aria-selected="false">
+        <span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small>35 products</small></span>
+      </button>
+      <button type="button" class="msc-tab msc-tab-all" data-filter="all" role="tab" aria-selected="false">
+        <span class="msc-tab-icon">✦</span><span><b>All Products</b><small>60 listings</small></span>
+      </button>
     </div>
-    <div class="msc-filters" role="group" aria-label="Catalogue filter">
-      <button type="button" class="msc-filter active" data-filter="all">All</button>
-      <button type="button" class="msc-filter" data-filter="VIP King Combo">VIP King</button>
-      <button type="button" class="msc-filter" data-filter="VIP Queen Combo">VIP Queen</button>
+
+    <div class="msc-toolbar msc-toolbar-premium">
+      <div class="msc-search-wrap">
+        <span>⌕</span>
+        <input id="mscSearch" type="search" placeholder="Search by product name..." autocomplete="off" aria-label="Search catalogue">
+      </div>
+      <div class="msc-category-pills" aria-label="Category filters">
+        <button type="button" class="msc-pill active" data-category="all">All</button>
+        <button type="button" class="msc-pill" data-category="featured">Featured</button>
+        <button type="button" class="msc-pill" data-category="with-photo">With Photo</button>
+      </div>
     </div>
-    <div class="msc-result-count"><span id="mscResultCount">35</span> items</div>
-  </div>
 
-  <div class="msc-notice">
-    <strong>Enquiry Only</strong> — Add products to your enquiry list and send the complete requirement to us on WhatsApp. Final availability and pricing will be confirmed by our team.
-  </div>
+    <div class="msc-notice msc-notice-premium">
+      <span class="msc-notice-icon">✓</span>
+      <div><strong>Enquiry Only</strong><br><span>Add your required products to <b>My Enquiry</b>. Our team will confirm availability and pricing on WhatsApp.</span></div>
+    </div>
 
-  <div class="msc-grid" id="mscProductGrid">
-<article class="msc-product-card" data-name="max 100 gun" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/01.jpeg" alt="Max 100 Gun" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">01</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Max 100 Gun</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(1,-1)">−</button>
-            <span id="mscQty1">1</span>
-            <button type="button" onclick="mscChangeQty(1,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(1)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="pixels" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/14.jpeg" alt="Pixels" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">02</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Pixels</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(2,-1)">−</button>
-            <span id="mscQty2">1</span>
-            <button type="button" onclick="mscChangeQty(2,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(2)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="pink octopus (2 pcs)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/15.jpeg" alt="Pink Octopus (2 pcs)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">03</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Pink Octopus (2 pcs)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(3,-1)">−</button>
-            <span id="mscQty3">1</span>
-            <button type="button" onclick="mscChangeQty(3,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(3)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="thanos (1 pc)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/17.jpeg" alt="Thanos (1 pc)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">04</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Thanos (1 pc)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(4,-1)">−</button>
-            <span id="mscQty4">1</span>
-            <button type="button" onclick="mscChangeQty(4,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(4)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="purple palm (1 pc)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/16.jpeg" alt="Purple Palm (1 pc)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">05</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Purple Palm (1 pc)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(5,-1)">−</button>
-            <span id="mscQty5">1</span>
-            <button type="button" onclick="mscChangeQty(5,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(5)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="king crown (new)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/13.jpeg" alt="King Crown (New)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">06</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>King Crown (New)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(6,-1)">−</button>
-            <span id="mscQty6">1</span>
-            <button type="button" onclick="mscChangeQty(6,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(6)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="troy 25" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/12.jpeg" alt="Troy 25" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">07</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Troy 25</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(7,-1)">−</button>
-            <span id="mscQty7">1</span>
-            <button type="button" onclick="mscChangeQty(7,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(7)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="1/2 sky digital" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/11.jpeg" alt="1/2 Sky Digital" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">08</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>1/2 Sky Digital</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(8,-1)">−</button>
-            <span id="mscQty8">1</span>
-            <button type="button" onclick="mscChangeQty(8,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(8)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="electric sparkle (3 cm)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">09</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Electric Sparkle (3 cm)</h3>
-        <p class="msc-pack">Combo quantity: <strong>2 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(9,-1)">−</button>
-            <span id="mscQty9">1</span>
-            <button type="button" onclick="mscChangeQty(9,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(9)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="11&quot; (13 cm)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">10</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>11&quot; (13 cm)</h3>
-        <p class="msc-pack">Combo quantity: <strong>5 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(10,-1)">−</button>
-            <span id="mscQty10">1</span>
-            <button type="button" onclick="mscChangeQty(10,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(10)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="cluster (1 pcs)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/09.jpeg" alt="Cluster (1 pcs)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">11</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Cluster (1 pcs)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(11,-1)">−</button>
-            <span id="mscQty11">1</span>
-            <button type="button" onclick="mscChangeQty(11,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(11)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="blue ice (1 pcs)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">12</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Blue Ice (1 pcs)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(12,-1)">−</button>
-            <span id="mscQty12">1</span>
-            <button type="button" onclick="mscChangeQty(12,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(12)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="x-mas tree (1 pcs)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/18.jpeg" alt="X-Mas Tree (1 pcs)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">13</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>X-Mas Tree (1 pcs)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(13,-1)">−</button>
-            <span id="mscQty13">1</span>
-            <button type="button" onclick="mscChangeQty(13,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(13)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="h fire joker" data-combo="VIP King Combo">
-      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">14</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>H Fire Joker</h3>
-        <p class="msc-pack">Combo quantity: <strong>5 Pkt</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(14,-1)">−</button>
-            <span id="mscQty14">1</span>
-            <button type="button" onclick="mscChangeQty(14,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(14)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="2 3/4&quot; h fire joker" data-combo="VIP King Combo">
-      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">15</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>2 3/4&quot; H Fire Joker</h3>
-        <p class="msc-pack">Combo quantity: <strong>5 Pkt</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(15,-1)">−</button>
-            <span id="mscQty15">1</span>
-            <button type="button" onclick="mscChangeQty(15,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(15)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="rainbow smoke (1 pcs)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/19.jpeg" alt="Rainbow Smoke (1 pcs)" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">16</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Rainbow Smoke (1 pcs)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(16,-1)">−</button>
-            <span id="mscQty16">1</span>
-            <button type="button" onclick="mscChangeQty(16,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(16)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="1/2 twinkling star" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/21.jpeg" alt="1/2 Twinkling Star" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">17</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>1/2 Twinkling Star</h3>
-        <p class="msc-pack">Combo quantity: <strong>5 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(17,-1)">−</button>
-            <span id="mscQty17">1</span>
-            <button type="button" onclick="mscChangeQty(17,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(17)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="silver (2 pcs)" data-combo="VIP King Combo">
-      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">18</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Silver (2 pcs)</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(18,-1)">−</button>
-            <span id="mscQty18">1</span>
-            <button type="button" onclick="mscChangeQty(18,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(18)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="violet colour kathi deluxe" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/07.jpeg" alt="Violet Colour Kathi Deluxe" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">19</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Violet Colour Kathi Deluxe</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(19,-1)">−</button>
-            <span id="mscQty19">1</span>
-            <button type="button" onclick="mscChangeQty(19,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(19)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="flower pot big" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/06.jpeg" alt="Flower Pot Big" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">20</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Flower Pot Big</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(20,-1)">−</button>
-            <span id="mscQty20">1</span>
-            <button type="button" onclick="mscChangeQty(20,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(20)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="ground chakkar special" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/03.jpeg" alt="Ground Chakkar Special" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">21</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Ground Chakkar Special</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(21,-1)">−</button>
-            <span id="mscQty21">1</span>
-            <button type="button" onclick="mscChangeQty(21,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(21)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="ground chakkar big" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/02.jpeg" alt="Ground Chakkar Big" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">22</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Ground Chakkar Big</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(22,-1)">−</button>
-            <span id="mscQty22">1</span>
-            <button type="button" onclick="mscChangeQty(22,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(22)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="red bijili" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/22.jpeg" alt="Red Bijili" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">23</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Red Bijili</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Pkt</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(23,-1)">−</button>
-            <span id="mscQty23">1</span>
-            <button type="button" onclick="mscChangeQty(23,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(23)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="whistling paper" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/20.jpeg" alt="Whistling Paper" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">24</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Whistling Paper</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(24,-1)">−</button>
-            <span id="mscQty24">1</span>
-            <button type="button" onclick="mscChangeQty(24,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(24)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="emerald fall" data-combo="VIP King Combo">
-      <div class="msc-product-image"><img src="vip-king/23.jpeg" alt="Emerald Fall" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">25</div>
-        <span class="msc-combo-tag">VIP King Combo</span>
-        <h3>Emerald Fall</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(25,-1)">−</button>
-            <span id="mscQty25">1</span>
-            <button type="button" onclick="mscChangeQty(25,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(25)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="ant man" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/01.jpeg" alt="Ant Man" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">26</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Ant Man</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(26,-1)">−</button>
-            <span id="mscQty26">1</span>
-            <button type="button" onclick="mscChangeQty(26,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(26)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="sizzling star" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/02.jpeg" alt="Sizzling Star" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">27</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Sizzling Star</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(27,-1)">−</button>
-            <span id="mscQty27">1</span>
-            <button type="button" onclick="mscChangeQty(27,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(27)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="drizzling raker" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/03.jpeg" alt="Drizzling Raker" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">28</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Drizzling Raker</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(28,-1)">−</button>
-            <span id="mscQty28">1</span>
-            <button type="button" onclick="mscChangeQty(28,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(28)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="hulk warrior" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/04.jpeg" alt="Hulk Warrior" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">29</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Hulk Warrior</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(29,-1)">−</button>
-            <span id="mscQty29">1</span>
-            <button type="button" onclick="mscChangeQty(29,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(29)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="rock and roll" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/05.jpeg" alt="Rock and Roll" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">30</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Rock and Roll</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(30,-1)">−</button>
-            <span id="mscQty30">1</span>
-            <button type="button" onclick="mscChangeQty(30,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(30)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="sweet sixteen" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/06.jpeg" alt="Sweet Sixteen" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">31</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Sweet Sixteen</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(31,-1)">−</button>
-            <span id="mscQty31">1</span>
-            <button type="button" onclick="mscChangeQty(31,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(31)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="princess and the frog" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/07.jpeg" alt="Princess and the Frog" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">32</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Princess and the Frog</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(32,-1)">−</button>
-            <span id="mscQty32">1</span>
-            <button type="button" onclick="mscChangeQty(32,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(32)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="777 crackers" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/08.jpeg" alt="777 Crackers" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">33</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>777 Crackers</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(33,-1)">−</button>
-            <span id="mscQty33">1</span>
-            <button type="button" onclick="mscChangeQty(33,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(33)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="velvet touches" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/09.jpeg" alt="Velvet Touches" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">34</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Velvet Touches</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(34,-1)">−</button>
-            <span id="mscQty34">1</span>
-            <button type="button" onclick="mscChangeQty(34,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(34)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
-<article class="msc-product-card" data-name="dancing queen" data-combo="VIP Queen Combo">
-      <div class="msc-product-image"><img src="vip-queen/10.jpeg" alt="Dancing Queen" loading="lazy" decoding="async"></div>
-      <div class="msc-product-body">
-        <div class="msc-product-number">35</div>
-        <span class="msc-combo-tag">VIP Queen Combo</span>
-        <h3>Dancing Queen</h3>
-        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" onclick="mscChangeQty(35,-1)">−</button>
-            <span id="mscQty35">1</span>
-            <button type="button" onclick="mscChangeQty(35,1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(35)">Add to Enquiry</button>
-        </div>
-      </div>
-    </article>
+    <div class="msc-grid" id="mscProductGrid"></div>
+    <div class="msc-empty-results" id="mscEmptyResults" hidden>No products match your search/filter.</div>
   </div>
 </section>
+
+<!-- FLOATING ENQUIRY CART -->
+<button type="button" class="msc-floating-cart" onclick="mscOpenCart()" aria-label="Open My Enquiry">
+  <span class="msc-floating-cart-icon">🛒</span>
+  <span class="msc-floating-cart-text"><small>YOUR LIST</small><strong>My Enquiry</strong></span>
+  <b id="mscFloatingCartCount">0</b>
+</button>
+
 
 <!-- CART DRAWER -->
 <div class="msc-cart-overlay" id="mscCartOverlay" onclick="mscCloseCart()"></div>
@@ -3147,10 +2585,55 @@ body.combo-modal-open {
 
 
 <script id="meenkshi-shopping-catalogue-js">
-const mscProducts = [{"id": 1, "name": "Max 100 Gun", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/01.jpeg"}, {"id": 2, "name": "Pixels", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/14.jpeg"}, {"id": 3, "name": "Pink Octopus (2 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/15.jpeg"}, {"id": 4, "name": "Thanos (1 pc)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/17.jpeg"}, {"id": 5, "name": "Purple Palm (1 pc)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/16.jpeg"}, {"id": 6, "name": "King Crown (New)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/13.jpeg"}, {"id": 7, "name": "Troy 25", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/12.jpeg"}, {"id": 8, "name": "1/2 Sky Digital", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/11.jpeg"}, {"id": 9, "name": "Electric Sparkle (3 cm)", "pack": "2 Box", "combo": "VIP King Combo", "image": ""}, {"id": 10, "name": "11\" (13 cm)", "pack": "5 Box", "combo": "VIP King Combo", "image": ""}, {"id": 11, "name": "Cluster (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/09.jpeg"}, {"id": 12, "name": "Blue Ice (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": ""}, {"id": 13, "name": "X-Mas Tree (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/18.jpeg"}, {"id": 14, "name": "H Fire Joker", "pack": "5 Pkt", "combo": "VIP King Combo", "image": ""}, {"id": 15, "name": "2 3/4\" H Fire Joker", "pack": "5 Pkt", "combo": "VIP King Combo", "image": ""}, {"id": 16, "name": "Rainbow Smoke (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/19.jpeg"}, {"id": 17, "name": "1/2 Twinkling Star", "pack": "5 Box", "combo": "VIP King Combo", "image": "vip-king/21.jpeg"}, {"id": 18, "name": "Silver (2 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": ""}, {"id": 19, "name": "Violet Colour Kathi Deluxe", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/07.jpeg"}, {"id": 20, "name": "Flower Pot Big", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/06.jpeg"}, {"id": 21, "name": "Ground Chakkar Special", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/03.jpeg"}, {"id": 22, "name": "Ground Chakkar Big", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/02.jpeg"}, {"id": 23, "name": "Red Bijili", "pack": "1 Pkt", "combo": "VIP King Combo", "image": "vip-king/22.jpeg"}, {"id": 24, "name": "Whistling Paper", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/20.jpeg"}, {"id": 25, "name": "Emerald Fall", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/23.jpeg"}, {"id": 26, "name": "Ant Man", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/01.jpeg"}, {"id": 27, "name": "Sizzling Star", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/02.jpeg"}, {"id": 28, "name": "Drizzling Raker", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/03.jpeg"}, {"id": 29, "name": "Hulk Warrior", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/04.jpeg"}, {"id": 30, "name": "Rock and Roll", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/05.jpeg"}, {"id": 31, "name": "Sweet Sixteen", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/06.jpeg"}, {"id": 32, "name": "Princess and the Frog", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/07.jpeg"}, {"id": 33, "name": "777 Crackers", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/08.jpeg"}, {"id": 34, "name": "Velvet Touches", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/09.jpeg"}, {"id": 35, "name": "Dancing Queen", "pack": "1 Box", "combo": "VIP Queen Combo", "image": "vip-queen/10.jpeg"}];
+const mscProducts = [{"id": 1, "name": "Max 100 Gun", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/01.jpeg"}, {"id": 2, "name": "Pixels", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/14.jpeg"}, {"id": 3, "name": "Pink Octopus (2 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/15.jpeg"}, {"id": 4, "name": "Thanos (1 pc)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/17.jpeg"}, {"id": 5, "name": "Purple Palm (1 pc)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/16.jpeg"}, {"id": 6, "name": "King Crown (New)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/13.jpeg"}, {"id": 7, "name": "Troy 25", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/12.jpeg"}, {"id": 8, "name": "1/2 Sky Digital", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/11.jpeg"}, {"id": 9, "name": "Electric Sparkle (3 cm)", "pack": "2 Box", "combo": "VIP King Combo", "image": ""}, {"id": 10, "name": "11\" (13 cm)", "pack": "5 Box", "combo": "VIP King Combo", "image": ""}, {"id": 11, "name": "Cluster (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/09.jpeg"}, {"id": 12, "name": "Blue Ice (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": ""}, {"id": 13, "name": "X-Mas Tree (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/18.jpeg"}, {"id": 14, "name": "H Fire Joker", "pack": "5 Pkt", "combo": "VIP King Combo", "image": ""}, {"id": 15, "name": "2 3/4\" H Fire Joker", "pack": "5 Pkt", "combo": "VIP King Combo", "image": ""}, {"id": 16, "name": "Rainbow Smoke (1 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/19.jpeg"}, {"id": 17, "name": "1/2 Twinkling Star", "pack": "5 Box", "combo": "VIP King Combo", "image": "vip-king/21.jpeg"}, {"id": 18, "name": "Silver (2 pcs)", "pack": "1 Box", "combo": "VIP King Combo", "image": ""}, {"id": 19, "name": "Violet Colour Kathi Deluxe", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/07.jpeg"}, {"id": 20, "name": "Flower Pot Big", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/06.jpeg"}, {"id": 21, "name": "Ground Chakkar Special", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/03.jpeg"}, {"id": 22, "name": "Ground Chakkar Big", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/02.jpeg"}, {"id": 23, "name": "Red Bijili", "pack": "1 Pkt", "combo": "VIP King Combo", "image": "vip-king/22.jpeg"}, {"id": 24, "name": "Whistling Paper", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/20.jpeg"}, {"id": 25, "name": "Emerald Fall", "pack": "1 Box", "combo": "VIP King Combo", "image": "vip-king/23.jpeg"}, {"id": 101, "name": "Ant Man", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/01.jpeg", "displayId": 1}, {"id": 102, "name": "Sizzling Star", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/02.jpeg", "displayId": 2}, {"id": 103, "name": "Drizzling Raker", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/03.jpeg", "displayId": 3}, {"id": 104, "name": "Hulk Warrior", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/04.jpeg", "displayId": 4}, {"id": 105, "name": "Rock and Roll", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/05.jpeg", "displayId": 5}, {"id": 106, "name": "Sweet Sixteen", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/06.jpeg", "displayId": 6}, {"id": 107, "name": "Princess and the Frog", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/07.jpeg", "displayId": 7}, {"id": 108, "name": "777 Crackers", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/08.jpeg", "displayId": 8}, {"id": 109, "name": "Velvet Touches", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/09.jpeg", "displayId": 9}, {"id": 110, "name": "Dancing Queen", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-queen/10.jpeg", "displayId": 10}, {"id": 111, "name": "Max 100 Gun", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/01.jpeg", "displayId": 11}, {"id": 112, "name": "Chakkar Big (10 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/02.jpeg", "displayId": 12}, {"id": 113, "name": "Chakkar Special (10 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/03.jpeg", "displayId": 13}, {"id": 114, "name": "Electric Sparkle (30 cm)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/04.jpeg", "displayId": 14}, {"id": 115, "name": "Electric Sparkle (15 cm)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/05.jpeg", "displayId": 15}, {"id": 116, "name": "Flower Pot Big (10 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/06.jpeg", "displayId": 16}, {"id": 117, "name": "Violet Color Koti (10 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/07.jpeg", "displayId": 17}, {"id": 118, "name": "Cosmic Kids", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/08.jpeg", "displayId": 18}, {"id": 119, "name": "Cluster (1*5)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/09.jpeg", "displayId": 19}, {"id": 120, "name": "Siren (2 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/10.jpeg", "displayId": 20}, {"id": 121, "name": "12 Sky Digital", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/11.jpeg", "displayId": 21}, {"id": 122, "name": "Troy 25 Shots", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/12.jpeg", "displayId": 22}, {"id": 123, "name": "King Crown 50 Shots", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/13.jpeg", "displayId": 23}, {"id": 124, "name": "Pixels New", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/14.jpeg", "displayId": 24}, {"id": 125, "name": "Pink Octopus (2 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/15.jpeg", "displayId": 25}, {"id": 126, "name": "Purple Palm Sky Shot (1 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/16.jpeg", "displayId": 26}, {"id": 127, "name": "Thanos Sky Shot (1 pc)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/17.jpeg", "displayId": 27}, {"id": 128, "name": "X-Mas Tree (5 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/18.jpeg", "displayId": 28}, {"id": 129, "name": "Rainbow Smoke (2 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/19.jpeg", "displayId": 29}, {"id": 130, "name": "Whistling Piper (2 pcs)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/20.jpeg", "displayId": 30}, {"id": 131, "name": "1 1/2 Twinkle Star (5 box)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/21.jpeg", "displayId": 31}, {"id": 132, "name": "Red Bijili (1 pkt)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/22.jpeg", "displayId": 32}, {"id": 133, "name": "Emerald Foil (1 box)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/23.jpeg", "displayId": 33}, {"id": 134, "name": "2 3/4 Bird Joker (5 pkts)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/24.jpeg", "displayId": 34}, {"id": 135, "name": "4 Bird Joker (5 pkts)", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/25.jpeg", "displayId": 35}];
 const mscCart = {};
+let mscActiveCombo = 'VIP King Combo';
+let mscActiveCategory = 'all';
 
-function mscChangeQty(id, delta){
+function mscEsc(v){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function mscGetVisibleProducts(){
+  const q=(document.getElementById('mscSearch')?.value||'').trim().toLowerCase();
+  return mscProducts.filter(p=>{
+    const comboOk=mscActiveCombo==='all'||p.combo===mscActiveCombo;
+    const searchOk=!q||p.name.toLowerCase().includes(q);
+    const categoryOk=mscActiveCategory==='all'||
+      (mscActiveCategory==='with-photo'&&!!p.image)||
+      (mscActiveCategory==='featured'&&(p.displayId? p.displayId<=10 : p.id<=8));
+    return comboOk&&searchOk&&categoryOk;
+  });
+}
+function mscRenderProducts(){
+  const grid=document.getElementById('mscProductGrid');
+  const empty=document.getElementById('mscEmptyResults');
+  const count=document.getElementById('mscResultCount');
+  if(!grid)return;
+  const items=mscGetVisibleProducts();
+  count.textContent=items.length;
+  empty.hidden=items.length>0;
+  grid.innerHTML=items.map(p=>{
+    const displayNo=p.displayId||p.id;
+    const img=p.image?`<img src="${mscEsc(p.image)}" alt="${mscEsc(p.name)}" loading="lazy" decoding="async">`:`<div class="msc-no-image">✦</div>`;
+    const qty=mscCart[p.id]?.qty||1;
+    return `<article class="msc-product-card" data-name="${mscEsc(p.name.toLowerCase())}">
+      <div class="msc-product-image">${img}</div>
+      <div class="msc-product-body">
+        <div class="msc-product-number"><span>${String(displayNo).padStart(2,'0')}</span></div>
+        <span class="msc-combo-tag">${mscEsc(p.combo)}</span>
+        <h3>${mscEsc(p.name)}</h3>
+        <p class="msc-pack">${mscEsc(p.pack)}</p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" aria-label="Decrease quantity" onclick="mscChangeQty(${p.id},-1)">−</button>
+            <span id="mscQty${p.id}">${qty}</span>
+            <button type="button" aria-label="Increase quantity" onclick="mscChangeQty(${p.id},1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(${p.id})">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+}
+function mscChangeQty(id,delta){
   const el=document.getElementById('mscQty'+id); if(!el)return;
   const value=Math.max(1,Number(el.textContent||1)+delta); el.textContent=value;
   if(mscCart[id]){mscCart[id].qty=value;mscRenderCart();}
@@ -3158,23 +2641,26 @@ function mscChangeQty(id, delta){
 function mscAddToCart(id){
   const p=mscProducts.find(x=>x.id===id); if(!p)return;
   const qty=Math.max(1,Number(document.getElementById('mscQty'+id)?.textContent||1));
-  mscCart[id]={...p,qty}; mscRenderCart(); mscOpenCart();
+  mscCart[id]={...p,qty};
+  mscRenderCart();
+  mscOpenCart();
 }
 function mscRenderCart(){
   const box=document.getElementById('mscCartItems'), empty=document.getElementById('mscCartEmpty');
-  const values=Object.values(mscCart); let total=values.reduce((n,x)=>n+x.qty,0);
+  if(!box||!empty)return;
+  const values=Object.values(mscCart); const total=values.reduce((n,x)=>n+x.qty,0);
   document.getElementById('mscCartCount').textContent=total;
-  document.getElementById('mscCartTotalQty').textContent=total;
-  if(!values.length){box.innerHTML='';empty.style.display='block';return}
+  const floating=document.getElementById('mscFloatingCartCount'); if(floating)floating.textContent=total;
+  const totalEl=document.getElementById('mscCartTotalQty'); if(totalEl)totalEl.textContent=total;
+  if(!values.length){box.innerHTML='';empty.style.display='block';return;}
   empty.style.display='none';
-  box.innerHTML=values.map(x=>`<div class="msc-cart-row"><div><h3>${mscEsc(x.name)}</h3><p>Combo quantity: ${mscEsc(x.pack)}</p></div><div class="msc-cart-row-right"><button onclick="mscCartQty(${x.id},-1)">−</button><strong>${x.qty}</strong><button onclick="mscCartQty(${x.id},1)">+</button><button class="msc-cart-remove" onclick="mscRemove(${x.id})">×</button></div></div>`).join('');
+  box.innerHTML=values.map(x=>`<div class="msc-cart-row"><div><h3>${mscEsc(x.name)}</h3><p>${mscEsc(x.combo)} · ${mscEsc(x.pack)}</p></div><div class="msc-cart-row-right"><button onclick="mscCartQty(${x.id},-1)">−</button><strong>${x.qty}</strong><button onclick="mscCartQty(${x.id},1)">+</button><button class="msc-cart-remove" onclick="mscRemove(${x.id})">×</button></div></div>`).join('');
 }
-function mscCartQty(id,d){if(!mscCart[id])return;mscCart[id].qty=Math.max(1,mscCart[id].qty+d);const q=document.getElementById('mscQty'+id);if(q)q.textContent=mscCart[id].qty;mscRenderCart()}
-function mscRemove(id){delete mscCart[id];mscRenderCart()}
-function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);document.querySelectorAll('[id^="mscQty"]').forEach(x=>x.textContent='1');mscRenderCart()}
-function mscOpenCart(){document.getElementById('mscCart').classList.add('open');document.getElementById('mscCartOverlay').classList.add('open');document.getElementById('mscCart').setAttribute('aria-hidden','false')}
-function mscCloseCart(){document.getElementById('mscCart').classList.remove('open');document.getElementById('mscCartOverlay').classList.remove('open');document.getElementById('mscCart').setAttribute('aria-hidden','true')}
-function mscEsc(v){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function mscCartQty(id,d){if(!mscCart[id])return;mscCart[id].qty=Math.max(1,mscCart[id].qty+d);const q=document.getElementById('mscQty'+id);if(q)q.textContent=mscCart[id].qty;mscRenderCart();}
+function mscRemove(id){delete mscCart[id];const q=document.getElementById('mscQty'+id);if(q)q.textContent='1';mscRenderCart();}
+function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);mscRenderProducts();mscRenderCart();}
+function mscOpenCart(){document.getElementById('mscCart')?.classList.add('open');document.getElementById('mscCartOverlay')?.classList.add('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','false');}
+function mscCloseCart(){document.getElementById('mscCart')?.classList.remove('open');document.getElementById('mscCartOverlay')?.classList.remove('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','true');}
 function mscSendWhatsApp(){
   const values=Object.values(mscCart); if(!values.length){alert('Please add at least one product to your enquiry.');return;}
   const lines=values.map(x=>`${String(x.id).padStart(2,'0')}. ${x.name} — ${x.qty} qty`);
@@ -3187,42 +2673,23 @@ ${lines.join('\n')}
 Please share the latest availability and pricing.
 
 Thank you.`;
-  /* Keep the same WhatsApp number already used by the existing enquiry form. */
   window.open('https://wa.me/918610546638?text='+encodeURIComponent(message),'_blank');
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
   const input=document.getElementById('mscSearch');
-  const cards=[...document.querySelectorAll('.msc-product-card')];
-  const count=document.getElementById('mscResultCount');
-  const filters=[...document.querySelectorAll('.msc-filter')];
-  let activeFilter='all';
-
-  function applyCatalogueFilter(){
-    const q=(input?.value||'').trim().toLowerCase();
-    let n=0;
-    cards.forEach(c=>{
-      const matchesSearch=!q || c.dataset.name.includes(q);
-      const matchesCombo=activeFilter==='all' || c.dataset.combo===activeFilter;
-      const show=matchesSearch && matchesCombo;
-      c.style.display=show?'':'none';
-      if(show)n++;
-    });
-    count.textContent=n;
-  }
-
-  input?.addEventListener('input',applyCatalogueFilter);
-  filters.forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      filters.forEach(x=>x.classList.remove('active'));
-      btn.classList.add('active');
-      activeFilter=btn.dataset.filter;
-      applyCatalogueFilter();
-    });
-  });
-
+  input?.addEventListener('input',mscRenderProducts);
+  document.querySelectorAll('.msc-tab').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.msc-tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');});
+    btn.classList.add('active');btn.setAttribute('aria-selected','true');
+    mscActiveCombo=btn.dataset.filter;mscRenderProducts();
+  }));
+  document.querySelectorAll('.msc-pill').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.msc-pill').forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+    mscActiveCategory=btn.dataset.category;mscRenderProducts();
+  }));
+  mscRenderProducts();
   mscRenderCart();
-  applyCatalogueFilter();
 });
 </script>
 
