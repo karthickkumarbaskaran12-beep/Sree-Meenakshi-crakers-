@@ -1160,7 +1160,7 @@ footer a{color:#fff !important}
       <div>
         <p class="eyebrow">PREMIUM SHOPPING CATALOGUE</p>
         <h2>Choose Your <em>Combo</em></h2>
-        <p class="msc-lead">Browse the VIP King and VIP Queen collections, select quantities, and build your enquiry in seconds.</p>
+        <p class="msc-lead">Browse the VIP King and VIP Queen collections below. Select one combo or choose both combos for your enquiry.</p>
       </div>
       <div class="msc-head-stat"><strong id="mscResultCount">25</strong><span>products shown</span></div>
     </div>
@@ -2820,6 +2820,11 @@ body.combo-modal-open {
     max-height: 72vh;
   }
 }
+
+/* Combo-only enquiry selection */
+.msc-combo-selector{margin:18px 0 22px;padding:20px;border:1px solid rgba(214,0,91,.18);border-radius:18px;background:linear-gradient(135deg,#fff,#fff7fb);box-shadow:0 10px 30px rgba(75,31,80,.08)}
+.msc-combo-selector-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}.msc-combo-selector-head strong{display:block;color:#18265a;font-size:20px}.msc-combo-selector-head span{display:block;color:#70758b;font-size:13px;margin-top:3px}.msc-combo-selector-head small{font-weight:700;color:#c60062;background:#fff0f7;border:1px solid #ffd0e4;padding:7px 12px;border-radius:999px}.msc-combo-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.msc-combo-choice{display:flex;align-items:center;gap:12px;text-align:left;border:1px solid #eadbe4;border-radius:14px;padding:14px 16px;background:#fff;cursor:pointer;transition:.2s;box-shadow:0 4px 14px rgba(30,20,50,.04)}.msc-combo-choice:hover{transform:translateY(-2px);border-color:#ec1680}.msc-combo-choice.selected{border-color:#df006b;background:linear-gradient(135deg,#fff2f8,#fff);box-shadow:0 7px 20px rgba(223,0,107,.12)}.msc-combo-choice-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#fff0f7;color:#d90068;font-size:24px;flex:none}.msc-combo-choice b{display:block;color:#19265c;font-size:15px}.msc-combo-choice small{display:block;color:#7b8195;margin-top:3px}.msc-combo-choice-check{margin-left:auto;color:#d50066;font-size:13px;white-space:nowrap}.msc-notice-inline{display:flex;align-items:center;gap:8px;margin-top:13px;color:#666d80;font-size:13px}.msc-notice-inline .msc-notice-icon{color:#d50066}.msc-catalogue-only{margin-top:18px;padding-top:12px;border-top:1px solid #f0e7ed;color:#858b9d;font-size:12px;font-weight:600}.msc-cart-selected-label{font-size:12px;font-weight:700;color:#d50066;background:#fff0f7;border-radius:999px;padding:5px 8px}.msc-cart-row-right{display:flex;align-items:center;gap:8px}.msc-cart-row-right .msc-cart-remove{width:28px;height:28px}
+@media(max-width:700px){.msc-combo-selector-head{align-items:flex-start;flex-direction:column}.msc-combo-choice-grid{grid-template-columns:1fr}.msc-combo-choice{padding:12px}.msc-combo-selector{padding:15px}}
 </style>
 
 
@@ -2852,7 +2857,6 @@ function mscRenderProducts(){
   grid.innerHTML=items.map(p=>{
     const displayNo=p.displayId||p.id;
     const img=p.image?`<img src="${mscEsc(p.image)}" alt="${mscEsc(p.name)}" loading="lazy" decoding="async">`:`<div class="msc-no-image">✦</div>`;
-    const qty=mscCart[p.id]?.qty||1;
     return `<article class="msc-product-card" data-name="${mscEsc(p.name.toLowerCase())}">
       <div class="msc-product-image">${img}</div>
       <div class="msc-product-body">
@@ -2860,56 +2864,62 @@ function mscRenderProducts(){
         <span class="msc-combo-tag">${mscEsc(p.combo)}</span>
         <h3>${mscEsc(p.name)}</h3>
         <p class="msc-pack">${mscEsc(p.pack)}</p>
-        <div class="msc-card-actions">
-          <div class="msc-qty">
-            <button type="button" aria-label="Decrease quantity" onclick="mscChangeQty(${p.id},-1)">−</button>
-            <span id="mscQty${p.id}">${qty}</span>
-            <button type="button" aria-label="Increase quantity" onclick="mscChangeQty(${p.id},1)">+</button>
-          </div>
-          <button type="button" class="msc-add" onclick="mscAddToCart(${p.id})">Add to Enquiry</button>
-        </div>
+        <div class="msc-catalogue-only"><span>Included in complete combo</span></div>
       </div>
     </article>`;
   }).join('');
+  mscUpdateComboChoices();
 }
-function mscChangeQty(id,delta){
-  const el=document.getElementById('mscQty'+id); if(!el)return;
-  const value=Math.max(1,Number(el.textContent||1)+delta); el.textContent=value;
-  if(mscCart[id]){mscCart[id].qty=value;mscRenderCart();}
-}
-function mscAddToCart(id){
-  const p=mscProducts.find(x=>x.id===id); if(!p)return;
-  const qty=Math.max(1,Number(document.getElementById('mscQty'+id)?.textContent||1));
-  mscCart[id]={...p,qty};
+
+function mscSelectCombo(combo){
+  const id=combo==='VIP King Combo'?9001:9002;
+  const already=!!mscCart[id];
+  if(already){ delete mscCart[id]; }
+  else {
+    const count=combo==='VIP King Combo'?25:35;
+    mscCart[id]={id,name:combo,combo,pack:`${count} products included`,qty:1,isCombo:true};
+  }
   mscRenderCart();
-  mscOpenCart();
+  mscUpdateComboChoices();
+}
+function mscUpdateComboChoices(){
+  const king=!!mscCart[9001], queen=!!mscCart[9002];
+  const k=document.getElementById('mscKingChoice'), q=document.getElementById('mscQueenChoice');
+  if(k){k.classList.toggle('selected',king);const x=k.querySelector('.msc-combo-choice-check');if(x)x.textContent=king?'✓ Selected':'Select';}
+  if(q){q.classList.toggle('selected',queen);const x=q.querySelector('.msc-combo-choice-check');if(x)x.textContent=queen?'✓ Selected':'Select';}
+  const status=document.getElementById('mscComboSelectionStatus');
+  if(status)status.textContent=king&&queen?'VIP King + VIP Queen selected':king?'VIP King selected':queen?'VIP Queen selected':'No combo selected';
 }
 function mscRenderCart(){
   const box=document.getElementById('mscCartItems'), empty=document.getElementById('mscCartEmpty');
   if(!box||!empty)return;
-  const values=Object.values(mscCart); const total=values.reduce((n,x)=>n+x.qty,0);
+  const values=Object.values(mscCart);
+  const total=values.length;
   document.getElementById('mscCartCount').textContent=total;
   const floating=document.getElementById('mscFloatingCartCount'); if(floating)floating.textContent=total;
   const totalEl=document.getElementById('mscCartTotalQty'); if(totalEl)totalEl.textContent=total;
-  if(!values.length){box.innerHTML='';empty.style.display='block';return;}
+  if(!values.length){box.innerHTML='';empty.style.display='block';mscUpdateComboChoices();return;}
   empty.style.display='none';
-  box.innerHTML=values.map(x=>`<div class="msc-cart-row"><div><h3>${mscEsc(x.name)}</h3><p>${mscEsc(x.combo)} · ${mscEsc(x.pack)}</p></div><div class="msc-cart-row-right"><button onclick="mscCartQty(${x.id},-1)">−</button><strong>${x.qty}</strong><button onclick="mscCartQty(${x.id},1)">+</button><button class="msc-cart-remove" onclick="mscRemove(${x.id})">×</button></div></div>`).join('');
+  box.innerHTML=values.map(x=>`<div class="msc-cart-row"><div><h3>${mscEsc(x.name)}</h3><p>${mscEsc(x.pack)}</p></div><div class="msc-cart-row-right"><span class="msc-cart-selected-label">Selected</span><button class="msc-cart-remove" onclick="mscRemove(${x.id})" aria-label="Remove ${mscEsc(x.name)}">×</button></div></div>`).join('');
 }
-function mscCartQty(id,d){if(!mscCart[id])return;mscCart[id].qty=Math.max(1,mscCart[id].qty+d);const q=document.getElementById('mscQty'+id);if(q)q.textContent=mscCart[id].qty;mscRenderCart();}
-function mscRemove(id){delete mscCart[id];const q=document.getElementById('mscQty'+id);if(q)q.textContent='1';mscRenderCart();}
-function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);mscRenderProducts();mscRenderCart();}
+function mscRemove(id){
+  if(mscCart[id])delete mscCart[id];
+  mscRenderCart();
+  mscUpdateComboChoices();
+}
+function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);mscRenderCart();mscUpdateComboChoices();}
 function mscOpenCart(){document.getElementById('mscCart')?.classList.add('open');document.getElementById('mscCartOverlay')?.classList.add('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','false');}
 function mscCloseCart(){document.getElementById('mscCart')?.classList.remove('open');document.getElementById('mscCartOverlay')?.classList.remove('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','true');}
 function mscSendWhatsApp(){
   const values=Object.values(mscCart); if(!values.length){alert('Please add at least one product to your enquiry.');return;}
-  const lines=values.map(x=>`${String(x.id).padStart(2,'0')}. ${x.name} — ${x.qty} qty`);
+  const lines=values.map((x,i)=>`${i+1}. ${x.name} — ${x.pack}`);
   const message=`Hello Sri Meenakshi Crackers,
 
-I would like to enquire about the following products:
+I would like to enquire about the following combo(s):
 
 ${lines.join('\n')}
 
-Please share the latest availability and pricing.
+Please share the latest availability and pricing for the selected combo(s).
 
 Thank you.`;
   window.open('https://wa.me/918610546638?text='+encodeURIComponent(message),'_blank');
