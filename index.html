@@ -3115,16 +3115,86 @@ function mscUpdateComboChoices(){
   if(status)status.textContent=king&&queen?'VIP King + VIP Queen selected':king?'VIP King selected':queen?'VIP Queen selected':'No combo selected';
 }
 function mscRenderCart(){
-  const box=document.getElementById('mscCartItems'), empty=document.getElementById('mscCartEmpty');
-  if(!box||!empty)return;
-  const values=Object.values(mscCart);
-  const total=values.length;
-  document.getElementById('mscCartCount').textContent=total;
-  const floating=document.getElementById('mscFloatingCartCount'); if(floating)floating.textContent=total;
-  const totalEl=document.getElementById('mscCartTotalQty'); if(totalEl)totalEl.textContent=total;
-  if(!values.length){box.innerHTML='';empty.style.display='block';mscUpdateComboChoices();return;}
-  empty.style.display='none';
-  box.innerHTML=values.map(x=>`<div class="msc-cart-row"><div><h3>${mscEsc(x.name)}</h3><p>${mscEsc(x.pack)}</p></div><div class="msc-cart-row-right"><span class="msc-cart-selected-label">Selected</span><button class="msc-cart-remove" onclick="mscRemove(${x.id})" aria-label="Remove ${mscEsc(x.name)}">×</button></div></div>`).join('');
+
+  const box = document.getElementById('mscCartItems');
+  const empty = document.getElementById('mscCartEmpty');
+
+  if(!box || !empty) return;
+
+  const values = Object.values(mscCart);
+  const total = values.length;
+
+  /* Floating enquiry count */
+  const floating =
+    document.getElementById('mscFloatingCartCount');
+
+  if(floating){
+    floating.textContent = total;
+  }
+
+  /* Footer count */
+  const totalEl =
+    document.getElementById('mscCartTotalQty');
+
+  if(totalEl){
+    totalEl.textContent = total;
+  }
+
+  /* Old count element - optional */
+  const cartCount =
+    document.getElementById('mscCartCount');
+
+  if(cartCount){
+    cartCount.textContent = total;
+  }
+
+  /* Nothing selected */
+  if(!values.length){
+
+    box.innerHTML = '';
+
+    empty.style.display = 'block';
+
+    mscUpdateComboChoices();
+
+    return;
+  }
+
+  /* Something selected */
+  empty.style.display = 'none';
+
+  box.innerHTML = values.map(x => `
+
+    <div class="msc-cart-row">
+
+      <div>
+        <h3>${mscEsc(x.name)}</h3>
+        <p>${mscEsc(x.pack)}</p>
+      </div>
+
+      <div class="msc-cart-row-right">
+
+        <span class="msc-cart-selected-label">
+          ✓ Selected
+        </span>
+
+        <button
+          type="button"
+          class="msc-cart-remove"
+          onclick="mscRemove(${x.id})"
+          aria-label="Remove ${mscEsc(x.name)}">
+
+          ×
+
+        </button>
+
+      </div>
+
+    </div>
+
+  `).join('');
+
+  mscUpdateComboChoices();
 }
 function mscRemove(id){
   if(mscCart[id])delete mscCart[id];
