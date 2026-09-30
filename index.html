@@ -127,6 +127,33 @@
 }
 </style>
 
+
+<style id="meenkshi-shopping-catalogue">
+/* Shopping catalogue - added without changing the existing VIP King/Queen code */
+.msc-section{padding:78px 0 90px;position:relative}
+.msc-section,.msc-section *{box-sizing:border-box}
+.msc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.msc-head h2{margin:0 0 10px;font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,4vw,3.4rem);color:#ffd96b}
+.msc-head p:not(.eyebrow){margin:0;max-width:720px;line-height:1.7;color:rgba(255,255,255,.68)}
+.msc-cart-button{border:1px solid rgba(232,191,85,.55);background:linear-gradient(135deg,#1b1828,#0f0e18);color:#ffd96b;border-radius:999px;padding:13px 18px;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 10px 35px rgba(0,0,0,.25)}
+.msc-cart-button b{display:inline-flex;min-width:24px;height:24px;align-items:center;justify-content:center;border-radius:50%;background:#ffd96b;color:#0e0d15;margin-left:7px}
+.msc-toolbar{display:flex;gap:16px;align-items:center;margin:0 0 18px}
+.msc-search-wrap{flex:1;display:flex;align-items:center;gap:10px;border:1px solid rgba(232,191,85,.28);border-radius:14px;background:#12111b;padding:0 15px;min-height:50px}
+.msc-search-wrap span{font-size:24px;color:#ffd96b}.msc-search-wrap input{width:100%;border:0;outline:0;background:transparent;color:#fff;font:inherit;font-size:16px}.msc-search-wrap input::placeholder{color:rgba(255,255,255,.45)}
+.msc-result-count{color:rgba(255,255,255,.62);white-space:nowrap}.msc-result-count span{color:#ffd96b;font-weight:700}
+.msc-notice{padding:14px 17px;border:1px solid rgba(232,191,85,.25);border-radius:13px;background:rgba(232,191,85,.06);color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.6}.msc-notice strong{color:#ffd96b}
+.msc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.msc-product-card{background:#13121d;border:1px solid rgba(232,191,85,.22);border-radius:18px;overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.msc-product-card:hover{transform:translateY(-4px);border-color:rgba(232,191,85,.5);box-shadow:0 18px 45px rgba(0,0,0,.28)}
+.msc-product-image{height:210px;background:#fff;display:flex;align-items:center;justify-content:center;padding:14px;border-bottom:1px solid rgba(232,191,85,.15)}
+.msc-product-image img{width:100%;height:100%;object-fit:contain;display:block}.msc-no-image{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px dashed #caa94e;color:#caa94e;font-size:30px}
+.msc-product-body{padding:17px}.msc-product-number{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#e8bf55;margin-bottom:5px}.msc-product-body h3{margin:0;color:#f7d774;font-family:"Cormorant Garamond",serif;font-size:25px;line-height:1.12;min-height:56px}.msc-pack{margin:8px 0 15px;color:rgba(255,255,255,.58);font-size:13px}.msc-pack strong{color:rgba(255,255,255,.85)}
+.msc-card-actions{display:flex;gap:9px;align-items:center}.msc-qty{display:flex;align-items:center;border:1px solid rgba(232,191,85,.3);border-radius:10px;overflow:hidden;background:#0e0d16}.msc-qty button{width:34px;height:40px;border:0;background:transparent;color:#ffd96b;font-size:22px;cursor:pointer}.msc-qty span{width:32px;text-align:center;color:#fff;font-weight:700}.msc-add{flex:1;height:40px;border:0;border-radius:10px;background:#ffd96b;color:#0c0b12;font-weight:800;cursor:pointer}.msc-add:hover{filter:brightness(1.06)}
+.msc-cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(4px);z-index:120000;opacity:0;pointer-events:none;transition:opacity .2s}.msc-cart{position:fixed;top:0;right:-460px;width:min(460px,94vw);height:100vh;background:#11101b;border-left:1px solid rgba(232,191,85,.45);z-index:120001;display:flex;flex-direction:column;transition:right .25s ease;box-shadow:-25px 0 80px rgba(0,0,0,.5)}.msc-cart.open{right:0}.msc-cart-overlay.open{opacity:1;pointer-events:auto}.msc-cart-head{display:flex;justify-content:space-between;align-items:flex-start;padding:24px;border-bottom:1px solid rgba(232,191,85,.18)}.msc-cart-head h2{margin:0;color:#ffd96b;font-family:"Cormorant Garamond",serif;font-size:30px}.msc-cart-head .eyebrow{margin:0 0 5px}.msc-cart-head>button{border:1px solid rgba(232,191,85,.35);background:#090812;color:#ffd96b;border-radius:50%;width:38px;height:38px;font-size:25px;cursor:pointer}
+.msc-cart-items{flex:1;overflow:auto;padding:16px 20px}.msc-cart-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}.msc-cart-row h3{margin:0 0 5px;color:#fff;font-size:16px}.msc-cart-row p{margin:0;color:rgba(255,255,255,.5);font-size:12px}.msc-cart-row-right{display:flex;align-items:center;gap:8px}.msc-cart-row-right button{border:1px solid rgba(232,191,85,.25);background:#171521;color:#ffd96b;border-radius:7px;width:28px;height:28px;cursor:pointer}.msc-cart-row-right strong{min-width:22px;text-align:center;color:#fff}.msc-cart-remove{border:0!important;background:transparent!important;color:#aaa!important;font-size:16px}.msc-cart-empty{text-align:center;color:rgba(255,255,255,.55);padding:45px 20px;line-height:1.8}.msc-cart-foot{padding:18px 20px;border-top:1px solid rgba(232,191,85,.18);background:#0d0c14}.msc-cart-summary{display:flex;justify-content:space-between;color:rgba(255,255,255,.6);margin-bottom:12px}.msc-cart-summary strong{color:#ffd96b}.msc-whatsapp{width:100%;height:48px;border:0;border-radius:12px;background:#ffd96b;color:#0b0a11;font-weight:800;cursor:pointer}.msc-clear{width:100%;margin-top:8px;border:0;background:transparent;color:rgba(255,255,255,.5);cursor:pointer;padding:8px}
+@media(max-width:900px){.msc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.msc-head{align-items:flex-start;flex-direction:column}.msc-cart-button{align-self:stretch}}
+@media(max-width:620px){.msc-section{padding:58px 0}.msc-grid{grid-template-columns:1fr}.msc-toolbar{align-items:stretch;flex-direction:column}.msc-product-image{height:220px}.msc-card-actions{flex-direction:row}.msc-add{min-width:0}.msc-head h2{font-size:2.5rem}}
+</style>
+
 </head>
 
 <body>
@@ -197,7 +224,7 @@
 
     <a class="active" href="#home">Home</a>
 
-    <a href="#products">Products</a>
+    <a href="#shopping-catalogue">Catalogue</a>
 
     <a href="#process">How It Works</a>
 
@@ -249,8 +276,8 @@
 
     <div class="actions">
 
-      <a class="btn primary" href="#products">
-        Explore Products
+      <a class="btn primary" href="#shopping-catalogue">
+        Explore Catalogue
         <span>→</span>
       </a>
 
@@ -871,6 +898,454 @@
 </main>
 
 
+
+<!-- =========================
+     SHOPPING CATALOGUE
+========================= -->
+<section class="msc-section" id="shopping-catalogue">
+  <div class="msc-head">
+    <div>
+      <p class="eyebrow">SHOPPING CATALOGUE</p>
+      <h2>Build Your Crackers Enquiry</h2>
+      <p>Select the products and quantities you want. This is still an enquiry catalogue — no online payment or sale is performed on the website.</p>
+    </div>
+    <button type="button" class="msc-cart-button" onclick="mscOpenCart()">
+      🛒 <span>My Enquiry</span> <b id="mscCartCount">0</b>
+    </button>
+  </div>
+
+  <div class="msc-toolbar">
+    <div class="msc-search-wrap">
+      <span>⌕</span>
+      <input id="mscSearch" type="search" placeholder="Search products..." autocomplete="off">
+    </div>
+    <div class="msc-result-count"><span id="mscResultCount">25</span> items</div>
+  </div>
+
+  <div class="msc-notice">
+    <strong>Enquiry Only</strong> — Add products to your enquiry list and send the complete requirement to us on WhatsApp. Final availability and pricing will be confirmed by our team.
+  </div>
+
+  <div class="msc-grid" id="mscProductGrid">
+    <article class="msc-product-card" data-name="max 100 gun">
+      <div class="msc-product-image"><img src="vip-king/01.jpeg" alt="Max 100 Gun" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">01</div>
+        <h3>Max 100 Gun</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(1,-1)">−</button>
+            <span id="mscQty1">1</span>
+            <button type="button" onclick="mscChangeQty(1,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(1)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="pixels">
+      <div class="msc-product-image"><img src="vip-king/14.jpeg" alt="Pixels" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">02</div>
+        <h3>Pixels</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(2,-1)">−</button>
+            <span id="mscQty2">1</span>
+            <button type="button" onclick="mscChangeQty(2,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(2)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="pink octopus (2 pcs)">
+      <div class="msc-product-image"><img src="vip-king/15.jpeg" alt="Pink Octopus (2 pcs)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">03</div>
+        <h3>Pink Octopus (2 pcs)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(3,-1)">−</button>
+            <span id="mscQty3">1</span>
+            <button type="button" onclick="mscChangeQty(3,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(3)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="thanos (1 pc)">
+      <div class="msc-product-image"><img src="vip-king/17.jpeg" alt="Thanos (1 pc)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">04</div>
+        <h3>Thanos (1 pc)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(4,-1)">−</button>
+            <span id="mscQty4">1</span>
+            <button type="button" onclick="mscChangeQty(4,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(4)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="purple palm (1 pc)">
+      <div class="msc-product-image"><img src="vip-king/16.jpeg" alt="Purple Palm (1 pc)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">05</div>
+        <h3>Purple Palm (1 pc)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(5,-1)">−</button>
+            <span id="mscQty5">1</span>
+            <button type="button" onclick="mscChangeQty(5,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(5)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="king crown (new)">
+      <div class="msc-product-image"><img src="vip-king/13.jpeg" alt="King Crown (New)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">06</div>
+        <h3>King Crown (New)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(6,-1)">−</button>
+            <span id="mscQty6">1</span>
+            <button type="button" onclick="mscChangeQty(6,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(6)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="troy 25">
+      <div class="msc-product-image"><img src="vip-king/12.jpeg" alt="Troy 25" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">07</div>
+        <h3>Troy 25</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(7,-1)">−</button>
+            <span id="mscQty7">1</span>
+            <button type="button" onclick="mscChangeQty(7,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(7)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="1/2 sky digital">
+      <div class="msc-product-image"><img src="vip-king/11.jpeg" alt="1/2 Sky Digital" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">08</div>
+        <h3>1/2 Sky Digital</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(8,-1)">−</button>
+            <span id="mscQty8">1</span>
+            <button type="button" onclick="mscChangeQty(8,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(8)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="electric sparkle (3 cm)">
+      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">09</div>
+        <h3>Electric Sparkle (3 cm)</h3>
+        <p class="msc-pack">Combo quantity: <strong>2 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(9,-1)">−</button>
+            <span id="mscQty9">1</span>
+            <button type="button" onclick="mscChangeQty(9,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(9)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="11&quot; (13 cm)">
+      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">10</div>
+        <h3>11&quot; (13 cm)</h3>
+        <p class="msc-pack">Combo quantity: <strong>5 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(10,-1)">−</button>
+            <span id="mscQty10">1</span>
+            <button type="button" onclick="mscChangeQty(10,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(10)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="cluster (1 pcs)">
+      <div class="msc-product-image"><img src="vip-king/09.jpeg" alt="Cluster (1 pcs)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">11</div>
+        <h3>Cluster (1 pcs)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(11,-1)">−</button>
+            <span id="mscQty11">1</span>
+            <button type="button" onclick="mscChangeQty(11,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(11)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="blue ice (1 pcs)">
+      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">12</div>
+        <h3>Blue Ice (1 pcs)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(12,-1)">−</button>
+            <span id="mscQty12">1</span>
+            <button type="button" onclick="mscChangeQty(12,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(12)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="x-mas tree (1 pcs)">
+      <div class="msc-product-image"><img src="vip-king/18.jpeg" alt="X-Mas Tree (1 pcs)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">13</div>
+        <h3>X-Mas Tree (1 pcs)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(13,-1)">−</button>
+            <span id="mscQty13">1</span>
+            <button type="button" onclick="mscChangeQty(13,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(13)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="h fire joker">
+      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">14</div>
+        <h3>H Fire Joker</h3>
+        <p class="msc-pack">Combo quantity: <strong>5 Pkt</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(14,-1)">−</button>
+            <span id="mscQty14">1</span>
+            <button type="button" onclick="mscChangeQty(14,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(14)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="2 3/4&quot; h fire joker">
+      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">15</div>
+        <h3>2 3/4&quot; H Fire Joker</h3>
+        <p class="msc-pack">Combo quantity: <strong>5 Pkt</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(15,-1)">−</button>
+            <span id="mscQty15">1</span>
+            <button type="button" onclick="mscChangeQty(15,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(15)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="rainbow smoke (1 pcs)">
+      <div class="msc-product-image"><img src="vip-king/19.jpeg" alt="Rainbow Smoke (1 pcs)" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">16</div>
+        <h3>Rainbow Smoke (1 pcs)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(16,-1)">−</button>
+            <span id="mscQty16">1</span>
+            <button type="button" onclick="mscChangeQty(16,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(16)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="1/2 twinkling star">
+      <div class="msc-product-image"><img src="vip-king/21.jpeg" alt="1/2 Twinkling Star" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">17</div>
+        <h3>1/2 Twinkling Star</h3>
+        <p class="msc-pack">Combo quantity: <strong>5 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(17,-1)">−</button>
+            <span id="mscQty17">1</span>
+            <button type="button" onclick="mscChangeQty(17,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(17)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="silver (2 pcs)">
+      <div class="msc-product-image"><div class="msc-no-image">✦</div></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">18</div>
+        <h3>Silver (2 pcs)</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(18,-1)">−</button>
+            <span id="mscQty18">1</span>
+            <button type="button" onclick="mscChangeQty(18,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(18)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="violet colour kathi deluxe">
+      <div class="msc-product-image"><img src="vip-king/07.jpeg" alt="Violet Colour Kathi Deluxe" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">19</div>
+        <h3>Violet Colour Kathi Deluxe</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(19,-1)">−</button>
+            <span id="mscQty19">1</span>
+            <button type="button" onclick="mscChangeQty(19,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(19)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="flower pot big">
+      <div class="msc-product-image"><img src="vip-king/06.jpeg" alt="Flower Pot Big" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">20</div>
+        <h3>Flower Pot Big</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(20,-1)">−</button>
+            <span id="mscQty20">1</span>
+            <button type="button" onclick="mscChangeQty(20,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(20)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="ground chakkar special">
+      <div class="msc-product-image"><img src="vip-king/03.jpeg" alt="Ground Chakkar Special" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">21</div>
+        <h3>Ground Chakkar Special</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(21,-1)">−</button>
+            <span id="mscQty21">1</span>
+            <button type="button" onclick="mscChangeQty(21,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(21)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="ground chakkar big">
+      <div class="msc-product-image"><img src="vip-king/02.jpeg" alt="Ground Chakkar Big" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">22</div>
+        <h3>Ground Chakkar Big</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(22,-1)">−</button>
+            <span id="mscQty22">1</span>
+            <button type="button" onclick="mscChangeQty(22,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(22)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="red bijili">
+      <div class="msc-product-image"><img src="vip-king/22.jpeg" alt="Red Bijili" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">23</div>
+        <h3>Red Bijili</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Pkt</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(23,-1)">−</button>
+            <span id="mscQty23">1</span>
+            <button type="button" onclick="mscChangeQty(23,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(23)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="whistling paper">
+      <div class="msc-product-image"><img src="vip-king/20.jpeg" alt="Whistling Paper" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">24</div>
+        <h3>Whistling Paper</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(24,-1)">−</button>
+            <span id="mscQty24">1</span>
+            <button type="button" onclick="mscChangeQty(24,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(24)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+<article class="msc-product-card" data-name="emerald fall">
+      <div class="msc-product-image"><img src="vip-king/23.jpeg" alt="Emerald Fall" loading="lazy" decoding="async"></div>
+      <div class="msc-product-body">
+        <div class="msc-product-number">25</div>
+        <h3>Emerald Fall</h3>
+        <p class="msc-pack">Combo quantity: <strong>1 Box</strong></p>
+        <div class="msc-card-actions">
+          <div class="msc-qty">
+            <button type="button" onclick="mscChangeQty(25,-1)">−</button>
+            <span id="mscQty25">1</span>
+            <button type="button" onclick="mscChangeQty(25,1)">+</button>
+          </div>
+          <button type="button" class="msc-add" onclick="mscAddToCart(25)">Add to Enquiry</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CART DRAWER -->
+<div class="msc-cart-overlay" id="mscCartOverlay" onclick="mscCloseCart()"></div>
+<aside class="msc-cart" id="mscCart" aria-hidden="true">
+  <div class="msc-cart-head">
+    <div><p class="eyebrow">YOUR ENQUIRY</p><h2>Selected Products</h2></div>
+    <button type="button" onclick="mscCloseCart()" aria-label="Close">&times;</button>
+  </div>
+  <div class="msc-cart-items" id="mscCartItems"></div>
+  <div class="msc-cart-empty" id="mscCartEmpty">Your enquiry list is empty.<br>Add products from the catalogue.</div>
+  <div class="msc-cart-foot">
+    <div class="msc-cart-summary"><span>Selected items</span><strong id="mscCartTotalQty">0</strong></div>
+    <button type="button" class="msc-whatsapp" onclick="mscSendWhatsApp()">💬 Send Enquiry on WhatsApp</button>
+    <button type="button" class="msc-clear" onclick="mscClearCart()">Clear Selection</button>
+  </div>
+</aside>
+
 <!-- =========================
      FOOTER
 ========================= -->
@@ -1315,7 +1790,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 01 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/01.png"
+          <img src="vip-king/01.jpeg"
                alt="Max 100 Gun"
                loading="lazy"
                decoding="async">
@@ -1330,7 +1805,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 02 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/02.png"
+          <img src="vip-king/02.jpeg"
                alt="Chakkar Big (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1345,7 +1820,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 03 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/03.png"
+          <img src="vip-king/03.jpeg"
                alt="Chakkar Special (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1360,7 +1835,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 04 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/04.png"
+          <img src="vip-king/04.jpeg"
                alt="Electric Sparkle (30 cm)"
                loading="lazy"
                decoding="async">
@@ -1375,7 +1850,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 05 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/05.png"
+          <img src="vip-king/05.jpeg"
                alt="Electric Sparkle (15 cm)"
                loading="lazy"
                decoding="async">
@@ -1390,7 +1865,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 06 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/06.png"
+          <img src="vip-king/06.jpeg"
                alt="Flower Pot Big (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1405,7 +1880,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 07 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/07.png"
+          <img src="vip-king/07.jpeg"
                alt="Violet Color Koti (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1420,7 +1895,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 08 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/08.png"
+          <img src="vip-king/08.jpeg"
                alt="Cosmic Kids"
                loading="lazy"
                decoding="async">
@@ -1435,7 +1910,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 09 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/09.png"
+          <img src="vip-king/09.jpeg"
                alt="Cluster (1*5)"
                loading="lazy"
                decoding="async">
@@ -1450,7 +1925,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 10 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/10.png"
+          <img src="vip-king/10.jpeg"
                alt="Siren (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -1465,7 +1940,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 11 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/11.png"
+          <img src="vip-king/11.jpeg"
                alt="12 Sky Digital"
                loading="lazy"
                decoding="async">
@@ -1480,7 +1955,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 12 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/12.png"
+          <img src="vip-king/12.jpeg"
                alt="Troy 25 Shots"
                loading="lazy"
                decoding="async">
@@ -1495,7 +1970,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 13 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/13.png"
+          <img src="vip-king/13.jpeg"
                alt="King Crown 50 Shots"
                loading="lazy"
                decoding="async">
@@ -1510,7 +1985,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 14 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/14.png"
+          <img src="vip-king/14.jpeg"
                alt="Pixels New"
                loading="lazy"
                decoding="async">
@@ -1525,7 +2000,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 15 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/15.png"
+          <img src="vip-king/15.jpeg"
                alt="Pink Octopus (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -1540,7 +2015,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 16 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/16.png"
+          <img src="vip-king/16.jpeg"
                alt="Purple Palm Sky Shot (1 pcs)"
                loading="lazy"
                decoding="async">
@@ -1555,7 +2030,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 17 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/17.png"
+          <img src="vip-king/17.jpeg"
                alt="Thanos Sky Shot (1 pcs)"
                loading="lazy"
                decoding="async">
@@ -1570,7 +2045,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 18 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/18.png"
+          <img src="vip-king/18.jpeg"
                alt="X-Mas Tree (5 pcs)"
                loading="lazy"
                decoding="async">
@@ -1585,7 +2060,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 19 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/19.png"
+          <img src="vip-king/19.jpeg"
                alt="Rainbow Smoke (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -1600,7 +2075,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 20 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/20.png"
+          <img src="vip-king/20.jpeg"
                alt="Whistling Piper (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -1615,7 +2090,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 21 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/21.png"
+          <img src="vip-king/21.jpeg"
                alt="1 1/2 Twinkle Star (5 box)"
                loading="lazy"
                decoding="async">
@@ -1630,7 +2105,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 22 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/22.png"
+          <img src="vip-king/22.jpeg"
                alt="Red Bijili (1 pkt)"
                loading="lazy"
                decoding="async">
@@ -1645,7 +2120,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 23 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/23.png"
+          <img src="vip-king/23.jpeg"
                alt="Emerald Foil (1 box)"
                loading="lazy"
                decoding="async">
@@ -1660,7 +2135,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 24 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/24.png"
+          <img src="vip-king/24.jpeg"
                alt="2 3/4 Bird Joker (5 pkts)"
                loading="lazy"
                decoding="async">
@@ -1675,7 +2150,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 25 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/25.png"
+          <img src="vip-king/25.jpeg"
                alt="4 Bird Joker (5 pkts)"
                loading="lazy"
                decoding="async">
@@ -1873,7 +2348,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 11 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/01.png"
+          <img src="vip-king/01.jpeg"
                alt="Max 100 Gun"
                loading="lazy"
                decoding="async">
@@ -1887,7 +2362,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 12 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/02.png"
+          <img src="vip-king/02.jpeg"
                alt="Chakkar Big (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1901,7 +2376,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 13 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/03.png"
+          <img src="vip-king/03.jpeg"
                alt="Chakkar Special (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1915,7 +2390,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 14 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/04.png"
+          <img src="vip-king/04.jpeg"
                alt="Electric Sparkle (30 cm)"
                loading="lazy"
                decoding="async">
@@ -1929,7 +2404,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 15 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/05.png"
+          <img src="vip-king/05.jpeg"
                alt="Electric Sparkle (15 cm)"
                loading="lazy"
                decoding="async">
@@ -1943,7 +2418,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 16 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/06.png"
+          <img src="vip-king/06.jpeg"
                alt="Flower Pot Big (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1957,7 +2432,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 17 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/07.png"
+          <img src="vip-king/07.jpeg"
                alt="Violet Color Koti (10 pcs)"
                loading="lazy"
                decoding="async">
@@ -1971,7 +2446,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 18 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/08.png"
+          <img src="vip-king/08.jpeg"
                alt="Cosmic Kids"
                loading="lazy"
                decoding="async">
@@ -1985,7 +2460,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 19 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/09.png"
+          <img src="vip-king/09.jpeg"
                alt="Cluster (1*5)"
                loading="lazy"
                decoding="async">
@@ -1999,7 +2474,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 20 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/10.png"
+          <img src="vip-king/10.jpeg"
                alt="Siren (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -2013,7 +2488,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 21 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/11.png"
+          <img src="vip-king/11.jpeg"
                alt="12 Sky Digital"
                loading="lazy"
                decoding="async">
@@ -2027,7 +2502,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 22 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/12.png"
+          <img src="vip-king/12.jpeg"
                alt="Troy 25 Shots"
                loading="lazy"
                decoding="async">
@@ -2041,7 +2516,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 23 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/13.png"
+          <img src="vip-king/13.jpeg"
                alt="King Crown 50 Shots"
                loading="lazy"
                decoding="async">
@@ -2055,7 +2530,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 24 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/14.png"
+          <img src="vip-king/14.jpeg"
                alt="Pixels New"
                loading="lazy"
                decoding="async">
@@ -2069,7 +2544,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 25 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/15.png"
+          <img src="vip-king/15.jpeg"
                alt="Pink Octopus (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -2083,7 +2558,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 26 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/16.png"
+          <img src="vip-king/16.jpeg"
                alt="Purple Palm Sky Shot (1 pcs)"
                loading="lazy"
                decoding="async">
@@ -2097,7 +2572,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 27 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/17.png"
+          <img src="vip-king/17.jpeg"
                alt="Thanos Sky Shot (1 pcs)"
                loading="lazy"
                decoding="async">
@@ -2111,7 +2586,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 28 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/18.png"
+          <img src="vip-king/18.jpeg"
                alt="X-Mas Tree (5 pcs)"
                loading="lazy"
                decoding="async">
@@ -2125,7 +2600,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 29 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/19.png"
+          <img src="vip-king/19.jpeg"
                alt="Rainbow Smoke (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -2139,7 +2614,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 30 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/20.png"
+          <img src="vip-king/20.jpeg"
                alt="Whistling Piper (2 pcs)"
                loading="lazy"
                decoding="async">
@@ -2153,7 +2628,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 31 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/21.png"
+          <img src="vip-king/21.jpeg"
                alt="1 1/2 Twinkle Star (5 box)"
                loading="lazy"
                decoding="async">
@@ -2167,7 +2642,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 32 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/22.png"
+          <img src="vip-king/22.jpeg"
                alt="Red Bijili (1 pkt)"
                loading="lazy"
                decoding="async">
@@ -2181,7 +2656,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 33 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/23.png"
+          <img src="vip-king/23.jpeg"
                alt="Emerald Foil (1 box)"
                loading="lazy"
                decoding="async">
@@ -2195,7 +2670,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 34 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/24.png"
+          <img src="vip-king/24.jpeg"
                alt="2 3/4 Bird Joker (5 pkts)"
                loading="lazy"
                decoding="async">
@@ -2209,7 +2684,7 @@ document.addEventListener("keydown", function(event) {
       <!-- 35 -->
       <div class="vip-product">
         <div class="vip-product-image">
-          <img src="vip-king/25.png"
+          <img src="vip-king/25.jpeg"
                alt="4 Bird Joker (5 pkts)"
                loading="lazy"
                decoding="async">
@@ -2469,6 +2944,61 @@ body.combo-modal-open {
   }
 }
 </style>
+
+
+<script id="meenkshi-shopping-catalogue-js">
+const mscProducts = [{"id": 1, "name": "Max 100 Gun", "pack": "1 Box"}, {"id": 2, "name": "Pixels", "pack": "1 Box"}, {"id": 3, "name": "Pink Octopus (2 pcs)", "pack": "1 Box"}, {"id": 4, "name": "Thanos (1 pc)", "pack": "1 Box"}, {"id": 5, "name": "Purple Palm (1 pc)", "pack": "1 Box"}, {"id": 6, "name": "King Crown (New)", "pack": "1 Box"}, {"id": 7, "name": "Troy 25", "pack": "1 Box"}, {"id": 8, "name": "1/2 Sky Digital", "pack": "1 Box"}, {"id": 9, "name": "Electric Sparkle (3 cm)", "pack": "2 Box"}, {"id": 10, "name": "11\" (13 cm)", "pack": "5 Box"}, {"id": 11, "name": "Cluster (1 pcs)", "pack": "1 Box"}, {"id": 12, "name": "Blue Ice (1 pcs)", "pack": "1 Box"}, {"id": 13, "name": "X-Mas Tree (1 pcs)", "pack": "1 Box"}, {"id": 14, "name": "H Fire Joker", "pack": "5 Pkt"}, {"id": 15, "name": "2 3/4\" H Fire Joker", "pack": "5 Pkt"}, {"id": 16, "name": "Rainbow Smoke (1 pcs)", "pack": "1 Box"}, {"id": 17, "name": "1/2 Twinkling Star", "pack": "5 Box"}, {"id": 18, "name": "Silver (2 pcs)", "pack": "1 Box"}, {"id": 19, "name": "Violet Colour Kathi Deluxe", "pack": "1 Box"}, {"id": 20, "name": "Flower Pot Big", "pack": "1 Box"}, {"id": 21, "name": "Ground Chakkar Special", "pack": "1 Box"}, {"id": 22, "name": "Ground Chakkar Big", "pack": "1 Box"}, {"id": 23, "name": "Red Bijili", "pack": "1 Pkt"}, {"id": 24, "name": "Whistling Paper", "pack": "1 Box"}, {"id": 25, "name": "Emerald Fall", "pack": "1 Box"}];
+const mscCart = {};
+
+function mscChangeQty(id, delta){
+  const el=document.getElementById('mscQty'+id); if(!el)return;
+  const value=Math.max(1,Number(el.textContent||1)+delta); el.textContent=value;
+  if(mscCart[id]){mscCart[id].qty=value;mscRenderCart();}
+}
+function mscAddToCart(id){
+  const p=mscProducts.find(x=>x.id===id); if(!p)return;
+  const qty=Math.max(1,Number(document.getElementById('mscQty'+id)?.textContent||1));
+  mscCart[id]={...p,qty}; mscRenderCart(); mscOpenCart();
+}
+function mscRenderCart(){
+  const box=document.getElementById('mscCartItems'), empty=document.getElementById('mscCartEmpty');
+  const values=Object.values(mscCart); let total=values.reduce((n,x)=>n+x.qty,0);
+  document.getElementById('mscCartCount').textContent=total;
+  document.getElementById('mscCartTotalQty').textContent=total;
+  if(!values.length){box.innerHTML='';empty.style.display='block';return}
+  empty.style.display='none';
+  box.innerHTML=values.map(x=>`<div class="msc-cart-row"><div><h3>${mscEsc(x.name)}</h3><p>Combo quantity: ${mscEsc(x.pack)}</p></div><div class="msc-cart-row-right"><button onclick="mscCartQty(${x.id},-1)">−</button><strong>${x.qty}</strong><button onclick="mscCartQty(${x.id},1)">+</button><button class="msc-cart-remove" onclick="mscRemove(${x.id})">×</button></div></div>`).join('');
+}
+function mscCartQty(id,d){if(!mscCart[id])return;mscCart[id].qty=Math.max(1,mscCart[id].qty+d);const q=document.getElementById('mscQty'+id);if(q)q.textContent=mscCart[id].qty;mscRenderCart()}
+function mscRemove(id){delete mscCart[id];mscRenderCart()}
+function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);document.querySelectorAll('[id^="mscQty"]').forEach(x=>x.textContent='1');mscRenderCart()}
+function mscOpenCart(){document.getElementById('mscCart').classList.add('open');document.getElementById('mscCartOverlay').classList.add('open');document.getElementById('mscCart').setAttribute('aria-hidden','false')}
+function mscCloseCart(){document.getElementById('mscCart').classList.remove('open');document.getElementById('mscCartOverlay').classList.remove('open');document.getElementById('mscCart').setAttribute('aria-hidden','true')}
+function mscEsc(v){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function mscSendWhatsApp(){
+  const values=Object.values(mscCart); if(!values.length){alert('Please add at least one product to your enquiry.');return;}
+  const lines=values.map(x=>`${String(x.id).padStart(2,'0')}. ${x.name} — ${x.qty} qty`);
+  const message=`Hello Sri Meenakshi Crackers,
+
+I would like to enquire about the following products:
+
+${lines.join('
+')}
+
+Please share the latest availability and pricing.
+
+Thank you.`;
+  /* Keep the same WhatsApp number already used by the existing enquiry form. */
+  window.open('https://wa.me/918610546638?text='+encodeURIComponent(message),'_blank');
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const input=document.getElementById('mscSearch'); const cards=[...document.querySelectorAll('.msc-product-card')];
+  const count=document.getElementById('mscResultCount');
+  input?.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const ok=!q||c.dataset.name.includes(q);c.style.display=ok?'':'none';if(ok)n++});count.textContent=n});
+  mscRenderCart();
+});
+</script>
 
 </body>
 </html>
