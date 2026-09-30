@@ -1756,3 +1756,1088 @@ footer{
     font-size: 15px;
   }
 }
+/* =========================================================
+   SRI MEENAKSHI CRACKERS
+   PREMIUM FESTIVE COMBO + ENQUIRY DESIGN
+   Paste this at the VERY BOTTOM of styles.css
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   FESTIVE COLOUR SYSTEM
+   --------------------------------------------------------- */
+
+:root {
+  --sm-pink: #e90063;
+  --sm-pink-dark: #c70052;
+  --sm-purple: #5b218d;
+  --sm-purple-dark: #35135d;
+  --sm-gold: #f2b72f;
+  --sm-gold-light: #ffd86a;
+  --sm-cream: #fffaf2;
+  --sm-cream-2: #fff4e5;
+  --sm-ink: #14295c;
+  --sm-muted: #68738a;
+  --sm-white: #ffffff;
+}
+
+
+/* =========================================================
+   COMBO DEALS SECTION
+   ========================================================= */
+
+.combo-section {
+  position: relative !important;
+  margin-top: 42px !important;
+  padding: 58px 42px 64px !important;
+
+  border-radius: 30px !important;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(233, 0, 99, 0.10) 0,
+      rgba(233, 0, 99, 0) 180px
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(242, 183, 47, 0.14) 0,
+      rgba(242, 183, 47, 0) 220px
+    ),
+    linear-gradient(
+      135deg,
+      #fffdf8 0%,
+      #fff7ec 48%,
+      #fffaf5 100%
+    ) !important;
+
+  border: 1px solid rgba(91, 33, 141, 0.10) !important;
+
+  box-shadow:
+    0 22px 60px rgba(75, 37, 82, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+
+  overflow: hidden !important;
+}
+
+
+/* Decorative festive glow */
+
+.combo-section::before {
+  content: "✦";
+  position: absolute;
+  top: 24px;
+  right: 38px;
+
+  font-size: 70px;
+  line-height: 1;
+
+  color: rgba(242, 183, 47, 0.20);
+
+  pointer-events: none;
+}
+
+.combo-section::after {
+  content: "✧";
+  position: absolute;
+  bottom: 18px;
+  left: 28px;
+
+  font-size: 55px;
+  line-height: 1;
+
+  color: rgba(233, 0, 99, 0.12);
+
+  pointer-events: none;
+}
+
+
+/* Combo heading */
+
+.combo-section .section-head {
+  position: relative;
+  z-index: 2;
+}
+
+.combo-section .section-head h2 {
+  color: var(--sm-ink) !important;
+  font-size: clamp(38px, 5vw, 58px) !important;
+}
+
+.combo-section .section-head p {
+  color: #657089 !important;
+}
+
+.combo-section .eyebrow {
+  color: var(--sm-pink) !important;
+  letter-spacing: 2.5px !important;
+}
+
+
+/* =========================================================
+   VIP COMBO CARDS
+   ========================================================= */
+
+.combo-section .cards {
+  position: relative;
+  z-index: 2;
+
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+
+  margin-top: 34px !important;
+}
+
+
+/* Base card */
+
+.combo-section .product {
+  position: relative !important;
+
+  min-height: 320px !important;
+
+  padding: 34px 32px 32px !important;
+
+  border-radius: 24px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fffaf5 100%
+    ) !important;
+
+  border: 1px solid rgba(91, 33, 141, 0.12) !important;
+
+  box-shadow:
+    0 14px 40px rgba(60, 31, 74, 0.10) !important;
+
+  overflow: hidden !important;
+
+  transition:
+    transform 0.30s ease,
+    box-shadow 0.30s ease,
+    border-color 0.30s ease !important;
+}
+
+
+/* Decorative corner glow */
+
+.combo-section .product::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -80px;
+  top: -80px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(242, 183, 47, 0.20),
+      rgba(242, 183, 47, 0)
+    );
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.combo-section .product:hover {
+  transform: translateY(-8px) !important;
+
+  box-shadow:
+    0 24px 55px rgba(91, 33, 141, 0.16) !important;
+}
+
+
+/* =========================================================
+   VIP KING CARD
+   ========================================================= */
+
+.combo-section .product:nth-child(1) {
+  border-top: 4px solid var(--sm-gold) !important;
+}
+
+.combo-section .product:nth-child(1)::after {
+  content: "BEST SELLER";
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff1bd,
+      #ffe28a
+    );
+
+  color: #694700;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+
+/* =========================================================
+   VIP QUEEN CARD
+   ========================================================= */
+
+.combo-section .product:nth-child(2) {
+  border-top: 4px solid var(--sm-pink) !important;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(233, 0, 99, 0.07),
+      transparent 190px
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fff8fc 100%
+    ) !important;
+}
+
+.combo-section .product:nth-child(2)::after {
+  content: "POPULAR";
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe0ef,
+      #ffd0e7
+    );
+
+  color: #a5004b;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+
+/* =========================================================
+   COMBO ICON
+   ========================================================= */
+
+.combo-section .product .icon {
+  position: relative;
+  z-index: 2;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0b8,
+      #ffd45d
+    ) !important;
+
+  color: #5b3a00 !important;
+
+  font-size: 28px !important;
+
+  box-shadow:
+    0 10px 22px rgba(242, 183, 47, 0.22);
+}
+
+
+/* Queen icon */
+
+.combo-section .product:nth-child(2) .icon {
+  background:
+    linear-gradient(
+      135deg,
+      #ffe1ef,
+      #ffbddb
+    ) !important;
+
+  color: var(--sm-pink) !important;
+
+  box-shadow:
+    0 10px 22px rgba(233, 0, 99, 0.16);
+}
+
+
+/* =========================================================
+   PRODUCT TAG
+   ========================================================= */
+
+.combo-section .product-tag {
+  display: inline-block !important;
+
+  margin-bottom: 10px !important;
+
+  color: var(--sm-purple) !important;
+
+  font-size: 11px !important;
+  font-weight: 800 !important;
+
+  letter-spacing: 1.4px !important;
+  text-transform: uppercase !important;
+}
+
+
+/* =========================================================
+   COMBO TITLE
+   ========================================================= */
+
+.combo-section .product h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 4px 0 14px !important;
+
+  color: var(--sm-ink) !important;
+
+  font-size: clamp(28px, 3vw, 38px) !important;
+
+  line-height: 1.05 !important;
+}
+
+
+/* Queen title */
+
+.combo-section .product:nth-child(2) h3 {
+  color: #711447 !important;
+}
+
+
+/* =========================================================
+   COMBO DESCRIPTION
+   ========================================================= */
+
+.combo-section .product p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 500px;
+
+  color: #6b7488 !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   VIEW COMBO LINK
+   ========================================================= */
+
+.combo-section .product a {
+  position: relative;
+  z-index: 3;
+
+  display: inline-flex !important;
+  align-items: center;
+
+  margin-top: 22px !important;
+
+  padding: 12px 20px !important;
+
+  border-radius: 999px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--sm-purple),
+      #35135d
+    ) !important;
+
+  color: #ffffff !important;
+
+  font-weight: 800 !important;
+
+  text-decoration: none !important;
+
+  box-shadow:
+    0 9px 20px rgba(91, 33, 141, 0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+.combo-section .product a:hover {
+  transform: translateY(-2px) !important;
+
+  box-shadow:
+    0 14px 28px rgba(91, 33, 141, 0.28) !important;
+}
+
+
+/* Queen button */
+
+.combo-section .product:nth-child(2) a {
+  background:
+    linear-gradient(
+      135deg,
+      var(--sm-pink),
+      #c70052
+    ) !important;
+
+  box-shadow:
+    0 9px 20px rgba(233, 0, 99, 0.20);
+}
+
+
+/* =========================================================
+   ENQUIRY SECTION
+   ========================================================= */
+
+.enquiry-section {
+  position: relative !important;
+
+  padding: 82px 24px 90px !important;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(233, 0, 99, 0.10),
+      transparent 230px
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(242, 183, 47, 0.13),
+      transparent 250px
+    ),
+    linear-gradient(
+      135deg,
+      #fffdf9 0%,
+      #fff7ed 50%,
+      #fffaf5 100%
+    ) !important;
+
+  overflow: hidden !important;
+
+  border-top: 1px solid rgba(91, 33, 141, 0.08) !important;
+  border-bottom: 1px solid rgba(91, 33, 141, 0.08) !important;
+}
+
+
+/* Festive decorative elements */
+
+.enquiry-section::before {
+  content: "✦  ✧  ✦";
+
+  position: absolute;
+
+  top: 28px;
+  right: 7%;
+
+  color: rgba(242, 183, 47, 0.30);
+
+  font-size: 28px;
+  letter-spacing: 15px;
+
+  pointer-events: none;
+}
+
+.enquiry-section::after {
+  content: "✧  ✦  ✧";
+
+  position: absolute;
+
+  bottom: 32px;
+  left: 6%;
+
+  color: rgba(233, 0, 99, 0.16);
+
+  font-size: 25px;
+  letter-spacing: 12px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ENQUIRY HEADING
+   ========================================================= */
+
+.enquiry-section > .eyebrow,
+.enquiry-section > h2,
+.enquiry-section > p {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+.enquiry-section > .eyebrow {
+  color: var(--sm-pink) !important;
+  letter-spacing: 2.5px !important;
+}
+
+.enquiry-section > h2 {
+  color: var(--sm-ink) !important;
+
+  font-size: clamp(40px, 5vw, 62px) !important;
+
+  margin-bottom: 12px !important;
+}
+
+.enquiry-section > p {
+  max-width: 720px;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  color: #69748a !important;
+
+  line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   ENQUIRY FORM CARD
+   ========================================================= */
+
+.enquiry-form-wrapper {
+  position: relative;
+  z-index: 3;
+
+  width: min(900px, 100%);
+
+  margin: 38px auto 0 !important;
+
+  padding: 38px !important;
+
+  border-radius: 28px !important;
+
+  background:
+    rgba(255, 255, 255, 0.94) !important;
+
+  border: 1px solid rgba(91, 33, 141, 0.12) !important;
+
+  box-shadow:
+    0 25px 70px rgba(62, 35, 75, 0.12),
+    0 3px 10px rgba(62, 35, 75, 0.04) !important;
+
+  backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   FORM LAYOUT
+   ========================================================= */
+
+#enquiryForm {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px 22px;
+}
+
+
+/* Make product/combo fields full width */
+
+#enquiryForm .form-group:nth-child(4),
+#enquiryForm .form-group:nth-child(5),
+#enquiryForm .form-group:nth-child(6),
+#enquiryForm .combo-select-wrapper,
+#enquiryForm .combo-selection,
+#enquiryForm .combo-tags {
+  grid-column: 1 / -1;
+}
+
+
+/* Submit button full width */
+
+#enquiryForm .enquiry-submit {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+#enquiryForm .form-group {
+  margin: 0 !important;
+}
+
+
+/* =========================================================
+   FORM LABEL
+   ========================================================= */
+
+#enquiryForm label {
+  display: block;
+
+  margin-bottom: 8px !important;
+
+  color: var(--sm-purple) !important;
+
+  font-size: 13px !important;
+  font-weight: 800 !important;
+
+  letter-spacing: 0.4px !important;
+}
+
+#enquiryForm label span {
+  color: var(--sm-pink) !important;
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+#enquiryForm input[type="text"],
+#enquiryForm input[type="tel"],
+#enquiryForm input[type="email"],
+#enquiryForm input[type="search"],
+#enquiryForm textarea,
+#enquiryForm select {
+  width: 100% !important;
+
+  box-sizing: border-box !important;
+
+  min-height: 52px;
+
+  padding: 14px 16px !important;
+
+  border-radius: 13px !important;
+
+  border: 1px solid rgba(91, 33, 141, 0.16) !important;
+
+  background: #fffdfb !important;
+
+  color: var(--sm-ink) !important;
+
+  font-family: inherit !important;
+
+  font-size: 15px !important;
+
+  outline: none !important;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease !important;
+}
+
+
+#enquiryForm textarea {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+
+#enquiryForm input::placeholder,
+#enquiryForm textarea::placeholder {
+  color: #a1a7b3 !important;
+}
+
+
+/* Focus */
+
+#enquiryForm input:focus,
+#enquiryForm textarea:focus,
+#enquiryForm select:focus {
+  background: #ffffff !important;
+
+  border-color: var(--sm-pink) !important;
+
+  box-shadow:
+    0 0 0 4px rgba(233, 0, 99, 0.08) !important;
+}
+
+
+/* =========================================================
+   COMBO MULTI-SELECT
+   Existing dropdown / checkbox system
+   ========================================================= */
+
+#comboSelectButton {
+  width: 100% !important;
+
+  min-height: 56px !important;
+
+  padding: 14px 17px !important;
+
+  border-radius: 14px !important;
+
+  border: 1px solid rgba(91, 33, 141, 0.16) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fffaf4
+    ) !important;
+
+  color: var(--sm-ink) !important;
+
+  font-weight: 700 !important;
+
+  box-shadow:
+    0 5px 15px rgba(91, 33, 141, 0.05) !important;
+}
+
+
+/* Dropdown */
+
+#comboSelectDropdown {
+  border-radius: 16px !important;
+
+  border: 1px solid rgba(91, 33, 141, 0.14) !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 20px 45px rgba(62, 35, 75, 0.16) !important;
+
+  overflow: hidden !important;
+}
+
+
+/* Combo options */
+
+#comboSelectDropdown .combo-option {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 16px !important;
+
+  background: #ffffff !important;
+
+  color: var(--sm-ink) !important;
+
+  border-bottom: 1px solid rgba(91, 33, 141, 0.07) !important;
+
+  transition:
+    background 0.2s ease !important;
+}
+
+#comboSelectDropdown .combo-option:hover {
+  background: #fff5fa !important;
+}
+
+
+/* Checkbox */
+
+#comboSelectDropdown input[type="checkbox"] {
+  accent-color: var(--sm-pink);
+
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Combo tags */
+
+#comboTags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+#comboTags > * {
+  border-radius: 999px !important;
+
+  padding: 7px 12px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe4f0,
+      #fff0c7
+    ) !important;
+
+  border: 1px solid rgba(233, 0, 99, 0.12) !important;
+
+  color: var(--sm-purple) !important;
+
+  font-size: 12px !important;
+
+  font-weight: 800 !important;
+}
+
+
+/* =========================================================
+   SUBMIT ENQUIRY BUTTON
+   ========================================================= */
+
+#enquiryForm .enquiry-submit {
+  width: 100% !important;
+
+  min-height: 58px !important;
+
+  margin-top: 8px !important;
+
+  border: 0 !important;
+
+  border-radius: 15px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--sm-pink),
+      #c70052 55%,
+      var(--sm-purple)
+    ) !important;
+
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  font-weight: 800 !important;
+
+  letter-spacing: 0.3px !important;
+
+  cursor: pointer !important;
+
+  box-shadow:
+    0 13px 28px rgba(233, 0, 99, 0.22) !important;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+#enquiryForm .enquiry-submit:hover {
+  transform: translateY(-3px) !important;
+
+  box-shadow:
+    0 18px 35px rgba(91, 33, 141, 0.25) !important;
+}
+
+
+/* =========================================================
+   PRODUCT NOTICE
+   ========================================================= */
+
+.product-notice {
+  position: relative;
+
+  margin: 24px auto 0 !important;
+
+  width: min(1000px, 100%);
+
+  padding: 16px 22px !important;
+
+  border-radius: 16px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff5d8,
+      #fff0f6
+    ) !important;
+
+  border: 1px solid rgba(242, 183, 47, 0.25) !important;
+
+  color: #58657c !important;
+
+  box-shadow:
+    0 8px 22px rgba(91, 33, 141, 0.05) !important;
+
+  text-align: center;
+}
+
+.product-notice strong {
+  color: var(--sm-purple) !important;
+}
+
+
+/* =========================================================
+   SHOPPING CATALOGUE - KEEP SAME FESTIVE LANGUAGE
+   ========================================================= */
+
+.msc-section {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(233, 0, 99, 0.08),
+      transparent 200px
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(242, 183, 47, 0.10),
+      transparent 230px
+    ),
+    linear-gradient(
+      135deg,
+      #fffdf9,
+      #fff7ec
+    ) !important;
+}
+
+
+/* Catalogue heading */
+
+.msc-head h2 {
+  color: var(--sm-ink) !important;
+}
+
+.msc-head h2 em {
+  color: var(--sm-pink) !important;
+}
+
+
+/* Catalogue tabs */
+
+.msc-tab {
+  border-color: rgba(91, 33, 141, 0.14) !important;
+
+  background: #ffffff !important;
+
+  color: var(--sm-purple) !important;
+}
+
+.msc-tab.active {
+  background:
+    linear-gradient(
+      135deg,
+      var(--sm-pink),
+      var(--sm-purple)
+    ) !important;
+
+  color: #ffffff !important;
+
+  border-color: transparent !important;
+
+  box-shadow:
+    0 10px 24px rgba(91, 33, 141, 0.18) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .combo-section {
+    padding: 42px 20px 48px !important;
+    border-radius: 22px !important;
+  }
+
+  .combo-section .cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .combo-section .product {
+    min-height: auto !important;
+  }
+
+  #enquiryForm {
+    grid-template-columns: 1fr !important;
+  }
+
+  #enquiryForm .form-group,
+  #enquiryForm .enquiry-submit {
+    grid-column: 1 / -1 !important;
+  }
+
+  .enquiry-form-wrapper {
+    padding: 24px 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .enquiry-section {
+    padding: 60px 16px 70px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .combo-section {
+    margin-top: 28px !important;
+    padding: 34px 14px 40px !important;
+  }
+
+  .combo-section .product {
+    padding: 27px 22px 25px !important;
+    border-radius: 20px !important;
+  }
+
+  .combo-section .product h3 {
+    font-size: 30px !important;
+  }
+
+  .combo-section .product::after {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+  }
+
+  .combo-section .product .icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    font-size: 24px !important;
+  }
+
+  .enquiry-form-wrapper {
+    padding: 20px 14px !important;
+  }
+
+  #enquiryForm {
+    gap: 17px !important;
+  }
+
+  #enquiryForm input[type="text"],
+  #enquiryForm input[type="tel"],
+  #enquiryForm textarea,
+  #comboSelectButton {
+    min-height: 50px !important;
+  }
+
+  .enquiry-section > h2 {
+    font-size: 40px !important;
+  }
+}
