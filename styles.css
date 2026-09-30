@@ -3571,3 +3571,539 @@ footer{
   }
 
 }
+/* =========================================================
+   FINAL POLISH
+   WHAT WE STAND FOR + DELIVERY
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   WHAT WE STAND FOR
+   --------------------------------------------------------- */
+
+.promise {
+  position: relative;
+  padding: 110px 7%;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 0, 120, 0.10), transparent 28%),
+    radial-gradient(circle at 85% 70%, rgba(255, 196, 60, 0.08), transparent 30%),
+    linear-gradient(135deg, #130d22 0%, #21102d 45%, #100b1d 100%);
+  overflow: hidden;
+}
+
+/* subtle decorative glow */
+.promise::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -180px;
+  right: -120px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 205, 90, 0.12),
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.promise::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  bottom: -180px;
+  left: -120px;
+  background: radial-gradient(
+    circle,
+    rgba(236, 0, 118, 0.10),
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.promise .section-head {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 55px;
+}
+
+.promise .section-head .eyebrow {
+  color: #f5c84b;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.promise .section-head h2 {
+  color: #ffffff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.35);
+}
+
+.promise-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Individual value cards */
+.promise-grid > div {
+  position: relative;
+
+  min-height: 225px;
+  padding: 30px 28px;
+
+  border: 1px solid rgba(255, 210, 90, 0.22);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.075),
+      rgba(255,255,255,0.025)
+    );
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.promise-grid > div:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(255, 211, 89, 0.65);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,0.35),
+    0 0 30px rgba(255,196,70,0.08);
+}
+
+/* Icon */
+.promise-grid > div > span {
+  display: flex;
+
+  width: 48px;
+  height: 48px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  color: #ffd45c;
+  font-size: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,208,82,0.18),
+      rgba(236,0,118,0.12)
+    );
+
+  border: 1px solid rgba(255,211,89,0.25);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.18);
+}
+
+.promise-grid h3 {
+  margin: 0 0 12px;
+
+  color: #ffe08a;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  line-height: 1.1;
+}
+
+.promise-grid p {
+  margin: 0;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Make Customer First span across remaining row nicely */
+.promise-grid > div:nth-child(4) {
+  grid-column: span 1;
+}
+
+/* ---------------------------------------------------------
+   DELIVERY SECTION
+   --------------------------------------------------------- */
+
+.delivery {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 70px;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 110px 7%;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(255, 190, 60, 0.09),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #fffdf8 0%,
+      #fff8ee 55%,
+      #fffdf8 100%
+    );
+
+  overflow: hidden;
+}
+
+/* Decorative golden glow */
+.delivery::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -220px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(236,0,118,0.07),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   DELIVERY IMAGE
+   --------------------------------------------------------- */
+
+.delivery-image {
+  position: relative;
+
+  width: 100%;
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,1) 0%,
+      rgba(255,250,240,0.95) 55%,
+      rgba(255,243,225,0.8) 100%
+    );
+
+  border: 1px solid rgba(204,160,60,0.20);
+
+  box-shadow:
+    0 25px 65px rgba(80,50,20,0.12),
+    inset 0 0 40px rgba(255,255,255,0.7);
+
+  overflow: hidden;
+}
+
+/* Decorative border */
+.delivery-image::before {
+  content: "";
+
+  position: absolute;
+  inset: 12px;
+
+  border: 1px dashed rgba(210,165,70,0.25);
+
+  border-radius: 20px;
+
+  pointer-events: none;
+}
+
+/* Image itself */
+.delivery-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 390px;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 18px;
+
+  mix-blend-mode: multiply;
+
+  filter:
+    saturate(1.08)
+    contrast(1.03)
+    drop-shadow(0 15px 20px rgba(0,0,0,0.12));
+}
+
+/* ---------------------------------------------------------
+   DELIVERY CONTENT
+   --------------------------------------------------------- */
+
+.delivery > div:last-child {
+  position: relative;
+  z-index: 2;
+}
+
+.delivery .eyebrow {
+  color: #b98b18;
+
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.delivery h2 {
+  margin: 0 0 20px;
+
+  color: #132d67;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(40px, 4vw, 60px);
+
+  line-height: 1.05;
+}
+
+.delivery > div:last-child > p:not(.eyebrow) {
+  color: #5d6270;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+
+  max-width: 560px;
+
+  margin-bottom: 25px;
+}
+
+/* Delivery checklist */
+.delivery ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 14px;
+}
+
+.delivery li {
+  position: relative;
+
+  padding-left: 34px;
+
+  color: #3f4655;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+.delivery li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+  top: -2px;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #ffd85a,
+    #f3b928
+  );
+
+  color: #422900;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow: 0 5px 12px rgba(205,150,30,0.18);
+}
+
+/* ---------------------------------------------------------
+   DESKTOP BALANCE
+   --------------------------------------------------------- */
+
+@media (min-width: 1100px) {
+
+  .promise-grid > div:nth-child(4) {
+    margin-right: calc(100% / 3 + 11px);
+  }
+
+  .delivery {
+    min-height: 650px;
+  }
+
+}
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .promise {
+    padding: 80px 5%;
+  }
+
+  .promise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promise-grid > div:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .delivery {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 80px 5%;
+  }
+
+  .delivery-image {
+    min-height: 380px;
+  }
+
+  .delivery-image img {
+    height: 340px;
+  }
+
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .promise {
+    padding: 65px 18px;
+  }
+
+  .promise .section-head {
+    margin-bottom: 35px;
+  }
+
+  .promise .section-head h2 {
+    font-size: 43px;
+  }
+
+  .promise-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .promise-grid > div,
+  .promise-grid > div:nth-child(4) {
+    grid-column: auto;
+
+    min-height: auto;
+
+    padding: 25px 22px;
+  }
+
+  .promise-grid h3 {
+    font-size: 25px;
+  }
+
+  .promise-grid p {
+    font-size: 14px;
+  }
+
+  .delivery {
+    padding: 65px 18px;
+
+    gap: 35px;
+  }
+
+  .delivery-image {
+    min-height: 300px;
+
+    padding: 18px;
+
+    border-radius: 22px;
+  }
+
+  .delivery-image::before {
+    inset: 9px;
+  }
+
+  .delivery-image img {
+    width: 100%;
+    height: 270px;
+  }
+
+  .delivery h2 {
+    font-size: 42px;
+  }
+
+  .delivery > div:last-child > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+
+  .delivery li {
+    font-size: 14px;
+  }
+
+}
