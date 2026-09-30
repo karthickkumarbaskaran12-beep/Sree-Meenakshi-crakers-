@@ -3103,5 +3103,148 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+  <!-- =========================
+     VIP COMBO MY ENQUIRY
+========================= -->
+
+<button id="comboEnquiryFloatingBtn"
+        class="combo-enquiry-floating"
+        type="button"
+        onclick="openComboEnquiry()">
+
+  <span class="combo-enquiry-icon">🛒</span>
+
+  <span class="combo-enquiry-text">
+    My Enquiry
+  </span>
+
+  <span id="comboEnquiryCount" class="combo-enquiry-count">0</span>
+
+</button>
+
+
+<!-- =========================
+     COMBO ENQUIRY PANEL
+========================= -->
+
+<div id="comboEnquiryPanel"
+     class="combo-enquiry-panel"
+     aria-hidden="true">
+
+  <div class="combo-enquiry-backdrop"
+       onclick="closeComboEnquiry()"></div>
+
+  <div class="combo-enquiry-box">
+
+    <button type="button"
+            class="combo-enquiry-close"
+            onclick="closeComboEnquiry()"
+            aria-label="Close">
+      &times;
+    </button>
+
+    <div class="combo-enquiry-header">
+
+      <span class="eyebrow">
+        MY ENQUIRY
+      </span>
+
+      <h2>Select Your Combo</h2>
+
+      <p>
+        Choose VIP King Combo, VIP Queen Combo,
+        or both combos.
+      </p>
+
+    </div>
+
+
+    <div class="combo-selection">
+
+      <!-- VIP KING -->
+
+      <label class="combo-selection-card">
+
+        <input type="checkbox"
+               id="selectVipKing"
+               value="VIP King Combo"
+               onchange="updateComboEnquiry()">
+
+        <span class="combo-selection-content">
+
+          <span class="combo-selection-check">✓</span>
+
+          <span class="combo-selection-details">
+
+            <strong>👑 VIP King Combo</strong>
+
+            <small>
+              25 Products
+            </small>
+
+          </span>
+
+        </span>
+
+      </label>
+
+
+      <!-- VIP QUEEN -->
+
+      <label class="combo-selection-card">
+
+        <input type="checkbox"
+               id="selectVipQueen"
+               value="VIP Queen Combo"
+               onchange="updateComboEnquiry()">
+
+        <span class="combo-selection-content">
+
+          <span class="combo-selection-check">✓</span>
+
+          <span class="combo-selection-details">
+
+            <strong>👸 VIP Queen Combo</strong>
+
+            <small>
+              35 Products
+            </small>
+
+          </span>
+
+        </span>
+
+      </label>
+
+    </div>
+
+
+    <!-- SELECTED COMBOS -->
+
+    <div id="selectedComboSummary"
+         class="selected-combo-summary">
+
+      <span>No combo selected</span>
+
+    </div>
+
+
+    <!-- SEND ENQUIRY -->
+
+    <button id="sendComboWhatsApp"
+            type="button"
+            class="combo-whatsapp-btn"
+            onclick="sendComboEnquiry()"
+            disabled>
+
+      <span>Send Enquiry on WhatsApp</span>
+
+      <span>→</span>
+
+    </button>
+
+  </div>
+
+</div>
 </body>
 </html>
