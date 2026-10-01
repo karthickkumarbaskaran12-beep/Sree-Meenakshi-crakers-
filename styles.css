@@ -2841,440 +2841,6 @@ footer{
     font-size: 40px !important;
   }
 }
-/* =========================================
-   VIP KING / VIP QUEEN MY ENQUIRY
-========================================= */
-
-.combo-enquiry-floating {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-
-  z-index: 99990;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 14px 20px;
-
-  border: 1px solid rgba(232, 191, 85, 0.65);
-  border-radius: 50px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #fff8df,
-      #f5d477,
-      #d9a92e
-    );
-
-  color: #211700;
-
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,0.30),
-    0 0 25px rgba(232,191,85,0.25);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.combo-enquiry-floating:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 16px 40px rgba(0,0,0,0.38),
-    0 0 35px rgba(232,191,85,0.35);
-}
-
-.combo-enquiry-icon {
-  font-size: 20px;
-}
-
-.combo-enquiry-text {
-  white-space: nowrap;
-}
-
-.combo-enquiry-count {
-  min-width: 23px;
-  height: 23px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #19130a;
-  color: #f7d774;
-
-  font-size: 12px;
-  font-weight: 800;
-}
-
-
-/* =========================================
-   ENQUIRY PANEL
-========================================= */
-
-.combo-enquiry-panel {
-  position: fixed;
-  inset: 0;
-
-  z-index: 100000;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px;
-}
-
-.combo-enquiry-panel.open {
-  display: flex;
-}
-
-.combo-enquiry-backdrop {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(5, 4, 10, 0.78);
-
-  backdrop-filter: blur(10px);
-}
-
-
-.combo-enquiry-box {
-  position: relative;
-  z-index: 2;
-
-  width: min(520px, 100%);
-
-  padding: 30px;
-
-  border: 1px solid rgba(232,191,85,0.55);
-  border-radius: 22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #fffdf5,
-      #fff8e4 45%,
-      #f5e2ad
-    );
-
-  color: #211700;
-
-  box-shadow:
-    0 35px 100px rgba(0,0,0,0.55);
-
-  text-align: center;
-}
-
-
-.combo-enquiry-close {
-  position: absolute;
-
-  top: 12px;
-  right: 14px;
-
-  width: 40px;
-  height: 40px;
-
-  border: 1px solid rgba(100,70,10,0.25);
-  border-radius: 50%;
-
-  background: rgba(255,255,255,0.75);
-
-  color: #4d3500;
-
-  font-size: 26px;
-  line-height: 1;
-
-  cursor: pointer;
-}
-
-
-.combo-enquiry-header .eyebrow {
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #9a7010;
-
-  font-size: 12px;
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.combo-enquiry-header h2 {
-  margin: 0 0 10px;
-
-  color: #3a2800;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 38px;
-  line-height: 1.1;
-}
-
-
-.combo-enquiry-header p {
-  margin: 0 0 24px;
-
-  color: #665326;
-
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-
-/* =========================================
-   COMBO SELECTION CARDS
-========================================= */
-
-.combo-selection {
-  display: grid;
-
-  gap: 14px;
-
-  text-align: left;
-}
-
-
-.combo-selection-card {
-  display: block;
-
-  cursor: pointer;
-}
-
-
-.combo-selection-card input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-.combo-selection-content {
-  display: flex;
-  align-items: center;
-
-  gap: 14px;
-
-  padding: 18px;
-
-  border: 2px solid rgba(150,110,20,0.18);
-  border-radius: 16px;
-
-  background: rgba(255,255,255,0.72);
-
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-
-.combo-selection-card:hover .combo-selection-content {
-  transform: translateY(-2px);
-
-  border-color: rgba(180,135,30,0.5);
-}
-
-
-.combo-selection-card input:checked
-+ .combo-selection-content {
-  border-color: #c99b28;
-
-  background:
-    linear-gradient(
-      135deg,
-      #fffdf4,
-      #f9e9b6
-    );
-
-  box-shadow:
-    0 8px 25px rgba(150,110,20,0.15);
-}
-
-
-.combo-selection-check {
-  width: 28px;
-  height: 28px;
-
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid #c5a55b;
-  border-radius: 8px;
-
-  background: white;
-
-  color: transparent;
-
-  font-size: 16px;
-  font-weight: 900;
-}
-
-
-.combo-selection-card input:checked
-+ .combo-selection-content
-.combo-selection-check {
-  border-color: #b88917;
-
-  background: #c99b28;
-
-  color: white;
-}
-
-
-.combo-selection-details {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 4px;
-}
-
-
-.combo-selection-details strong {
-  color: #352500;
-
-  font-size: 17px;
-}
-
-
-.combo-selection-details small {
-  color: #806a35;
-
-  font-size: 13px;
-}
-
-
-/* =========================================
-   SELECTED SUMMARY
-========================================= */
-
-.selected-combo-summary {
-  margin-top: 18px;
-  margin-bottom: 18px;
-
-  min-height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 14px;
-
-  border-radius: 12px;
-
-  background: rgba(255,255,255,0.65);
-
-  color: #5a430b;
-
-  font-size: 14px;
-  font-weight: 700;
-}
-
-
-/* =========================================
-   WHATSAPP BUTTON
-========================================= */
-
-.combo-whatsapp-btn {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 16px 20px;
-
-  border: 0;
-  border-radius: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #c99b28,
-      #e8bf55
-    );
-
-  color: #211700;
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 15px;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 8px 22px rgba(140,100,10,0.20);
-
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-}
-
-
-.combo-whatsapp-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-}
-
-
-.combo-whatsapp-btn:disabled {
-  opacity: 0.45;
-
-  cursor: not-allowed;
-
-  box-shadow: none;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .combo-enquiry-floating {
-    right: 14px;
-    bottom: 14px;
-
-    padding: 12px 16px;
-
-    font-size: 14px;
-  }
-
-  .combo-enquiry-box {
-    padding: 24px 18px;
-  }
-
-  .combo-enquiry-header h2 {
-    font-size: 32px;
-  }
-
-  .combo-selection-content {
-    padding: 15px;
-  }
-
-}
 /* =========================================================
    MY ENQUIRY - VIP COMBO SELECTOR
 ========================================================= */
@@ -6408,76 +5974,235 @@ body > *:not(.site-fireworks) {
     font-size: 13px !important;
   }
 }
+
 /* =========================================================
-   FIX: MY ENQUIRY CART MUST BE HIDDEN UNTIL CLICKED
-   ========================================================= */
+   FINAL CLEAN VIP COMBO POPUP + ENQUIRY PRESENTATION
+   This block is intentionally the last popup styling block.
+========================================================= */
 
-#mscCart {
-  position: fixed !important;
-  top: 0 !important;
-  right: 0 !important;
-
-  width: min(460px, 94vw) !important;
-  height: 100vh !important;
-
-  z-index: 120001 !important;
-
-  /* CLOSED STATE */
-  transform: translate3d(105%, 0, 0) !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-
-  transition:
-    transform .28s ease,
-    opacity .2s ease,
-    visibility 0s linear .28s !important;
-
-  background: #11101b !important;
-  border-left: 1px solid rgba(232,191,85,.45);
-  box-shadow: -25px 0 80px rgba(0,0,0,.5);
-}
-
-/* OPEN STATE */
-#mscCart.open {
-  transform: translate3d(0, 0, 0) !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-
-  transition:
-    transform .28s ease,
-    opacity .2s ease,
-    visibility 0s linear 0s !important;
-}
-
-/* Overlay must also stay hidden initially */
-#mscCartOverlay {
+.combo-modal {
   position: fixed !important;
   inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  padding: 16px !important;
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  z-index: 999999 !important;
+}
+
+.combo-modal.open {
+  display: flex !important;
+}
+
+.combo-modal-backdrop {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(10, 7, 18, .80) !important;
+  backdrop-filter: blur(7px) !important;
+  -webkit-backdrop-filter: blur(7px) !important;
+  cursor: pointer !important;
+}
+
+.combo-modal-box {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(950px, calc(100vw - 32px)) !important;
+  max-width: 950px !important;
+  max-height: calc(100vh - 32px) !important;
+  max-height: calc(100dvh - 32px) !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  border-radius: 22px !important;
+  background: linear-gradient(180deg, #fffdf8 0%, #fff7ef 100%) !important;
+  border: 1px solid rgba(232,191,85,.55) !important;
+  box-shadow: 0 35px 100px rgba(0,0,0,.55) !important;
+}
+
+.combo-modal-close {
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 30 !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  border: 1px solid rgba(70,40,10,.16) !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.94) !important;
+  color: #35145f !important;
+  font-size: 27px !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,.14) !important;
+}
+
+.combo-modal-close:hover {
+  background: #e90063 !important;
+  color: #fff !important;
+}
+
+.vip-combo-top {
+  padding: 40px 55px 28px !important;
+  text-align: center !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #35145f 0%, #5b218d 52%, #9d145e 100%) !important;
+  border-bottom: 3px solid #f2b72f !important;
+}
+
+.vip-combo-top .eyebrow {
+  color: rgba(255,255,255,.76) !important;
+  margin: 10px 0 4px !important;
+}
+
+.vip-combo-top h2 {
+  margin: 0 0 8px !important;
+  color: #fff !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(2.3rem, 5vw, 4rem) !important;
+  line-height: .98 !important;
+}
+
+.vip-combo-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 7px 15px !important;
+  border: 1px solid rgba(255,216,106,.55) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.10) !important;
+  color: #ffd86a !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+}
+
+.vip-combo-icon { font-size: 20px !important; }
+
+.vip-king-intro {
+  max-width: 650px !important;
+  margin: 0 auto 18px !important;
+  color: rgba(255,255,255,.82) !important;
+  line-height: 1.6 !important;
+}
+
+.vip-combo-price-box {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 10px 24px !important;
+  border: 1px solid rgba(255,216,106,.35) !important;
+  border-radius: 15px !important;
+  background: rgba(0,0,0,.16) !important;
+}
+
+.vip-price-label {
+  color: #ffd86a !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+}
+
+.vip-combo-price-box strong {
+  color: #fff !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 30px !important;
+}
+
+.vip-combo-price-box small {
+  color: rgba(255,255,255,.68) !important;
+  font-size: 11px !important;
+}
+
+.vip-king-products {
+  padding: 18px !important;
+}
+
+#vipKingModal .vip-product,
+#vipQueenModal .vip-product {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+#vipKingModal .vip-product-image,
+#vipQueenModal .vip-product-image {
+  background: #fff !important;
+}
+
+#vipKingModal .vip-product-image img,
+#vipQueenModal .vip-product-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+.combo-modal-enquiry {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: calc(100% - 36px) !important;
+  min-height: 50px !important;
+  margin: 0 18px 20px !important;
+  border: 0 !important;
+  border-radius: 13px !important;
+  background: linear-gradient(135deg, #e90063, #5b218d) !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 25px rgba(91,33,141,.20) !important;
+}
+
+.combo-modal-enquiry:hover {
+  transform: translateY(-1px) !important;
+}
+
+body.combo-modal-open {
+  overflow: hidden !important;
+}
+
+/* The real My Enquiry drawer remains the single enquiry UI. */
+.msc-cart-overlay {
   z-index: 120000 !important;
-
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-
-  transition:
-    opacity .2s ease,
-    visibility 0s linear .2s !important;
-
-  background: rgba(0,0,0,.68) !important;
 }
 
-/* Overlay when enquiry is opened */
-#mscCartOverlay.open {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-
-  transition:
-    opacity .2s ease,
-    visibility 0s linear 0s !important;
+.msc-cart {
+  z-index: 120001 !important;
 }
+
+@media (max-width: 700px) {
+  .combo-modal { padding: 8px !important; }
+  .combo-modal-box {
+    width: calc(100vw - 16px) !important;
+    max-height: calc(100dvh - 16px) !important;
+    border-radius: 18px !important;
+  }
+  .vip-combo-top { padding: 34px 20px 23px !important; }
+  .vip-combo-top h2 { font-size: 2.5rem !important; }
+  .vip-king-products { padding: 10px !important; }
+  .combo-modal-enquiry {
+    width: calc(100% - 20px) !important;
+    margin: 0 10px 12px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .combo-modal { padding: 6px !important; }
+  .combo-modal-box {
+    width: calc(100vw - 12px) !important;
+    max-height: calc(100dvh - 12px) !important;
+  }
+  .vip-combo-top { padding: 32px 16px 20px !important; }
+  .vip-combo-top h2 { font-size: 2.2rem !important; }
+}
+
