@@ -1434,6 +1434,27 @@ function closeVipQueenModal() {
 }
 
 /* =========================
+   POPUP -> EXISTING ENQUIRY FORM
+========================= */
+function selectComboFromPopup(comboName) {
+  const hiddenInput = document.getElementById("productsCombosRequired");
+  const comboButton = document.getElementById("comboSelectButton");
+
+  if (hiddenInput) hiddenInput.value = comboName;
+  if (comboButton) comboButton.textContent = comboName;
+
+  closeVipKingModal();
+  closeVipQueenModal();
+
+  const enquirySection = document.getElementById("enquiry");
+  if (enquirySection) {
+    setTimeout(() => {
+      enquirySection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+  }
+}
+
+/* =========================
    SONNY COMBO IMAGE POPUP
 ========================= */
 
@@ -1787,7 +1808,7 @@ document.addEventListener("keydown", function(event) {
 </div>
 </div>
 </div>
-<a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="closeVipKingModal()">
+<a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="selectComboFromPopup('VIP King Combo'); return false;">
       Submit Enquiry <span>→</span>
 </a>
 </div>
@@ -2191,7 +2212,7 @@ document.addEventListener("keydown", function(event) {
 </div>
 </div>
 </div>
-<a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="closeVipQueenModal()">
+<a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="selectComboFromPopup('VIP Queen Combo'); return false;">
       Submit Enquiry <span>→</span>
 </a>
 </div>
@@ -2827,9 +2848,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-
-
-
 </script>
 <script>
 /* ==========================================
