@@ -5831,3 +5831,122 @@ main,
     height: auto;
   }
 }
+/* =========================================================
+   VIP KING + VIP QUEEN POPUP
+   PREMIUM PRODUCT NUMBERS + STICKY ENQUIRY
+   ========================================================= */
+
+/* Product number - premium badge */
+.vip-product-info span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 42px !important;
+  height: 28px !important;
+
+  margin: 0 0 9px !important;
+  padding: 0 !important;
+
+  border-radius: 999px !important;
+
+  background: linear-gradient(
+    135deg,
+    #f8d36a,
+    #e8ad32
+  ) !important;
+
+  border: 1px solid rgba(255, 239, 170, 0.75) !important;
+
+  color: #3b1b00 !important;
+
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+
+  box-shadow:
+    0 4px 10px rgba(232, 173, 50, 0.25),
+    inset 0 1px 1px rgba(255,255,255,0.55) !important;
+}
+
+/* Product name */
+.vip-product-info h3 {
+  color: #f7d774 !important;
+}
+
+
+/* =========================================================
+   STICKY SUBMIT ENQUIRY BUTTON
+   Stays visible while scrolling King / Queen products
+   ========================================================= */
+
+.combo-modal-box .combo-modal-enquiry {
+  position: sticky !important;
+
+  bottom: 0 !important;
+
+  z-index: 20 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: fit-content !important;
+  min-width: 170px !important;
+
+  margin: 18px auto 0 !important;
+
+  padding: 13px 25px !important;
+
+  border-radius: 999px !important;
+
+  background: linear-gradient(
+    135deg,
+    #d90068,
+    #a9008f
+  ) !important;
+
+  color: #ffffff !important;
+
+  font-weight: 800 !important;
+
+  box-shadow:
+    0 8px 22px rgba(180, 0, 105, 0.35),
+    0 -10px 25px rgba(17, 16, 27, 0.85) !important;
+
+  text-decoration: none !important;
+}
+
+/* Keep button attractive while hovering */
+.combo-modal-box .combo-modal-enquiry:hover {
+  transform: translateY(-2px) !important;
+
+  box-shadow:
+    0 10px 28px rgba(180, 0, 105, 0.45),
+    0 -10px 25px rgba(17, 16, 27, 0.9) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  .vip-product-info span {
+    width: 38px !important;
+    height: 25px !important;
+
+    font-size: 12px !important;
+  }
+
+  .combo-modal-box .combo-modal-enquiry {
+    width: calc(100% - 20px) !important;
+    max-width: 260px !important;
+
+    margin: 14px auto 0 !important;
+
+    padding: 12px 20px !important;
+  }
+}
