@@ -6206,3 +6206,100 @@ body.combo-modal-open {
   .vip-combo-top h2 { font-size: 2.2rem !important; }
 }
 
+/* =========================================================
+   FINAL FIX — MY ENQUIRY TRUE FIXED DRAWER
+   Hidden by default; opens only when the floating button is clicked.
+========================================================= */
+
+html.msc-cart-lock,
+body.msc-cart-lock {
+  overflow: hidden !important;
+}
+
+#mscCartOverlay {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  display: block !important;
+  background: rgba(8, 5, 15, .72) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  z-index: 120000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity .22s ease, visibility 0s linear .22s !important;
+}
+
+#mscCartOverlay.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transition: opacity .22s ease !important;
+}
+
+#mscCart {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  width: min(460px, 94vw) !important;
+  max-width: 460px !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  z-index: 120001 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translate3d(105%, 0, 0) !important;
+  opacity: 0 !important;
+  background: #24143e !important;
+  box-shadow: -25px 0 80px rgba(0,0,0,.48) !important;
+  transition: transform .28s cubic-bezier(.22,.61,.36,1), opacity .18s ease, visibility 0s linear .28s !important;
+}
+
+#mscCart.open {
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1 !important;
+  transition: transform .28s cubic-bezier(.22,.61,.36,1), opacity .18s ease !important;
+}
+
+#mscCart .msc-cart-head,
+#mscCart .msc-combo-selector,
+#mscCart .msc-cart-items,
+#mscCart .msc-cart-empty,
+#mscCart .msc-cart-foot {
+  flex-shrink: 0;
+}
+
+#mscCart .msc-cart-items {
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+#mscCart .msc-cart-foot {
+  margin-top: auto !important;
+}
+
+#mscCartCloseFix {
+  cursor: pointer !important;
+}
+
+@media (max-width: 600px) {
+  #mscCart {
+    width: min(100vw, 430px) !important;
+    max-width: 100vw !important;
+  }
+}
+
