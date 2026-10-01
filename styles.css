@@ -5370,3 +5370,30 @@ main,
     width: 100%;
   }
 }
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid currentColor;
+  border-radius: 6px;
+
+  font-size: 15px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.instagram-icon::after {
+  content: "";
+  position: absolute;
+}
