@@ -6408,3 +6408,76 @@ body > *:not(.site-fireworks) {
     font-size: 13px !important;
   }
 }
+/* =========================================================
+   FIX: MY ENQUIRY CART MUST BE HIDDEN UNTIL CLICKED
+   ========================================================= */
+
+#mscCart {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+
+  width: min(460px, 94vw) !important;
+  height: 100vh !important;
+
+  z-index: 120001 !important;
+
+  /* CLOSED STATE */
+  transform: translate3d(105%, 0, 0) !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  transition:
+    transform .28s ease,
+    opacity .2s ease,
+    visibility 0s linear .28s !important;
+
+  background: #11101b !important;
+  border-left: 1px solid rgba(232,191,85,.45);
+  box-shadow: -25px 0 80px rgba(0,0,0,.5);
+}
+
+/* OPEN STATE */
+#mscCart.open {
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+
+  transition:
+    transform .28s ease,
+    opacity .2s ease,
+    visibility 0s linear 0s !important;
+}
+
+/* Overlay must also stay hidden initially */
+#mscCartOverlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 120000 !important;
+
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+
+  transition:
+    opacity .2s ease,
+    visibility 0s linear .2s !important;
+
+  background: rgba(0,0,0,.68) !important;
+}
+
+/* Overlay when enquiry is opened */
+#mscCartOverlay.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+
+  transition:
+    opacity .2s ease,
+    visibility 0s linear 0s !important;
+}
