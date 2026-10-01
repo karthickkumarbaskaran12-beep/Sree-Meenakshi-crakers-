@@ -4620,3 +4620,58 @@ main,
     max-width: 100% !important;
   }
 }
+/* ================================
+   VIP COMBO PRICE
+================================ */
+
+.combo-price {
+  display: inline-block;
+  margin: 8px 0 14px;
+  padding: 7px 16px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #8a5a00;
+
+  background: linear-gradient(
+    135deg,
+    #fff4bd,
+    #ffd96b
+  );
+
+  border: 1px solid #e7b83f;
+  border-radius: 999px;
+
+  box-shadow:
+    0 6px 18px rgba(190,140,20,.18);
+
+  letter-spacing: .3px;
+}
+
+.queen-price {
+  color: #9b0751;
+
+  background: linear-gradient(
+    135deg,
+    #ffe1ed,
+    #ffb8d2
+  );
+
+  border-color: #f08aae;
+
+  box-shadow:
+    0 6px 18px rgba(233,0,99,.16);
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+
+  .combo-price {
+    font-size: 21px;
+    padding: 6px 14px;
+    margin: 6px 0 12px;
+  }
+
+}
