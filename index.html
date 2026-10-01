@@ -585,53 +585,75 @@ footer a{color:#fff !important}
 </div>
 </div>
 <div class="cards">
-<!-- COMBO 1 -->
-<article class="product combo-clickable" onclick="openVipKingModal()">
-<div class="icon">
-          ✦
-        </div>
-<span class="product-tag">
-          Best Seller
-        </span>
-<h3>
-  VIP King Combo
-</h3>
+<!-- =========================
+     VIP KING COMBO CARD
+========================= -->
 
-<div class="combo-price">
-  ₹10,000
-</div>
+<article class="product combo-clickable vip-combo-card vip-king-card"
+         onclick="openVipKingModal()">
 
-<p>
-  25 products included in the VIP King Combo.
-  Scroll through the complete product collection.
-</p>
-<a href="#" onclick="openVipKingModal(); return false;">
-          View VIP King Combo →
-        </a>
+  <div class="icon vip-king-icon">
+    ♔
+  </div>
+
+  <span class="product-tag">
+    Best Seller
+  </span>
+
+  <h3>
+    VIP King Combo
+  </h3>
+
+  <div class="combo-price">
+    ₹10,000
+  </div>
+
+  <p>
+    25 products included in the VIP King Combo.
+    Scroll through the complete product collection.
+  </p>
+
+  <a href="#"
+     onclick="event.stopPropagation(); openVipKingModal(); return false;">
+    View VIP King Combo →
+  </a>
+
 </article>
-<!-- COMBO 2 - VIP QUEEN -->
-<article class="product combo-clickable" onclick="openVipQueenModal()">
-<div class="icon">
-          ♕
-        </div>
-<span class="product-tag">
-          Popular
-        </span>
-<h3>
-  VIP Queen Combo
-</h3>
 
-<div class="combo-price queen-price">
-  ₹15,000
-</div>
 
-<p>
-  35 products included in the VIP Queen Combo.
-  Explore the complete product collection.
-</p>
-<a href="#" onclick="openVipQueenModal(); return false;">
-          View VIP Queen Combo →
-        </a>
+<!-- =========================
+     VIP QUEEN COMBO CARD
+========================= -->
+
+<article class="product combo-clickable vip-combo-card vip-queen-card"
+         onclick="openVipQueenModal()">
+
+  <div class="icon vip-queen-icon">
+    ♕
+  </div>
+
+  <span class="product-tag">
+    Popular
+  </span>
+
+  <h3>
+    VIP Queen Combo
+  </h3>
+
+  <div class="combo-price queen-price">
+    ₹15,000
+  </div>
+
+  <p>
+    35 products included in the VIP Queen Combo.
+    Explore the complete product collection.
+  </p>
+
+  <a href="#"
+     onclick="event.stopPropagation(); openVipQueenModal(); return false;">
+    View VIP Queen Combo →
+  </a>
+
 </article>
 </div>
 </div>
@@ -1427,13 +1449,44 @@ document.addEventListener("keydown", function(event) {
 <button aria-label="Close" class="combo-modal-close" onclick="closeVipKingModal()" type="button">
       ×
     </button>
-<p class="eyebrow">VIP KING COMBO</p>
-<h2 id="vipKingModalTitle">
-      VIP King Combo
-    </h2>
-<p class="vip-king-intro">
-      Explore our complete VIP King Combo collection
-    </p>
+<!-- VIP KING PREMIUM HEADER -->
+
+<div class="vip-combo-top king-theme">
+
+  <div class="vip-combo-badge">
+    <span class="vip-combo-icon">♔</span>
+    <span>BEST SELLER</span>
+  </div>
+
+  <p class="eyebrow">
+    VIP KING COMBO
+  </p>
+
+  <h2 id="vipKingModalTitle">
+    VIP King Combo
+  </h2>
+
+  <p class="vip-king-intro">
+    Explore our complete 25-product VIP King Combo collection
+  </p>
+
+  <div class="vip-combo-price-box">
+
+    <span class="vip-price-label">
+      COMPLETE COMBO
+    </span>
+
+    <strong>
+      ₹10,000
+    </strong>
+
+    <small>
+      25 products included
+    </small>
+
+  </div>
+
+</div>
 <!-- =========================
          PRODUCTS 01 - 25
     ========================= -->
@@ -1703,13 +1756,44 @@ document.addEventListener("keydown", function(event) {
 <button aria-label="Close" class="combo-modal-close" onclick="closeVipQueenModal()" type="button">
       ×
     </button>
-<p class="eyebrow">VIP QUEEN COMBO</p>
-<h2 id="vipQueenModalTitle">
-      VIP Queen Combo
-    </h2>
-<p class="vip-king-intro">
-      Explore our complete VIP Queen Combo collection — 35 products
-    </p>
+<!-- VIP QUEEN PREMIUM HEADER -->
+
+<div class="vip-combo-top queen-theme">
+
+  <div class="vip-combo-badge">
+    <span class="vip-combo-icon">♕</span>
+    <span>POPULAR</span>
+  </div>
+
+  <p class="eyebrow">
+    VIP QUEEN COMBO
+  </p>
+
+  <h2 id="vipQueenModalTitle">
+    VIP Queen Combo
+  </h2>
+
+  <p class="vip-king-intro">
+    Explore our complete 35-product VIP Queen Combo collection
+  </p>
+
+  <div class="vip-combo-price-box">
+
+    <span class="vip-price-label">
+      COMPLETE COMBO
+    </span>
+
+    <strong>
+      ₹15,000
+    </strong>
+
+    <small>
+      35 products included
+    </small>
+
+  </div>
+
+</div>
 <div class="vip-king-products">
 <!-- 01 -->
 <div class="vip-product">
