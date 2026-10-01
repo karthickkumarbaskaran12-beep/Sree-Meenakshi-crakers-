@@ -4238,3 +4238,169 @@ footer{
     font-size:30px !important;
   }
 }
+
+/* =========================================================
+   MOBILE HEADER FIX — GST + DIRECT ENQUIRY
+   Keep GST details visible and make Enquiry reachable without
+   opening the hamburger menu.
+   ========================================================= */
+@media (max-width: 850px){
+  .nav{
+    position:sticky;
+    padding:9px 12px;
+    gap:8px;
+    min-height:64px;
+    background:#ffffff !important;
+    border-bottom:1px solid rgba(91,33,141,.14) !important;
+  }
+
+  .brand{
+    flex:0 0 auto;
+    gap:7px;
+  }
+
+  .brand-mark{
+    font-size:28px;
+  }
+
+  .brand b{
+    font-size:19px;
+    line-height:.95;
+    color:var(--sm-pink) !important;
+  }
+
+  .brand small{
+    font-size:8px;
+    letter-spacing:2.5px;
+    color:var(--sm-ink) !important;
+  }
+
+  .gst-header-details{
+    display:flex !important;
+    flex:1 1 auto;
+    min-width:0;
+    margin-left:2px;
+    padding:4px 7px;
+    border-left:1px solid rgba(91,33,141,.18) !important;
+    gap:1px;
+    white-space:normal;
+    overflow:hidden;
+    line-height:1.18;
+  }
+
+  .gst-header-details strong{
+    font-size:8.5px !important;
+    letter-spacing:.35px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color:var(--sm-purple) !important;
+  }
+
+  .gst-header-details span{
+    font-size:7.5px !important;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color:#405078 !important;
+  }
+
+  .menu{
+    display:block !important;
+    flex:0 0 auto;
+    width:38px;
+    height:38px;
+    padding:0;
+    border:1px solid rgba(91,33,141,.18);
+    border-radius:10px;
+    background:#fff !important;
+    color:var(--sm-purple) !important;
+    font-size:22px;
+    line-height:1;
+  }
+
+  .mobile-nav-cta{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    min-height:38px;
+    padding:0 10px;
+    border-radius:9px;
+    background:linear-gradient(135deg,#09a86a,#087d56) !important;
+    color:#fff !important;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:800;
+    white-space:nowrap;
+    box-shadow:0 5px 14px rgba(0,150,95,.18);
+  }
+
+  .nav nav{
+    top:100%;
+    background:#ffffff !important;
+    border-bottom:1px solid rgba(91,33,141,.14) !important;
+    box-shadow:0 12px 30px rgba(40,20,60,.10);
+  }
+
+  .nav nav a{
+    color:var(--sm-ink) !important;
+  }
+
+  .nav nav .nav-cta{
+    color:#fff !important;
+  }
+}
+
+@media (max-width: 520px){
+  .nav{
+    padding:8px 9px;
+    gap:5px;
+  }
+
+  .brand-mark{
+    font-size:25px;
+  }
+
+  .brand b{
+    font-size:17px;
+  }
+
+  .brand small{
+    font-size:7px;
+    letter-spacing:2px;
+  }
+
+  .gst-header-details{
+    padding-left:6px;
+    padding-right:4px;
+  }
+
+  .gst-header-details span:last-child{
+    display:none;
+  }
+
+  .gst-header-details strong{
+    font-size:7.8px !important;
+  }
+
+  .gst-header-details span{
+    font-size:7.2px !important;
+  }
+
+  .mobile-nav-cta{
+    min-height:36px;
+    padding:0 8px;
+    font-size:10px;
+  }
+
+  .menu{
+    width:36px;
+    height:36px;
+    font-size:20px;
+  }
+}
+
+@media (min-width: 851px){
+  .mobile-nav-cta{display:none !important;}
+}
