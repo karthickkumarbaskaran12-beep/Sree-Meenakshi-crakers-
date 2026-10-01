@@ -5397,3 +5397,371 @@ main,
   content: "";
   position: absolute;
 }
+/* =========================================================
+   PREMIUM MY ENQUIRY DRAWER
+   ========================================================= */
+
+.msc-cart-head-premium {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 20px 22px;
+
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 225, 240, .95),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fff8fc
+    );
+
+  border-bottom: 1px solid #f0dce8;
+}
+
+.msc-cart-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.msc-cart-crown {
+  width: 46px;
+  height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff6d0,
+      #ffedab
+    );
+
+  border: 1px solid #f0d16b;
+
+  color: #936400;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+
+  box-shadow:
+    0 6px 18px rgba(165, 110, 0, .12);
+}
+
+.msc-cart-head-premium .eyebrow {
+  margin: 0 0 3px;
+
+  color: #a52c70;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.msc-cart-head-premium h2 {
+  margin: 0;
+
+  color: #1c2b62;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 29px;
+
+  line-height: 1;
+}
+
+.msc-cart-subtitle {
+  margin: 5px 0 0;
+
+  color: #7c7f90;
+
+  font-size: 11px;
+}
+
+.msc-cart-close {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #eadce7;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #7c4268;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.msc-cart-close:hover {
+  transform: rotate(90deg);
+
+  background: #fff0f7;
+}
+
+
+/* =========================================================
+   PREMIUM COMBO SELECTION
+   ========================================================= */
+
+.msc-combo-choice {
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.msc-combo-choice:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(80, 25, 75, .10);
+}
+
+.msc-combo-choice.selected {
+  border-color: #c52b78 !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff4fa,
+      #ffffff
+    ) !important;
+
+  box-shadow:
+    0 8px 24px rgba(197, 43, 120, .13);
+}
+
+
+/* =========================================================
+   PREMIUM CONTINUE BUTTON
+   ========================================================= */
+
+.msc-whatsapp {
+  width: 100%;
+
+  min-height: 48px;
+
+  border: 0;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #85259b,
+      #d10068
+    ) !important;
+
+  color: #ffffff !important;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: .2px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 24px rgba(135, 31, 117, .22);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.msc-whatsapp:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 30px rgba(135, 31, 117, .30);
+}
+
+
+/* =========================================================
+   PREMIUM INSTAGRAM
+   ========================================================= */
+
+.instagram-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+.instagram-link:hover {
+  transform: translateY(-1px);
+
+  opacity: .82;
+}
+
+
+/* Instagram camera icon */
+
+.instagram-icon {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4 0%,
+      #c13584 38%,
+      #e1306c 62%,
+      #fd1d1d 78%,
+      #f77737 100%
+    );
+
+  box-shadow:
+    0 4px 10px rgba(193, 53, 132, .20);
+}
+
+
+/* Camera lens */
+
+.instagram-icon::before {
+  content: "";
+
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+
+/* Camera top-right dot */
+
+.instagram-camera-dot {
+  position: absolute;
+
+  top: 4px;
+  right: 4px;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FASTER / CLEANER PRODUCT IMAGES
+   ========================================================= */
+
+.msc-product-image {
+  contain: layout paint;
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.msc-product-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  image-rendering: auto;
+
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .msc-cart-head-premium {
+    padding: 16px;
+
+  }
+
+  .msc-cart-crown {
+    width: 40px;
+    height: 40px;
+
+    font-size: 24px;
+  }
+
+  .msc-cart-head-premium h2 {
+    font-size: 25px;
+  }
+
+  .msc-cart-subtitle {
+    font-size: 10px;
+  }
+
+  .instagram-icon {
+    width: 21px;
+    height: 21px;
+  }
+}
