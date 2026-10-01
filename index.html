@@ -974,7 +974,7 @@ footer a{color:#fff !important}
 </div>
 </section>
 <!-- FLOATING ENQUIRY CART -->
-<button aria-label="Open My Enquiry" class="msc-floating-cart" onclick="mscOpenCart()" type="button">
+<button aria-label="Open My Enquiry" aria-controls="mscCart" aria-expanded="false" class="msc-floating-cart" id="mscFloatingCartButton" onclick="mscOpenCart(event)" type="button">
 <span class="msc-floating-cart-icon">🛒</span>
 <span class="msc-floating-cart-text"><small>YOUR LIST</small><strong>My Enquiry</strong></span>
 <b id="mscFloatingCartCount">0</b>
@@ -1009,7 +1009,8 @@ footer a{color:#fff !important}
   <button
     type="button"
     class="msc-cart-close"
-    onclick="mscCloseCart()"
+    id="mscCartCloseFix"
+    onclick="mscCloseCart(event)"
     aria-label="Close">
     &times;
   </button>
@@ -2598,8 +2599,42 @@ function mscRemove(id){
   mscUpdateComboChoices();
 }
 function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);mscRenderCart();mscUpdateComboChoices();}
-function mscOpenCart(){document.getElementById('mscCart')?.classList.add('open');document.getElementById('mscCartOverlay')?.classList.add('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','false');}
-function mscCloseCart(){document.getElementById('mscCart')?.classList.remove('open');document.getElementById('mscCartOverlay')?.classList.remove('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','true');}
+function mscOpenCart(event) {
+  if (event) event.preventDefault();
+
+  const cart = document.getElementById('mscCart');
+  const overlay = document.getElementById('mscCartOverlay');
+  const trigger = document.getElementById('mscFloatingCartButton');
+
+  if (!cart || !overlay) return;
+
+  cart.classList.add('open');
+  overlay.classList.add('open');
+  cart.setAttribute('aria-hidden', 'false');
+
+  if (trigger) trigger.setAttribute('aria-expanded', 'true');
+  document.documentElement.classList.add('msc-cart-lock');
+  document.body.classList.add('msc-cart-lock');
+}
+
+function mscCloseCart(event) {
+  if (event) event.preventDefault();
+
+  const cart = document.getElementById('mscCart');
+  const overlay = document.getElementById('mscCartOverlay');
+  const trigger = document.getElementById('mscFloatingCartButton');
+
+  if (cart) {
+    cart.classList.remove('open');
+    cart.setAttribute('aria-hidden', 'true');
+  }
+
+  if (overlay) overlay.classList.remove('open');
+  if (trigger) trigger.setAttribute('aria-expanded', 'false');
+
+  document.documentElement.classList.remove('msc-cart-lock');
+  document.body.classList.remove('msc-cart-lock');
+}
 /* =========================================================
    MY ENQUIRY → EXISTING ENQUIRY FORM
    ========================================================= */
@@ -2747,6 +2782,10 @@ function mscContinueToEnquiry() {
   }, 700);
 
 }
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') mscCloseCart();
+});
 
 document.addEventListener('DOMContentLoaded',()=>{
   const input=document.getElementById('mscSearch');
