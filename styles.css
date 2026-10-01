@@ -3866,19 +3866,38 @@ footer{
   display: block;
 
   width: 100%;
-  height: 390px;
+  max-width: 500px;
+  height: 560px;
 
   object-fit: contain;
   object-position: center;
 
   border-radius: 18px;
 
-  mix-blend-mode: multiply;
+  /* Keep the original poster colours intact */
+  mix-blend-mode: normal;
 
   filter:
-    saturate(1.08)
-    contrast(1.03)
-    drop-shadow(0 15px 20px rgba(0,0,0,0.12));
+    saturate(1.05)
+    contrast(1.02)
+    drop-shadow(0 15px 20px rgba(0,0,0,0.14));
+}
+
+.delivery-image {
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .delivery-image {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .delivery-image img {
+    height: auto;
+    max-height: 620px;
+    max-width: 100%;
+  }
 }
 
 /* ---------------------------------------------------------
