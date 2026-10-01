@@ -5950,3 +5950,324 @@ main,
     padding: 12px 20px !important;
   }
 }
+/* =========================================================
+   GLOBAL DIWALI FIREWORKS BACKGROUND
+   Lightweight CSS-only animation
+   Appears throughout the website while scrolling
+   ========================================================= */
+
+.site-fireworks {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.42;
+}
+
+/* Keep all actual website content above fireworks */
+body > *:not(.site-fireworks) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual firework */
+.site-firework {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffd86a;
+
+  opacity: 0;
+
+  box-shadow:
+    0 0 6px #ffd86a,
+    0 0 14px #ffd86a,
+    0 0 28px rgba(255, 190, 40, 0.75);
+
+  animation:
+    globalFirework 5.5s ease-out infinite;
+}
+
+/* Positions + timing */
+
+.site-firework.fw1 {
+  left: 8%;
+  top: 18%;
+  animation-delay: 0s;
+}
+
+.site-firework.fw2 {
+  left: 27%;
+  top: 42%;
+  animation-delay: 1.4s;
+}
+
+.site-firework.fw3 {
+  left: 52%;
+  top: 16%;
+  animation-delay: 2.7s;
+}
+
+.site-firework.fw4 {
+  left: 76%;
+  top: 32%;
+  animation-delay: 0.8s;
+}
+
+.site-firework.fw5 {
+  left: 91%;
+  top: 62%;
+  animation-delay: 3.4s;
+}
+
+.site-firework.fw6 {
+  left: 63%;
+  top: 72%;
+  animation-delay: 4.1s;
+}
+
+.site-firework.fw7 {
+  left: 34%;
+  top: 82%;
+  animation-delay: 2s;
+}
+
+.site-firework.fw8 {
+  left: 12%;
+  top: 68%;
+  animation-delay: 4.8s;
+}
+
+
+/* =========================================================
+   FIREWORK PARTICLE BURST
+   ========================================================= */
+
+.site-firework::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #ffffff 0 1px,
+      #ffd86a 2px,
+      transparent 3px
+    );
+
+  background-size: 18px 18px;
+
+  animation: globalSparkle 5.5s ease-out infinite;
+}
+
+
+/* Bright cross rays */
+
+.site-firework::after {
+  content: "";
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      0deg,
+      transparent 47%,
+      rgba(255,220,110,.85) 49%,
+      rgba(255,255,255,.95) 50%,
+      rgba(255,220,110,.85) 51%,
+      transparent 53%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 47%,
+      rgba(255,220,110,.85) 49%,
+      rgba(255,255,255,.95) 50%,
+      rgba(255,220,110,.85) 51%,
+      transparent 53%
+    );
+
+  animation: globalRays 5.5s ease-out infinite;
+}
+
+
+/* =========================================================
+   MAIN EXPLOSION
+   ========================================================= */
+
+@keyframes globalFirework {
+
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+
+  8% {
+    opacity: 1;
+    transform: scale(.45);
+  }
+
+  18% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  38% {
+    opacity: .85;
+    transform: scale(1.08);
+  }
+
+  65% {
+    opacity: .30;
+    transform: scale(1.3);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+@keyframes globalSparkle {
+
+  0% {
+    opacity: 0;
+    transform:
+      translate(-50%, -50%)
+      scale(.05)
+      rotate(0deg);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+    transform:
+      translate(-50%, -50%)
+      scale(1)
+      rotate(70deg);
+  }
+
+  70% {
+    opacity: .45;
+    transform:
+      translate(-50%, -50%)
+      scale(1.2)
+      rotate(150deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(-50%, -50%)
+      scale(1.45)
+      rotate(230deg);
+  }
+}
+
+
+/* =========================================================
+   RAYS
+   ========================================================= */
+
+@keyframes globalRays {
+
+  0% {
+    opacity: 0;
+    transform:
+      translate(-50%, -50%)
+      scale(.05)
+      rotate(0deg);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: .9;
+    transform:
+      translate(-50%, -50%)
+      scale(1)
+      rotate(45deg);
+  }
+
+  70% {
+    opacity: .35;
+    transform:
+      translate(-50%, -50%)
+      scale(1.25)
+      rotate(100deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(-50%, -50%)
+      scale(1.5)
+      rotate(150deg);
+  }
+}
+
+
+/* =========================================================
+   MOBILE — SUBTLE VERSION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .site-fireworks {
+    opacity: 0.28;
+  }
+
+  .site-firework::before {
+    width: 115px;
+    height: 115px;
+    background-size: 15px 15px;
+  }
+
+  .site-firework::after {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .site-firework,
+  .site-firework::before,
+  .site-firework::after {
+    animation: none !important;
+    opacity: .12;
+  }
+}
