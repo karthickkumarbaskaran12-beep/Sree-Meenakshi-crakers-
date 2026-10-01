@@ -966,14 +966,34 @@ footer a{color:#fff !important}
 </div>
 <aside aria-hidden="true" class="msc-cart" id="mscCart">
 <!-- HEADER -->
-<div class="msc-cart-head">
-<div>
-<p class="eyebrow">YOUR ENQUIRY</p>
-<h2>Select Your Combo</h2>
-</div>
-<button aria-label="Close" onclick="mscCloseCart()" type="button">
-      ×
-    </button>
+<div class="msc-cart-head msc-cart-head-premium">
+
+  <div class="msc-cart-title-wrap">
+
+    <span class="msc-cart-crown">♔</span>
+
+    <div>
+      <p class="eyebrow">YOUR ENQUIRY</p>
+
+      <h2>
+        Select Your Combo
+      </h2>
+
+      <p class="msc-cart-subtitle">
+        Choose VIP King, VIP Queen, or both
+      </p>
+    </div>
+
+  </div>
+
+  <button
+    type="button"
+    class="msc-cart-close"
+    onclick="mscCloseCart()"
+    aria-label="Close">
+    &times;
+  </button>
+
 </div>
 <!-- COMBO SELECTION -->
 <div class="msc-combo-selector">
@@ -1039,11 +1059,12 @@ footer a{color:#fff !important}
         0
       </strong>
 </div>
-<button class="msc-whatsapp" onclick="mscSendWhatsApp()" type="button">
-
-      💬 Send Enquiry on WhatsApp
-
-    </button>
+<button
+  class="msc-whatsapp"
+  onclick="mscContinueToEnquiry()"
+  type="button">
+  ✨ Continue to Enquiry
+</button>
 <button class="msc-clear" onclick="mscClearCart()" type="button">
 
       Clear Selection
@@ -1122,10 +1143,22 @@ footer a{color:#fff !important}
         ☎ +91 86105 46638
       </p>
 <p>
-       <span class="instagram-link">
-  <span class="instagram-icon">◎</span>
-  @sri_meenakshi_cracker
-</span>
+      <a
+  class="instagram-link"
+  href="https://www.instagram.com/sri_meenakshi_cracker/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Sri Meenakshi Crackers Instagram">
+
+  <span class="instagram-icon" aria-hidden="true">
+    <span class="instagram-camera-dot"></span>
+  </span>
+
+  <span>
+    @sri_meenakshi_cracker
+  </span>
+
+</a>
       </p>
 <p>
         ⌖ Madurai, Tamil Nadu, India
@@ -2395,7 +2428,14 @@ function mscRenderProducts(){
   empty.hidden=items.length>0;
   grid.innerHTML=items.map(p=>{
     const displayNo=p.displayId||p.id;
-    const img=p.image?`<img src="${mscEsc(p.image)}" alt="${mscEsc(p.name)}" loading="lazy" decoding="async">`:`<div class="msc-no-image">✦</div>`;
+   const img = p.image
+  ? `<img
+       src="${mscEsc(p.image)}"
+       alt="${mscEsc(p.name)}"
+       loading="${p.displayId && p.displayId <= 8 ? 'eager' : 'lazy'}"
+       decoding="async"
+       fetchpriority="${p.displayId && p.displayId <= 8 ? 'high' : 'low'}">`
+  : `<div class="msc-no-image">✦</div>`;
     return `<article class="msc-product-card" data-name="${mscEsc(p.name.toLowerCase())}">
       <div class="msc-product-image">${img}</div>
       <div class="msc-product-body">
@@ -2519,19 +2559,152 @@ function mscRemove(id){
 function mscClearCart(){Object.keys(mscCart).forEach(k=>delete mscCart[k]);mscRenderCart();mscUpdateComboChoices();}
 function mscOpenCart(){document.getElementById('mscCart')?.classList.add('open');document.getElementById('mscCartOverlay')?.classList.add('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','false');}
 function mscCloseCart(){document.getElementById('mscCart')?.classList.remove('open');document.getElementById('mscCartOverlay')?.classList.remove('open');document.getElementById('mscCart')?.setAttribute('aria-hidden','true');}
-function mscSendWhatsApp(){
-  const values=Object.values(mscCart); if(!values.length){alert('Please add at least one product to your enquiry.');return;}
-  const lines=values.map((x,i)=>`${i+1}. ${x.name} — ${x.pack}`);
-  const message=`Hello Sri Meenakshi Crackers,
+/* =========================================================
+   MY ENQUIRY → EXISTING ENQUIRY FORM
+   ========================================================= */
 
-I would like to enquire about the following combo(s):
+function mscContinueToEnquiry() {
 
-${lines.join('\n')}
+  const values = Object.values(mscCart);
 
-Please share the latest availability and pricing for the selected combo(s).
+  if (!values.length) {
 
-Thank you.`;
-  window.open('https://wa.me/918610546638?text='+encodeURIComponent(message),'_blank');
+    alert(
+      'Please select VIP King Combo, VIP Queen Combo, or both.'
+    );
+
+    return;
+  }
+
+  const selectedCombos = values
+    .filter(x => x.isCombo)
+    .map(x => x.name);
+
+  if (!selectedCombos.length) {
+
+    alert(
+      'Please select VIP King Combo, VIP Queen Combo, or both.'
+    );
+
+    return;
+  }
+
+  /* Existing enquiry form field */
+  const productsField =
+    document.getElementById('productsCombosRequired');
+
+  if (productsField) {
+    productsField.value = selectedCombos.join(', ');
+  }
+
+  /* Update the visible combo selector */
+  const comboButton =
+    document.getElementById('comboSelectButton');
+
+  const comboText =
+    document.getElementById('comboSelectText');
+
+  const comboDropdown =
+    document.getElementById('comboSelectDropdown');
+
+  const comboTags =
+    document.getElementById('comboTags');
+
+  if (comboText) {
+
+    if (selectedCombos.length === 1) {
+
+      comboText.textContent =
+        selectedCombos[0];
+
+    } else {
+
+      comboText.textContent =
+        'VIP King + VIP Queen';
+
+    }
+
+    comboText.className = 'combo-selected';
+  }
+
+  /*
+     Keep the actual checkboxes in sync
+     with My Enquiry selection.
+  */
+
+  if (comboDropdown) {
+
+    comboDropdown
+      .querySelectorAll(
+        'input[name="combo_selection"]'
+      )
+      .forEach(function (checkbox) {
+
+        checkbox.checked =
+          selectedCombos.includes(
+            checkbox.value
+          );
+
+      });
+  }
+
+  /* Rebuild selected combo tags */
+
+  if (comboTags) {
+
+    comboTags.innerHTML = '';
+
+    selectedCombos.forEach(function (item) {
+
+      const tag =
+        document.createElement('span');
+
+      tag.className = 'combo-tag';
+
+      tag.textContent =
+        '✓ ' + item;
+
+      comboTags.appendChild(tag);
+
+    });
+  }
+
+  /* Close My Enquiry drawer */
+
+  mscCloseCart();
+
+  /*
+     Scroll to the EXISTING enquiry form
+  */
+
+  const enquirySection =
+    document.getElementById('enquiry');
+
+  if (enquirySection) {
+
+    enquirySection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+  }
+
+  /*
+     Small delay so the user clearly sees
+     that the selection has been transferred.
+  */
+
+  setTimeout(function () {
+
+    const fullName =
+      document.getElementById('fullName');
+
+    if (fullName) {
+      fullName.focus();
+    }
+
+  }, 700);
+
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
