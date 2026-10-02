@@ -1022,16 +1022,58 @@
 
 <script>
 
-function closeNotice() {
 
-  document.getElementById("noticePopup").style.display = "none";
+/* =========================================================
+   FIRST VISIT WELCOME POPUP
+   ========================================================= */
+
+(function(){
+
+  const noticePopup = document.getElementById("noticePopup");
+
+  if (!noticePopup) return;
+
+  const accepted =
+    localStorage.getItem("meenkshiNoticeAccepted");
+
+  if (accepted === "true") {
+
+    noticePopup.classList.add("hidden");
+
+    document.documentElement.classList.remove("notice-open");
+    document.body.classList.remove("notice-open");
+
+  } else {
+
+    noticePopup.classList.remove("hidden");
+
+    document.documentElement.classList.add("notice-open");
+    document.body.classList.add("notice-open");
+
+  }
+
+})();
+
+
+function closeNotice(){
+
+  const noticePopup =
+    document.getElementById("noticePopup");
+
+  if (!noticePopup) return;
 
   localStorage.setItem(
     "meenkshiNoticeAccepted",
     "true"
   );
 
+  noticePopup.classList.add("hidden");
+
+  document.documentElement.classList.remove("notice-open");
+  document.body.classList.remove("notice-open");
+
 }
+
 
 
 window.addEventListener(
