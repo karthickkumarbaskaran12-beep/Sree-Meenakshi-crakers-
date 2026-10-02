@@ -19,32 +19,49 @@
 <body>
 
 <!-- =========================
-     ENQUIRY NOTICE POPUP
+     FIRST VISIT WELCOME POPUP
 ========================= -->
 
-<div id="noticePopup" class="notice-popup">
+<div id="noticePopup" class="notice-popup" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+
+  <div class="notice-backdrop"></div>
 
   <div class="notice-box">
 
     <div class="notice-icon">✨</div>
 
-    <h2>Sri Meenakshi Crackers</h2>
+    <p class="notice-eyebrow">WELCOME TO</p>
+
+    <h2 id="noticeTitle">Sri Meenakshi Crackers</h2>
+
+    <div class="notice-location">
+      MADURAI&nbsp; • &nbsp;SIVAKASI DIRECT SALE
+    </div>
+
+    <div class="notice-divider"></div>
 
     <p class="notice-title">
-    THIS WEBSITE IS NOT FOR ONLINE SALE
-</p>
+      THIS WEBSITE IS NOT FOR ONLINE SALE
+    </p>
 
-    <p>
-      This website is only for product information
+    <p class="notice-description">
+      This website is provided only for product information
       and enquiry purposes.
     </p>
 
-    <button onclick="closeNotice()">I Understand</button>
+    <p class="notice-note">
+      Product availability, pricing and delivery details
+      will be confirmed by our team.
+    </p>
+
+    <button type="button" class="notice-understand" onclick="closeNotice()">
+      <span>✦</span>
+      I Understand
+    </button>
 
   </div>
 
 </div>
-
 
 <!-- =========================
      TOP BAR
