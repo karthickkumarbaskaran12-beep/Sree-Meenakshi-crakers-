@@ -185,6 +185,7 @@
 .msc-tab-icon{position:relative;z-index:1;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:rgba(255,217,107,.09);color:#ffd96b;font-size:24px;flex:none}
 .msc-tab span:last-child{position:relative;z-index:1;display:flex;flex-direction:column;gap:3px}
 .msc-tab b{font-size:15px}.msc-tab small{color:rgba(255,255,255,.45);font-size:11px}.msc-tab.active small{color:rgba(255,217,107,.7)}
+.msc-tab-price{font-weight:800;color:#e6005c;margin-right:5px;font-size:12px}.msc-tab.active .msc-tab-price{color:#ffd96b}
 .msc-toolbar-premium{margin:0 0 17px;gap:12px;align-items:stretch}
 .msc-search-wrap{min-height:54px;border-radius:15px;background:#12111b;box-shadow:inset 0 0 0 1px rgba(255,255,255,.015)}
 .msc-category-pills{display:flex;align-items:center;gap:7px;padding:5px;border:1px solid rgba(232,191,85,.2);border-radius:15px;background:#12111b}
@@ -1024,13 +1025,13 @@ footer a{color:#fff !important}
 </div>
 <div aria-label="Combo collections" class="msc-tabs" role="tablist">
 <button aria-selected="true" class="msc-tab active" data-filter="VIP King Combo" role="tab" type="button">
-<span class="msc-tab-icon">♛</span><span><b>VIP King</b><small>25 products(42 Items)</small></span>
+<span class="msc-tab-icon">♛</span><span><b>VIP King</b><small><strong class="msc-tab-price">₹10,000</strong> · 25 products(42 Items)</small></span>
 </button>
 <button aria-selected="false" class="msc-tab" data-filter="VIP Queen Combo" role="tab" type="button">
-<span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small>35 products(52 Items)</small></span>
+<span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small><strong class="msc-tab-price">₹15,000</strong> · 35 products(52 Items)</small></span>
 </button>
 <button aria-selected="false" class="msc-tab little-princess-tab" data-filter="Little Princess Combo" role="tab" type="button">
-<span class="msc-tab-icon">👑</span><span><b>Little Princess</b><small>30 products</small></span>
+<span class="msc-tab-icon">👑</span><span><b>Little Princess</b><small><strong class="msc-tab-price">₹7,000</strong> · 30 products</small></span>
 </button>
 <button aria-selected="false" class="msc-tab msc-tab-all" data-filter="all" role="tab" type="button">
 <span class="msc-tab-icon">✦</span><span><b>All Products</b><small>90 listings</small></span>
