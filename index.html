@@ -438,6 +438,20 @@ footer a{color:#fff !important}
   .msc-section:before,.msc-section:after{font-size:75px}
 }
 </style>
+<style id="little-princess-styles">
+.little-princess-card{border-color:rgba(232,191,85,.48)}
+.little-princess-card:hover{border-color:rgba(255,217,107,.9);box-shadow:0 20px 55px rgba(255,217,107,.12)}
+.little-princess-icon{color:#ffd96b}
+.little-princess-tag{background:linear-gradient(135deg,#ffd96b,#e8bf55)!important;color:#18120a!important}
+.little-princess-price{color:#ffd96b!important}
+#littlePrincessModal .vip-product{grid-template-columns:minmax(260px,42%) 1fr;min-height:230px}
+#littlePrincessModal .vip-product-image{min-height:205px;display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
+#littlePrincessModal .vip-product-image img{width:100%;max-width:360px;height:190px;object-fit:contain;display:block;transform:scale(1.08);transform-origin:center}
+#littlePrincessModal .vip-product-info h3{font-size:clamp(1.45rem,2.2vw,2rem)}
+.little-princess-theme{background:linear-gradient(135deg,rgba(73,32,18,.98),rgba(36,17,63,.98))}
+.little-princess-choice.selected{border-color:rgba(255,217,107,.75)!important;box-shadow:0 0 0 1px rgba(255,217,107,.25) inset}
+@media(max-width:700px){#littlePrincessModal .vip-product{grid-template-columns:1fr;min-height:0}#littlePrincessModal .vip-product-image{min-height:220px}#littlePrincessModal .vip-product-image img{max-width:92%;height:210px}#littlePrincessModal .vip-product-info{text-align:center;padding-bottom:18px}}
+</style>
 </head>
 <body>
   <!-- =========================================
@@ -592,7 +606,7 @@ footer a{color:#fff !important}
       Every Celebration
     </h2>
 <p>
-      Browse our VIP King and VIP Queen collections and build an enquiry —
+      Browse our VIP King, VIP Queen and Little Princess collections and build an enquiry —
       our team will get back to you within 24 hours.
     </p>
 </div>
@@ -691,6 +705,41 @@ footer a{color:#fff !important}
   <a href="#"
      onclick="event.stopPropagation(); openVipQueenModal(); return false;">
     View VIP Queen Combo →
+  </a>
+
+</article>
+
+<!-- =========================
+     LITTLE PRINCESS COMBO CARD
+========================= -->
+
+<article class="product combo-clickable vip-combo-card little-princess-card"
+         onclick="openLittlePrincessModal()">
+
+  <div class="icon little-princess-icon">
+    👑
+  </div>
+
+  <span class="product-tag little-princess-tag">
+    New Combo
+  </span>
+
+  <h3>
+    Little Princess Combo
+  </h3>
+
+  <div class="combo-price little-princess-price">
+    ₹7,000
+  </div>
+
+  <p>
+    30 products included in the Little Princess Combo.
+    Explore the complete product collection.
+  </p>
+
+  <a href="#"
+     onclick="event.stopPropagation(); openLittlePrincessModal(); return false;">
+    View Little Princess Combo →
   </a>
 
 </article>
@@ -903,7 +952,7 @@ footer a{color:#fff !important}
 <div class="combo-select-wrapper">
 <button class="combo-select-button" id="comboSelectButton" type="button">
 <span class="combo-placeholder" id="comboSelectText">
-        Select VIP Combo
+        Select VIP / Little Combo
       </span>
 </button>
 <div class="combo-select-dropdown" id="comboSelectDropdown">
@@ -921,6 +970,14 @@ footer a{color:#fff !important}
 <span class="combo-icon">♛</span>
           VIP Queen Combo
           <small>35 products(52 Items)</small>
+</span>
+</label>
+<label class="combo-option">
+<input name="combo_selection" type="checkbox" value="Little Princess Combo"/>
+<span>
+<span class="combo-icon">👑</span>
+          Little Princess Combo
+          <small>30 products</small>
 </span>
 </label>
 </div>
@@ -961,7 +1018,7 @@ footer a{color:#fff !important}
 <div>
 <p class="eyebrow">PREMIUM SHOPPING CATALOGUE</p>
 <h2>Choose Your <em>Combo</em></h2>
-<p class="msc-lead">Browse the VIP King and VIP Queen collections below. Select one combo or choose both combos for your enquiry.</p>
+<p class="msc-lead">Browse the VIP King, VIP Queen and Little Princess collections below. Select one or more combos for your enquiry.</p>
 </div>
 <div class="msc-head-stat"><strong id="mscResultCount">25</strong><span>products shown</span></div>
 </div>
@@ -972,8 +1029,11 @@ footer a{color:#fff !important}
 <button aria-selected="false" class="msc-tab" data-filter="VIP Queen Combo" role="tab" type="button">
 <span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small>35 products(52 Items)</small></span>
 </button>
+<button aria-selected="false" class="msc-tab little-princess-tab" data-filter="Little Princess Combo" role="tab" type="button">
+<span class="msc-tab-icon">👑</span><span><b>Little Princess</b><small>30 products</small></span>
+</button>
 <button aria-selected="false" class="msc-tab msc-tab-all" data-filter="all" role="tab" type="button">
-<span class="msc-tab-icon">✦</span><span><b>All Products</b><small>60 listings</small></span>
+<span class="msc-tab-icon">✦</span><span><b>All Products</b><small>90 listings</small></span>
 </button>
 </div>
 <div class="msc-toolbar msc-toolbar-premium">
@@ -1022,7 +1082,7 @@ footer a{color:#fff !important}
       </h2>
 
       <p class="msc-cart-subtitle">
-        Choose VIP King, VIP Queen, or both
+        Choose VIP King, VIP Queen, Little Princess, or any combination
       </p>
     </div>
 
@@ -1044,7 +1104,7 @@ footer a{color:#fff !important}
 <div>
 <strong>Choose Your Combo</strong>
 <span>
-          You can select VIP King, VIP Queen, or both.
+          You can select VIP King, VIP Queen, Little Princess, or any combination.
         </span>
 </div>
 <small id="mscComboSelectionStatus">
@@ -1074,11 +1134,22 @@ footer a{color:#fff !important}
       Select
     </span>
 </button>
+<!-- LITTLE PRINCESS -->
+<button class="msc-combo-choice little-princess-choice" id="mscLittleChoice" type="button">
+<span class="msc-combo-choice-icon">👑</span>
+<span>
+<b>Little Princess Combo</b>
+<small>30 products included</small>
+</span>
+<span class="msc-combo-choice-check">
+      Select
+    </span>
+</button>
 </div>
 <div class="msc-notice-inline">
 <span class="msc-notice-icon">✓</span>
 <span>
-        Select either one combo or both combos before sending your enquiry.
+        Select one or more combos before sending your enquiry.
       </span>
 </div>
 </div>
@@ -1091,7 +1162,8 @@ footer a{color:#fff !important}
     Please select
     <strong>VIP King Combo</strong>,
     <strong>VIP Queen Combo</strong>,
-    or both.
+    <strong>Little Princess Combo</strong>,
+    or any combination.
 
   </div>
 <!-- FOOTER -->
@@ -1174,6 +1246,9 @@ footer a{color:#fff !important}
       </a>
 <a href="#products">
         VIP Queen Combo(35 Products - 52 Items)
+      </a>
+      <a href="#products">
+        Little Princess Combo(30 Products)
       </a>
 
 </div>
@@ -1360,7 +1435,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* Check combo selection */
     if (!productsCombosRequired) {
-      alert("Please select VIP King Combo, VIP Queen Combo, or both.");
+      alert("Please select VIP King Combo, VIP Queen Combo, Little Princess Combo, or any combination.");
       return;
     }
 
@@ -1457,6 +1532,27 @@ function closeVipQueenModal() {
 }
 
 /* =========================
+   LITTLE PRINCESS COMBO CATALOGUE
+========================= */
+function openLittlePrincessModal() {
+  const modal = document.getElementById("littlePrincessModal");
+  if (!modal) return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("combo-modal-open");
+  preloadComboImages(modal);
+}
+
+function closeLittlePrincessModal() {
+  const modal = document.getElementById("littlePrincessModal");
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("combo-modal-open");
+}
+
+
+/* =========================
    POPUP -> EXISTING ENQUIRY FORM
 ========================= */
 function selectComboFromPopup(comboName) {
@@ -1468,6 +1564,7 @@ function selectComboFromPopup(comboName) {
 
   closeVipKingModal();
   closeVipQueenModal();
+  closeLittlePrincessModal();
 
   const enquirySection = document.getElementById("enquiry");
   if (enquirySection) {
@@ -1525,10 +1622,341 @@ document.addEventListener("keydown", function(event) {
     closeComboModal();
     closeVipKingModal();
     closeVipQueenModal();
+    closeLittlePrincessModal();
   }
 });
 
 </script>
+<!-- =========================
+     LITTLE PRINCESS COMBO POPUP
+========================= -->
+<div aria-hidden="true" class="combo-modal" id="littlePrincessModal">
+<div class="combo-modal-backdrop" onclick="closeLittlePrincessModal()"></div>
+<div aria-labelledby="littlePrincessModalTitle" aria-modal="true" class="combo-modal-box vip-king-box little-princess-box" role="dialog">
+<button aria-label="Close" class="combo-modal-close" onclick="closeLittlePrincessModal()" type="button">
+      ×
+    </button>
+<div class="vip-combo-top little-princess-theme">
+  <div class="vip-combo-badge">
+    <span class="vip-combo-icon">👑</span>
+    <span>NEW COMBO</span>
+  </div>
+  <p class="eyebrow">LITTLE PRINCESS COMBO</p>
+  <h2 id="littlePrincessModalTitle">Little Princess Combo</h2>
+  <p class="vip-king-intro">Explore our complete 30-product Little Princess Combo collection</p>
+  <div class="vip-combo-price-box">
+    <span class="vip-price-label">COMPLETE COMBO</span>
+    <strong>₹7,000</strong>
+    <small>30 products included</small>
+  </div>
+</div>
+<div class="vip-king-products">
+<!-- 01 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Ground Chakkar Big" decoding="async" loading="lazy" fetchpriority="high" src="little/01.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>01</span>
+<h3>Ground Chakkar Big</h3><p class="vip-product-pack">(10 Pcs)</p>
+</div>
+</div>
+<!-- 02 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Ground Chakkar Special" decoding="async" loading="lazy" fetchpriority="high" src="little/02.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>02</span>
+<h3>Ground Chakkar Special</h3><p class="vip-product-pack">(10 Pcs)</p>
+</div>
+</div>
+<!-- 03 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Flower Pot Big" decoding="async" loading="lazy" fetchpriority="high" src="little/03.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>03</span>
+<h3>Flower Pot Big</h3>
+</div>
+</div>
+<!-- 04 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Flower Pot Special" decoding="async" loading="lazy" fetchpriority="high" src="little/04.jpg"/>
+</div>
+<div class="vip-product-info">
+<span>04</span>
+<h3>Flower Pot Special</h3>
+</div>
+</div>
+<!-- 05 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Dancing Queen" decoding="async" loading="lazy" src="little/05.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>05</span>
+<h3>Dancing Queen</h3>
+</div>
+</div>
+<!-- 06 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Drizzling Dancer" decoding="async" loading="lazy" src="little/06.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>06</span>
+<h3>Drizzling Dancer</h3>
+</div>
+</div>
+<!-- 07 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Emerald Foil" decoding="async" loading="lazy" src="little/07.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>07</span>
+<h3>Emerald Foil</h3>
+</div>
+</div>
+<!-- 08 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Little Flowers" decoding="async" loading="lazy" src="little/08.jpg"/>
+</div>
+<div class="vip-product-info">
+<span>08</span>
+<h3>Little Flowers</h3>
+</div>
+</div>
+<!-- 09 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="1½ Twinkling Star" decoding="async" loading="lazy" src="little/09.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>09</span>
+<h3>1½ Twinkling Star</h3><p class="vip-product-pack">(2 Box)</p>
+</div>
+</div>
+<!-- 10 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Whistling Paper" decoding="async" loading="lazy" src="vip-queen/20.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>10</span>
+<h3>Whistling Paper</h3>
+</div>
+</div>
+<!-- 11 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Max 100 Gun" decoding="async" loading="lazy" src="little/11.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>11</span>
+<h3>Max 100 Gun</h3>
+</div>
+</div>
+<!-- 12 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Rainbow Smoke" decoding="async" loading="lazy" src="vip-queen/19.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>12</span>
+<h3>Rainbow Smoke</h3>
+</div>
+</div>
+<!-- 13 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Red Bijili" decoding="async" loading="lazy" src="little/13.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>13</span>
+<h3>Red Bijili</h3>
+</div>
+</div>
+<!-- 14 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="100 Wala" decoding="async" loading="lazy" src="little/14.jfif"/>
+</div>
+<div class="vip-product-info">
+<span>14</span>
+<h3>100 Wala</h3>
+</div>
+</div>
+<!-- 15 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="2¾ Bird" decoding="async" loading="lazy" src="little/15.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>15</span>
+<h3>2¾ Bird</h3><p class="vip-product-pack">(2 Pkts)</p>
+</div>
+</div>
+<!-- 16 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="4 Bird" decoding="async" loading="lazy" src="little/16.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>16</span>
+<h3>4 Bird</h3><p class="vip-product-pack">(2 Pkts)</p>
+</div>
+</div>
+<!-- 17 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="777 Crackers" decoding="async" loading="lazy" src="little/17.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>17</span>
+<h3>777 Crackers</h3>
+</div>
+</div>
+<!-- 18 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Electric Sparkle" decoding="async" loading="lazy" src="little/18.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>18</span>
+<h3>Electric Sparkle</h3><p class="vip-product-pack">(15 cm – 2 Box)</p>
+</div>
+</div>
+<!-- 19 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Electric Sparkle" decoding="async" loading="lazy" src="little/19.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>19</span>
+<h3>Electric Sparkle</h3><p class="vip-product-pack">(30 cm)</p>
+</div>
+</div>
+<!-- 20 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Cluster" decoding="async" loading="lazy" src="little/20.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>20</span>
+<h3>Cluster</h3>
+</div>
+</div>
+<!-- 21 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="12 Rose" decoding="async" loading="lazy" src="little/21.jpg"/>
+</div>
+<div class="vip-product-info">
+<span>21</span>
+<h3>12 Rose</h3>
+</div>
+</div>
+<!-- 22 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="12 Sky Digital" decoding="async" loading="lazy" src="little/22.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>22</span>
+<h3>12 Sky Digital</h3>
+</div>
+</div>
+<!-- 23 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Sweet 16 White" decoding="async" loading="lazy" src="little/23.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>23</span>
+<h3>Sweet 16 White</h3>
+</div>
+</div>
+<!-- 24 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Peacock Titan" decoding="async" loading="lazy" src="little/24.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>24</span>
+<h3>Peacock Titan</h3>
+</div>
+</div>
+<!-- 25 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Troy 25" decoding="async" loading="lazy" src="little/25.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>25</span>
+<h3>Troy 25</h3>
+</div>
+</div>
+<!-- 26 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Purple Palm" decoding="async" loading="lazy" src="little/26.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>26</span>
+<h3>Purple Palm</h3>
+</div>
+</div>
+<!-- 27 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Blue Palm" decoding="async" loading="lazy" src="little/27.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>27</span>
+<h3>Blue Palm</h3>
+</div>
+</div>
+<!-- 28 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Hulk Warrior" decoding="async" loading="lazy" src="little/28.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>28</span>
+<h3>Hulk Warrior</h3>
+</div>
+</div>
+<!-- 29 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Cosmic Kids" decoding="async" loading="lazy" src="little/29.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>29</span>
+<h3>Cosmic Kids</h3>
+</div>
+</div>
+<!-- 30 -->
+<div class="vip-product">
+<div class="vip-product-image">
+<img alt="Magic Stick" decoding="async" loading="lazy" src="vip-queen/09.jpeg"/>
+</div>
+<div class="vip-product-info">
+<span>30</span>
+<h3>Magic Stick</h3><p class="vip-product-pack">(5 Pcs)</p>
+</div>
+</div>
+</div>
+<a class="btn primary combo-modal-enquiry" href="#enquiry" onclick="selectComboFromPopup('Little Princess Combo'); return false;">
+      Submit Enquiry <span>→</span>
+</a>
+</div>
+</div>
 <!-- =========================
      VIP KING COMBO POPUP
 ========================= -->
@@ -2465,7 +2893,7 @@ body.combo-modal-open {
 @media(max-width:700px){.msc-combo-selector-head{align-items:flex-start;flex-direction:column}.msc-combo-choice-grid{grid-template-columns:1fr}.msc-combo-choice{padding:12px}.msc-combo-selector{padding:15px}}
 </style>
 <script id="meenkshi-shopping-catalogue-js">
-const mscProducts = [{"id": 1, "name": "Max 100 Gun", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/01.jpeg", "displayId": 1}, {"id": 2, "name": "Chakkar Big", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/02.jpeg", "displayId": 2}, {"id": 3, "name": "Chakkar Special", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/03.jpeg", "displayId": 3}, {"id": 4, "name": "Electric Sparkle", "pack": "(30 cm – 2 Box)", "combo": "VIP King Combo", "image": "vip-king/04.jpeg", "displayId": 4}, {"id": 5, "name": "Electric Sparkle", "pack": "(15 cm – 5 Box)", "combo": "VIP King Combo", "image": "vip-king/05.jpeg", "displayId": 5}, {"id": 6, "name": "Flower Pot Big", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/06.jpeg", "displayId": 6}, {"id": 7, "name": "Violet Colour Koti delux", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/07.jpeg", "displayId": 7}, {"id": 8, "name": "Cosmic Kids Fountain", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/08.jpeg", "displayId": 8}, {"id": 9, "name": "Cluster", "pack": "(1 × 5)", "combo": "VIP King Combo", "image": "vip-king/09.jpeg", "displayId": 9}, {"id": 10, "name": "Siren", "pack": "(2 Pcs)", "combo": "VIP King Combo", "image": "vip-king/10.jpeg", "displayId": 10}, {"id": 11, "name": "12 Sky Digital", "pack": "(12 Shot)", "combo": "VIP King Combo", "image": "vip-king/11.jpeg", "displayId": 11}, {"id": 12, "name": "Troy 25 Shot", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/12.jpeg", "displayId": 12}, {"id": 13, "name": "King Crown", "pack": "(50 Shots)", "combo": "VIP King Combo", "image": "vip-king/13.jpeg", "displayId": 13}, {"id": 14, "name": "Pixels New", "pack": "(Pinky Shots)", "combo": "VIP King Combo", "image": "vip-king/14.jpeg", "displayId": 14}, {"id": 15, "name": "Pink Octopus", "pack": "(2 Pcs – Pink Sky)", "combo": "VIP King Combo", "image": "vip-king/15.jpeg", "displayId": 15}, {"id": 16, "name": "Purple Palm", "pack": "(1 Pcs – Purple Sky)", "combo": "VIP King Combo", "image": "vip-king/16.jpeg", "displayId": 16}, {"id": 17, "name": "Thanos", "pack": "(1 Pcs – Lavender Sky)", "combo": "VIP King Combo", "image": "vip-king/17.jpeg", "displayId": 17}, {"id": 18, "name": "X-Mas Tree", "pack": "(3 Pcs – 7 Shot)", "combo": "VIP King Combo", "image": "vip-king/18.jpeg", "displayId": 18}, {"id": 19, "name": "Rainbow Smoke", "pack": "(2 Pcs – 2 Colours)", "combo": "VIP King Combo", "image": "vip-king/19.jpeg", "displayId": 19}, {"id": 20, "name": "Whistling Piper", "pack": "(2 Pcs – Make Whistle)", "combo": "VIP King Combo", "image": "vip-king/20.jpeg", "displayId": 20}, {"id": 21, "name": "1/2 Twinkling Star", "pack": "(5 Box)", "combo": "VIP King Combo", "image": "vip-king/21.jpeg", "displayId": 21}, {"id": 22, "name": "Red Bijili", "pack": "(1 Pkt)", "combo": "VIP King Combo", "image": "vip-king/22.jpeg", "displayId": 22}, {"id": 23, "name": "Emerald Foil", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/23.jpeg", "displayId": 23}, {"id": 24, "name": "2 ¾ Bird Joker", "pack": "(5 Pkt)", "combo": "VIP King Combo", "image": "vip-king/24.jpeg", "displayId": 24}, {"id": 25, "name": "4 Bird Joker", "pack": "(5 Pkt)", "combo": "VIP King Combo", "image": "vip-king/25.jpeg", "displayId": 25}, {"id": 101, "name": "Antman", "pack": "(5 × 4 – Pan Cake)", "combo": "VIP Queen Combo", "image": "vip-queen/01.jpeg", "displayId": 1}, {"id": 102, "name": "Sizzling Star", "pack": "(5 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/02.jpeg", "displayId": 2}, {"id": 103, "name": "Drizzling Dancer", "pack": "(8 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/03.jpeg", "displayId": 3}, {"id": 104, "name": "Hulk Warrior", "pack": "(3 Pcs – Red & Green Sky)", "combo": "VIP Queen Combo", "image": "vip-queen/04.jpeg", "displayId": 4}, {"id": 105, "name": "Rock & Roll", "pack": "(2 Pcs – Multi Crack in Sky)", "combo": "VIP Queen Combo", "image": "vip-queen/05.jpeg", "displayId": 5}, {"id": 106, "name": "Sweet Sixteen Whistle", "pack": "(16 Whistle Sky)", "combo": "VIP Queen Combo", "image": "vip-queen/06.jpeg", "displayId": 6}, {"id": 107, "name": "Prince and The Frog", "pack": "(12 Shots in Two Colours)", "combo": "VIP Queen Combo", "image": "vip-queen/07.jpeg", "displayId": 7}, {"id": 108, "name": "777 Crackers", "pack": "(7 Shots)", "combo": "VIP Queen Combo", "image": "vip-queen/08.jpeg", "displayId": 8}, {"id": 109, "name": "Velvet Torches", "pack": "(2 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/09.jpeg", "displayId": 9}, {"id": 110, "name": "Dancing Queen", "pack": "(2 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/10.jpeg", "displayId": 10}, {"id": 111, "name": "Max 100 Gun", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/01.jpeg", "displayId": 11}, {"id": 112, "name": "Chakkar Big", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/02.jpeg", "displayId": 12}, {"id": 113, "name": "Chakkar Special", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/03.jpeg", "displayId": 13}, {"id": 114, "name": "Electric Sparkle", "pack": "(30 cm – 2 Box)", "combo": "VIP Queen Combo", "image": "vip-king/04.jpeg", "displayId": 14}, {"id": 115, "name": "Electric Sparkle", "pack": "(15 cm – 5 Box)", "combo": "VIP Queen Combo", "image": "vip-king/05.jpeg", "displayId": 15}, {"id": 116, "name": "Flower Pot Big", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/06.jpeg", "displayId": 16}, {"id": 117, "name": "Violet Colour Koti delux", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/07.jpeg", "displayId": 17}, {"id": 118, "name": "Cosmic Kids Fountain", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/08.jpeg", "displayId": 18}, {"id": 119, "name": "Cluster", "pack": "(1 × 5)", "combo": "VIP Queen Combo", "image": "vip-king/09.jpeg", "displayId": 19}, {"id": 120, "name": "Siren", "pack": "(2 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/10.jpeg", "displayId": 20}, {"id": 121, "name": "12 Sky Digital", "pack": "(12 Shot)", "combo": "VIP Queen Combo", "image": "vip-king/11.jpeg", "displayId": 21}, {"id": 122, "name": "Troy 25 Shot", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/12.jpeg", "displayId": 22}, {"id": 123, "name": "King Crown", "pack": "(50 Shots)", "combo": "VIP Queen Combo", "image": "vip-king/13.jpeg", "displayId": 23}, {"id": 124, "name": "Pixels New", "pack": "(Pinky Shots)", "combo": "VIP Queen Combo", "image": "vip-king/14.jpeg", "displayId": 24}, {"id": 125, "name": "Pink Octopus", "pack": "(2 Pcs – Pink Sky)", "combo": "VIP Queen Combo", "image": "vip-king/15.jpeg", "displayId": 25}, {"id": 126, "name": "Purple Palm", "pack": "(1 Pcs – Purple Sky)", "combo": "VIP Queen Combo", "image": "vip-king/16.jpeg", "displayId": 26}, {"id": 127, "name": "Thanos", "pack": "(1 Pcs – Lavender Sky)", "combo": "VIP Queen Combo", "image": "vip-king/17.jpeg", "displayId": 27}, {"id": 128, "name": "X-Mas Tree", "pack": "(3 Pcs – 7 Shot)", "combo": "VIP Queen Combo", "image": "vip-king/18.jpeg", "displayId": 28}, {"id": 129, "name": "Rainbow Smoke", "pack": "(2 Pcs – 2 Colours)", "combo": "VIP Queen Combo", "image": "vip-king/19.jpeg", "displayId": 29}, {"id": 130, "name": "Whistling Piper", "pack": "(2 Pcs – Make Whistle)", "combo": "VIP Queen Combo", "image": "vip-king/20.jpeg", "displayId": 30}, {"id": 131, "name": "1/2 Twinkling Star", "pack": "(5 Box)", "combo": "VIP Queen Combo", "image": "vip-king/21.jpeg", "displayId": 31}, {"id": 132, "name": "Red Bijili", "pack": "(1 Pkt)", "combo": "VIP Queen Combo", "image": "vip-king/22.jpeg", "displayId": 32}, {"id": 133, "name": "Emerald Foil", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/23.jpeg", "displayId": 33}, {"id": 134, "name": "2 ¾ Bird Joker", "pack": "(5 Pkt)", "combo": "VIP Queen Combo", "image": "vip-king/24.jpeg", "displayId": 34}, {"id": 135, "name": "4 Bird Joker", "pack": "(5 Pkt)", "combo": "VIP Queen Combo", "image": "vip-king/25.jpeg", "displayId": 35}];
+const mscProducts = [{"id": 1, "name": "Max 100 Gun", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/01.jpeg", "displayId": 1}, {"id": 2, "name": "Chakkar Big", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/02.jpeg", "displayId": 2}, {"id": 3, "name": "Chakkar Special", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/03.jpeg", "displayId": 3}, {"id": 4, "name": "Electric Sparkle", "pack": "(30 cm – 2 Box)", "combo": "VIP King Combo", "image": "vip-king/04.jpeg", "displayId": 4}, {"id": 5, "name": "Electric Sparkle", "pack": "(15 cm – 5 Box)", "combo": "VIP King Combo", "image": "vip-king/05.jpeg", "displayId": 5}, {"id": 6, "name": "Flower Pot Big", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/06.jpeg", "displayId": 6}, {"id": 7, "name": "Violet Colour Koti delux", "pack": "(10 Pcs)", "combo": "VIP King Combo", "image": "vip-king/07.jpeg", "displayId": 7}, {"id": 8, "name": "Cosmic Kids Fountain", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/08.jpeg", "displayId": 8}, {"id": 9, "name": "Cluster", "pack": "(1 × 5)", "combo": "VIP King Combo", "image": "vip-king/09.jpeg", "displayId": 9}, {"id": 10, "name": "Siren", "pack": "(2 Pcs)", "combo": "VIP King Combo", "image": "vip-king/10.jpeg", "displayId": 10}, {"id": 11, "name": "12 Sky Digital", "pack": "(12 Shot)", "combo": "VIP King Combo", "image": "vip-king/11.jpeg", "displayId": 11}, {"id": 12, "name": "Troy 25 Shot", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/12.jpeg", "displayId": 12}, {"id": 13, "name": "King Crown", "pack": "(50 Shots)", "combo": "VIP King Combo", "image": "vip-king/13.jpeg", "displayId": 13}, {"id": 14, "name": "Pixels New", "pack": "(Pinky Shots)", "combo": "VIP King Combo", "image": "vip-king/14.jpeg", "displayId": 14}, {"id": 15, "name": "Pink Octopus", "pack": "(2 Pcs – Pink Sky)", "combo": "VIP King Combo", "image": "vip-king/15.jpeg", "displayId": 15}, {"id": 16, "name": "Purple Palm", "pack": "(1 Pcs – Purple Sky)", "combo": "VIP King Combo", "image": "vip-king/16.jpeg", "displayId": 16}, {"id": 17, "name": "Thanos", "pack": "(1 Pcs – Lavender Sky)", "combo": "VIP King Combo", "image": "vip-king/17.jpeg", "displayId": 17}, {"id": 18, "name": "X-Mas Tree", "pack": "(3 Pcs – 7 Shot)", "combo": "VIP King Combo", "image": "vip-king/18.jpeg", "displayId": 18}, {"id": 19, "name": "Rainbow Smoke", "pack": "(2 Pcs – 2 Colours)", "combo": "VIP King Combo", "image": "vip-king/19.jpeg", "displayId": 19}, {"id": 20, "name": "Whistling Piper", "pack": "(2 Pcs – Make Whistle)", "combo": "VIP King Combo", "image": "vip-king/20.jpeg", "displayId": 20}, {"id": 21, "name": "1/2 Twinkling Star", "pack": "(5 Box)", "combo": "VIP King Combo", "image": "vip-king/21.jpeg", "displayId": 21}, {"id": 22, "name": "Red Bijili", "pack": "(1 Pkt)", "combo": "VIP King Combo", "image": "vip-king/22.jpeg", "displayId": 22}, {"id": 23, "name": "Emerald Foil", "pack": "Included in VIP King Combo", "combo": "VIP King Combo", "image": "vip-king/23.jpeg", "displayId": 23}, {"id": 24, "name": "2 ¾ Bird Joker", "pack": "(5 Pkt)", "combo": "VIP King Combo", "image": "vip-king/24.jpeg", "displayId": 24}, {"id": 25, "name": "4 Bird Joker", "pack": "(5 Pkt)", "combo": "VIP King Combo", "image": "vip-king/25.jpeg", "displayId": 25}, {"id": 101, "name": "Antman", "pack": "(5 × 4 – Pan Cake)", "combo": "VIP Queen Combo", "image": "vip-queen/01.jpeg", "displayId": 1}, {"id": 102, "name": "Sizzling Star", "pack": "(5 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/02.jpeg", "displayId": 2}, {"id": 103, "name": "Drizzling Dancer", "pack": "(8 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/03.jpeg", "displayId": 3}, {"id": 104, "name": "Hulk Warrior", "pack": "(3 Pcs – Red & Green Sky)", "combo": "VIP Queen Combo", "image": "vip-queen/04.jpeg", "displayId": 4}, {"id": 105, "name": "Rock & Roll", "pack": "(2 Pcs – Multi Crack in Sky)", "combo": "VIP Queen Combo", "image": "vip-queen/05.jpeg", "displayId": 5}, {"id": 106, "name": "Sweet Sixteen Whistle", "pack": "(16 Whistle Sky)", "combo": "VIP Queen Combo", "image": "vip-queen/06.jpeg", "displayId": 6}, {"id": 107, "name": "Prince and The Frog", "pack": "(12 Shots in Two Colours)", "combo": "VIP Queen Combo", "image": "vip-queen/07.jpeg", "displayId": 7}, {"id": 108, "name": "777 Crackers", "pack": "(7 Shots)", "combo": "VIP Queen Combo", "image": "vip-queen/08.jpeg", "displayId": 8}, {"id": 109, "name": "Velvet Torches", "pack": "(2 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/09.jpeg", "displayId": 9}, {"id": 110, "name": "Dancing Queen", "pack": "(2 Pcs)", "combo": "VIP Queen Combo", "image": "vip-queen/10.jpeg", "displayId": 10}, {"id": 111, "name": "Max 100 Gun", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/01.jpeg", "displayId": 11}, {"id": 112, "name": "Chakkar Big", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/02.jpeg", "displayId": 12}, {"id": 113, "name": "Chakkar Special", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/03.jpeg", "displayId": 13}, {"id": 114, "name": "Electric Sparkle", "pack": "(30 cm – 2 Box)", "combo": "VIP Queen Combo", "image": "vip-king/04.jpeg", "displayId": 14}, {"id": 115, "name": "Electric Sparkle", "pack": "(15 cm – 5 Box)", "combo": "VIP Queen Combo", "image": "vip-king/05.jpeg", "displayId": 15}, {"id": 116, "name": "Flower Pot Big", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/06.jpeg", "displayId": 16}, {"id": 117, "name": "Violet Colour Koti delux", "pack": "(10 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/07.jpeg", "displayId": 17}, {"id": 118, "name": "Cosmic Kids Fountain", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/08.jpeg", "displayId": 18}, {"id": 119, "name": "Cluster", "pack": "(1 × 5)", "combo": "VIP Queen Combo", "image": "vip-king/09.jpeg", "displayId": 19}, {"id": 120, "name": "Siren", "pack": "(2 Pcs)", "combo": "VIP Queen Combo", "image": "vip-king/10.jpeg", "displayId": 20}, {"id": 121, "name": "12 Sky Digital", "pack": "(12 Shot)", "combo": "VIP Queen Combo", "image": "vip-king/11.jpeg", "displayId": 21}, {"id": 122, "name": "Troy 25 Shot", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/12.jpeg", "displayId": 22}, {"id": 123, "name": "King Crown", "pack": "(50 Shots)", "combo": "VIP Queen Combo", "image": "vip-king/13.jpeg", "displayId": 23}, {"id": 124, "name": "Pixels New", "pack": "(Pinky Shots)", "combo": "VIP Queen Combo", "image": "vip-king/14.jpeg", "displayId": 24}, {"id": 125, "name": "Pink Octopus", "pack": "(2 Pcs – Pink Sky)", "combo": "VIP Queen Combo", "image": "vip-king/15.jpeg", "displayId": 25}, {"id": 126, "name": "Purple Palm", "pack": "(1 Pcs – Purple Sky)", "combo": "VIP Queen Combo", "image": "vip-king/16.jpeg", "displayId": 26}, {"id": 127, "name": "Thanos", "pack": "(1 Pcs – Lavender Sky)", "combo": "VIP Queen Combo", "image": "vip-king/17.jpeg", "displayId": 27}, {"id": 128, "name": "X-Mas Tree", "pack": "(3 Pcs – 7 Shot)", "combo": "VIP Queen Combo", "image": "vip-king/18.jpeg", "displayId": 28}, {"id": 129, "name": "Rainbow Smoke", "pack": "(2 Pcs – 2 Colours)", "combo": "VIP Queen Combo", "image": "vip-king/19.jpeg", "displayId": 29}, {"id": 130, "name": "Whistling Piper", "pack": "(2 Pcs – Make Whistle)", "combo": "VIP Queen Combo", "image": "vip-king/20.jpeg", "displayId": 30}, {"id": 131, "name": "1/2 Twinkling Star", "pack": "(5 Box)", "combo": "VIP Queen Combo", "image": "vip-king/21.jpeg", "displayId": 31}, {"id": 132, "name": "Red Bijili", "pack": "(1 Pkt)", "combo": "VIP Queen Combo", "image": "vip-king/22.jpeg", "displayId": 32}, {"id": 133, "name": "Emerald Foil", "pack": "Included in VIP Queen Combo", "combo": "VIP Queen Combo", "image": "vip-king/23.jpeg", "displayId": 33}, {"id": 134, "name": "2 ¾ Bird Joker", "pack": "(5 Pkt)", "combo": "VIP Queen Combo", "image": "vip-king/24.jpeg", "displayId": 34}, {"id": 135, "name": "4 Bird Joker", "pack": "(5 Pkt)", "combo": "VIP Queen Combo", "image": "vip-king/25.jpeg", "displayId": 35}, {"id": 201, "name": "Ground Chakkar Big", "pack": "(10 Pcs)", "combo": "Little Princess Combo", "image": "little/01.jpeg", "displayId": 1}, {"id": 202, "name": "Ground Chakkar Special", "pack": "(10 Pcs)", "combo": "Little Princess Combo", "image": "little/02.jpeg", "displayId": 2}, {"id": 203, "name": "Flower Pot Big", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/03.jpeg", "displayId": 3}, {"id": 204, "name": "Flower Pot Special", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/04.jpg", "displayId": 4}, {"id": 205, "name": "Dancing Queen", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/05.jpeg", "displayId": 5}, {"id": 206, "name": "Drizzling Dancer", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/06.jpeg", "displayId": 6}, {"id": 207, "name": "Emerald Foil", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/07.jpeg", "displayId": 7}, {"id": 208, "name": "Little Flowers", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/08.jpg", "displayId": 8}, {"id": 209, "name": "1½ Twinkling Star", "pack": "(2 Box)", "combo": "Little Princess Combo", "image": "little/09.jpeg", "displayId": 9}, {"id": 210, "name": "Whistling Paper", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "vip-queen/20.jpeg", "displayId": 10}, {"id": 211, "name": "Max 100 Gun", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/11.jpeg", "displayId": 11}, {"id": 212, "name": "Rainbow Smoke", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "vip-queen/19.jpeg", "displayId": 12}, {"id": 213, "name": "Red Bijili", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/13.jpeg", "displayId": 13}, {"id": 214, "name": "100 Wala", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/14.jfif", "displayId": 14}, {"id": 215, "name": "2¾ Bird", "pack": "(2 Pkts)", "combo": "Little Princess Combo", "image": "little/15.jpeg", "displayId": 15}, {"id": 216, "name": "4 Bird", "pack": "(2 Pkts)", "combo": "Little Princess Combo", "image": "little/16.jpeg", "displayId": 16}, {"id": 217, "name": "777 Crackers", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/17.jpeg", "displayId": 17}, {"id": 218, "name": "Electric Sparkle", "pack": "(15 cm – 2 Box)", "combo": "Little Princess Combo", "image": "little/18.jpeg", "displayId": 18}, {"id": 219, "name": "Electric Sparkle", "pack": "(30 cm)", "combo": "Little Princess Combo", "image": "little/19.jpeg", "displayId": 19}, {"id": 220, "name": "Cluster", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/20.jpeg", "displayId": 20}, {"id": 221, "name": "12 Rose", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/21.jpg", "displayId": 21}, {"id": 222, "name": "12 Sky Digital", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/22.jpeg", "displayId": 22}, {"id": 223, "name": "Sweet 16 White", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/23.jpeg", "displayId": 23}, {"id": 224, "name": "Peacock Titan", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/24.jpeg", "displayId": 24}, {"id": 225, "name": "Troy 25", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/25.jpeg", "displayId": 25}, {"id": 226, "name": "Purple Palm", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/26.jpeg", "displayId": 26}, {"id": 227, "name": "Blue Palm", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/27.jpeg", "displayId": 27}, {"id": 228, "name": "Hulk Warrior", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/28.jpeg", "displayId": 28}, {"id": 229, "name": "Cosmic Kids", "pack": "Included in Little Princess Combo", "combo": "Little Princess Combo", "image": "little/29.jpeg", "displayId": 29}, {"id": 230, "name": "Magic Stick", "pack": "(5 Pcs)", "combo": "Little Princess Combo", "image": "vip-queen/09.jpeg", "displayId": 30}];
 const mscCart = {};
 let mscActiveCombo = 'VIP King Combo';
 let mscActiveCategory = 'all';
@@ -2515,23 +2943,25 @@ function mscRenderProducts(){
 }
 
 function mscSelectCombo(combo){
-  const id=combo==='VIP King Combo'?9001:9002;
+  const id=combo==='VIP King Combo'?9001:combo==='VIP Queen Combo'?9002:9003;
   const already=!!mscCart[id];
   if(already){ delete mscCart[id]; }
   else {
-    const count=combo==='VIP King Combo'?25:35;
+    const count=combo==='VIP King Combo'?25:combo==='VIP Queen Combo'?35:30;
     mscCart[id]={id,name:combo,combo,pack:`${count} products included`,qty:1,isCombo:true};
   }
   mscRenderCart();
   mscUpdateComboChoices();
 }
 function mscUpdateComboChoices(){
-  const king=!!mscCart[9001], queen=!!mscCart[9002];
-  const k=document.getElementById('mscKingChoice'), q=document.getElementById('mscQueenChoice');
+  const king=!!mscCart[9001], queen=!!mscCart[9002], little=!!mscCart[9003];
+  const k=document.getElementById('mscKingChoice'), q=document.getElementById('mscQueenChoice'), l=document.getElementById('mscLittleChoice');
   if(k){k.classList.toggle('selected',king);const x=k.querySelector('.msc-combo-choice-check');if(x)x.textContent=king?'✓ Selected':'Select';}
   if(q){q.classList.toggle('selected',queen);const x=q.querySelector('.msc-combo-choice-check');if(x)x.textContent=queen?'✓ Selected':'Select';}
+  if(l){l.classList.toggle('selected',little);const x=l.querySelector('.msc-combo-choice-check');if(x)x.textContent=little?'✓ Selected':'Select';}
   const status=document.getElementById('mscComboSelectionStatus');
-  if(status)status.textContent=king&&queen?'VIP King + VIP Queen selected':king?'VIP King selected':queen?'VIP Queen selected':'No combo selected';
+  const selected=[king?'VIP King':null,queen?'VIP Queen':null,little?'Little Princess':null].filter(Boolean);
+  if(status)status.textContent=selected.length?selected.join(' + ')+' selected':'No combo selected';
 }
 function mscRenderCart(){
 
@@ -2668,7 +3098,7 @@ function mscContinueToEnquiry() {
   if (!values.length) {
 
     alert(
-      'Please select VIP King Combo, VIP Queen Combo, or both.'
+      'Please select VIP King Combo, VIP Queen Combo, Little Princess Combo, or any combination.'
     );
 
     return;
@@ -2681,7 +3111,7 @@ function mscContinueToEnquiry() {
   if (!selectedCombos.length) {
 
     alert(
-      'Please select VIP King Combo, VIP Queen Combo, or both.'
+      'Please select VIP King Combo, VIP Queen Combo, Little Princess Combo, or any combination.'
     );
 
     return;
@@ -2718,7 +3148,7 @@ function mscContinueToEnquiry() {
     } else {
 
       comboText.textContent =
-        'VIP King + VIP Queen';
+        selectedCombos.join(' + ');
 
     }
 
@@ -2863,7 +3293,7 @@ document.addEventListener("DOMContentLoaded", function () {
       /* Update button text */
       if (selected.length === 0) {
 
-        text.textContent = "Select VIP Combo";
+        text.textContent = "Select VIP / Little Combo";
         text.className = "combo-placeholder";
 
       } else if (selected.length === 1) {
@@ -2938,6 +3368,18 @@ document.addEventListener("DOMContentLoaded", function () {
       mscSelectCombo("VIP Queen Combo");
     });
 
+  }
+
+
+  const littleButton = document.getElementById("mscLittleChoice");
+
+  if (littleButton) {
+    littleButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      mscSelectCombo("Little Princess Combo");
+    });
   }
 
 });
