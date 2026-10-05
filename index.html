@@ -453,6 +453,93 @@ footer a{color:#fff !important}
 .little-princess-choice.selected{border-color:rgba(255,217,107,.75)!important;box-shadow:0 0 0 1px rgba(255,217,107,.25) inset}
 @media(max-width:700px){#littlePrincessModal .vip-product{grid-template-columns:1fr;min-height:0}#littlePrincessModal .vip-product-image{min-height:220px}#littlePrincessModal .vip-product-image img{max-width:96%;height:210px;transform:scale(1.18)}#littlePrincessModal .vip-product-info{text-align:center;padding-bottom:18px}}
 </style>
+
+<style id="notice-popup-fix">
+/* Initial website notice: centered modal overlay */
+.notice-popup {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(8, 7, 16, 0.82);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999999 !important;
+}
+
+.notice-box {
+  position: relative;
+  width: min(500px, 92vw);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 42px 42px 36px;
+  text-align: center;
+  background: #11101b;
+  border: 1px solid #e8bf55;
+  border-radius: 16px;
+  box-shadow: 0 25px 90px rgba(0,0,0,.65);
+  color: #fff;
+}
+
+.notice-box .notice-icon {
+  font-size: 38px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.notice-box h2 {
+  margin: 0 0 28px;
+  color: #ffd96b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(26px, 4vw, 34px);
+}
+
+.notice-box .notice-title {
+  margin: 0 0 14px;
+  color: #ff3d3d;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.notice-box > p:not(.notice-title) {
+  margin: 0 auto 30px;
+  max-width: 390px;
+  color: #f1f1f5;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.notice-box button {
+  border: 0;
+  border-radius: 6px;
+  padding: 14px 36px;
+  background: #ffd04a;
+  color: #18120a;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.notice-box button:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .notice-popup { padding: 16px; }
+  .notice-box { padding: 34px 24px 28px; }
+}
+
+body.notice-open { overflow: hidden !important; }
+</style>
+
 </head>
 <body>
   <!-- =========================================
@@ -1302,6 +1389,7 @@ footer a{color:#fff !important}
 function closeNotice() {
 
   document.getElementById("noticePopup").style.display = "none";
+  document.body.classList.remove("notice-open");
 
   localStorage.setItem(
     "meenkshiNoticeAccepted",
@@ -1324,7 +1412,10 @@ window.addEventListener(
       document.getElementById(
         "noticePopup"
       ).style.display = "none";
+      document.body.classList.remove("notice-open");
 
+    } else {
+      document.body.classList.add("notice-open");
     }
 
   }
