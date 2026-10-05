@@ -185,7 +185,6 @@
 .msc-tab-icon{position:relative;z-index:1;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:rgba(255,217,107,.09);color:#ffd96b;font-size:24px;flex:none}
 .msc-tab span:last-child{position:relative;z-index:1;display:flex;flex-direction:column;gap:3px}
 .msc-tab b{font-size:15px}.msc-tab small{color:rgba(255,255,255,.45);font-size:11px}.msc-tab.active small{color:rgba(255,217,107,.7)}
-.msc-tab-price{font-weight:800;color:#e6005c;margin-right:5px;font-size:12px}.msc-tab.active .msc-tab-price{color:#ffd96b}
 .msc-toolbar-premium{margin:0 0 17px;gap:12px;align-items:stretch}
 .msc-search-wrap{min-height:54px;border-radius:15px;background:#12111b;box-shadow:inset 0 0 0 1px rgba(255,255,255,.015)}
 .msc-category-pills{display:flex;align-items:center;gap:7px;padding:5px;border:1px solid rgba(232,191,85,.2);border-radius:15px;background:#12111b}
@@ -446,100 +445,13 @@ footer a{color:#fff !important}
 .little-princess-tag{background:linear-gradient(135deg,#ffd96b,#e8bf55)!important;color:#18120a!important}
 .little-princess-price{color:#ffd96b!important}
 #littlePrincessModal .vip-product{grid-template-columns:minmax(260px,42%) 1fr;min-height:230px}
-#littlePrincessModal .vip-product-image{min-height:205px;display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
-#littlePrincessModal .vip-product-image img{width:100%;max-width:360px;height:190px;object-fit:contain;display:block;transform:scale(1.28);transform-origin:center}
+#littlePrincessModal .vip-product-image{width:100%;min-height:205px;height:205px;display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
+#littlePrincessModal .vip-product-image img{width:100%;max-width:360px;height:190px;object-fit:contain;display:block;transform:scale(1.08);transform-origin:center}
 #littlePrincessModal .vip-product-info h3{font-size:clamp(1.45rem,2.2vw,2rem)}
 .little-princess-theme{background:linear-gradient(135deg,rgba(73,32,18,.98),rgba(36,17,63,.98))}
 .little-princess-choice.selected{border-color:rgba(255,217,107,.75)!important;box-shadow:0 0 0 1px rgba(255,217,107,.25) inset}
-@media(max-width:700px){#littlePrincessModal .vip-product{grid-template-columns:1fr;min-height:0}#littlePrincessModal .vip-product-image{min-height:220px}#littlePrincessModal .vip-product-image img{max-width:96%;height:210px;transform:scale(1.18)}#littlePrincessModal .vip-product-info{text-align:center;padding-bottom:18px}}
+@media(max-width:700px){#littlePrincessModal .vip-product{grid-template-columns:1fr;min-height:0}#littlePrincessModal .vip-product-image{width:100%;min-height:220px;height:220px}#littlePrincessModal .vip-product-image img{width:100%;max-width:92%;height:210px}#littlePrincessModal .vip-product-info{text-align:center;padding-bottom:18px}}
 </style>
-
-<style id="notice-popup-fix">
-/* Initial website notice: centered modal overlay */
-.notice-popup {
-  position: fixed !important;
-  inset: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  min-height: 100vh !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  box-sizing: border-box;
-  background: rgba(8, 7, 16, 0.82);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  z-index: 999999 !important;
-}
-
-.notice-box {
-  position: relative;
-  width: min(500px, 92vw);
-  max-height: calc(100vh - 48px);
-  overflow: auto;
-  box-sizing: border-box;
-  padding: 42px 42px 36px;
-  text-align: center;
-  background: #11101b;
-  border: 1px solid #e8bf55;
-  border-radius: 16px;
-  box-shadow: 0 25px 90px rgba(0,0,0,.65);
-  color: #fff;
-}
-
-.notice-box .notice-icon {
-  font-size: 38px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.notice-box h2 {
-  margin: 0 0 28px;
-  color: #ffd96b;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(26px, 4vw, 34px);
-}
-
-.notice-box .notice-title {
-  margin: 0 0 14px;
-  color: #ff3d3d;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.notice-box > p:not(.notice-title) {
-  margin: 0 auto 30px;
-  max-width: 390px;
-  color: #f1f1f5;
-  font-size: 17px;
-  line-height: 1.55;
-}
-
-.notice-box button {
-  border: 0;
-  border-radius: 6px;
-  padding: 14px 36px;
-  background: #ffd04a;
-  color: #18120a;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.notice-box button:hover {
-  filter: brightness(1.06);
-  transform: translateY(-1px);
-}
-
-@media (max-width: 600px) {
-  .notice-popup { padding: 16px; }
-  .notice-box { padding: 34px 24px 28px; }
-}
-
-body.notice-open { overflow: hidden !important; }
-</style>
-
 </head>
 <body>
   <!-- =========================================
@@ -1112,13 +1024,13 @@ body.notice-open { overflow: hidden !important; }
 </div>
 <div aria-label="Combo collections" class="msc-tabs" role="tablist">
 <button aria-selected="true" class="msc-tab active" data-filter="VIP King Combo" role="tab" type="button">
-<span class="msc-tab-icon">♛</span><span><b>VIP King</b><small><strong class="msc-tab-price">₹10,000</strong> · 25 products(42 Items)</small></span>
+<span class="msc-tab-icon">♛</span><span><b>VIP King</b><small>25 products(42 Items)</small></span>
 </button>
 <button aria-selected="false" class="msc-tab" data-filter="VIP Queen Combo" role="tab" type="button">
-<span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small><strong class="msc-tab-price">₹15,000</strong> · 35 products(52 Items)</small></span>
+<span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small>35 products(52 Items)</small></span>
 </button>
 <button aria-selected="false" class="msc-tab little-princess-tab" data-filter="Little Princess Combo" role="tab" type="button">
-<span class="msc-tab-icon">👑</span><span><b>Little Princess</b><small><strong class="msc-tab-price">₹7,000</strong> · 30 products</small></span>
+<span class="msc-tab-icon">👑</span><span><b>Little Princess</b><small>30 products</small></span>
 </button>
 <button aria-selected="false" class="msc-tab msc-tab-all" data-filter="all" role="tab" type="button">
 <span class="msc-tab-icon">✦</span><span><b>All Products</b><small>90 listings</small></span>
@@ -1389,7 +1301,6 @@ body.notice-open { overflow: hidden !important; }
 function closeNotice() {
 
   document.getElementById("noticePopup").style.display = "none";
-  document.body.classList.remove("notice-open");
 
   localStorage.setItem(
     "meenkshiNoticeAccepted",
@@ -1412,10 +1323,7 @@ window.addEventListener(
       document.getElementById(
         "noticePopup"
       ).style.display = "none";
-      document.body.classList.remove("notice-open");
 
-    } else {
-      document.body.classList.add("notice-open");
     }
 
   }
