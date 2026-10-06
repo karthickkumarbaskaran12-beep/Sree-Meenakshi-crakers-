@@ -443,7 +443,12 @@ footer a{color:#fff !important}
 .little-princess-card:hover{border-color:rgba(255,217,107,.9);box-shadow:0 20px 55px rgba(255,217,107,.12)}
 .little-princess-icon{color:#ffd96b}
 .little-princess-tag{background:linear-gradient(135deg,#ffd96b,#e8bf55)!important;color:#18120a!important}
-.little-princess-price{color:#ffd96b!important}
+.little-princess-price{
+    color:#5b1a8e !important;
+    opacity:1 !important;
+    font-weight:800 !important;
+    text-shadow:none !important;
+}
 
 #littlePrincessModal .vip-product{
     grid-template-columns:minmax(260px,42%) 1fr;
@@ -1116,19 +1121,66 @@ footer a{color:#fff !important}
 <div class="msc-head-stat"><strong id="mscResultCount">25</strong><span>products shown</span></div>
 </div>
 <div aria-label="Combo collections" class="msc-tabs" role="tablist">
-<button aria-selected="true" class="msc-tab active" data-filter="VIP King Combo" role="tab" type="button">
-<span class="msc-tab-icon">♛</span><span><b>VIP King</b><small>25 products(42 Items)</small></span>
-</button>
-<button aria-selected="false" class="msc-tab" data-filter="VIP Queen Combo" role="tab" type="button">
-<span class="msc-tab-icon">♕</span><span><b>VIP Queen</b><small>35 products(52 Items)</small></span>
-</button>
-<button aria-selected="false" class="msc-tab little-princess-tab" data-filter="Little Princess Combo" role="tab" type="button">
-<span class="msc-tab-icon">👑</span><span><b>Little Princess</b><small>30 products</small></span>
-</button>
-<button aria-selected="false" class="msc-tab msc-tab-all" data-filter="all" role="tab" type="button">
-<span class="msc-tab-icon">✦</span><span><b>All Products</b><small>90 listings</small></span>
-</button>
+
+  <!-- VIP KING -->
+  <button aria-selected="true"
+          class="msc-tab active"
+          data-filter="VIP King Combo"
+          role="tab"
+          type="button">
+    <span class="msc-tab-icon">♛</span>
+    <span>
+      <b>VIP King</b>
+      <small>
+        <strong class="msc-tab-price">₹10,000</strong> · 25 products (42 Items)
+      </small>
+    </span>
+  </button>
+
+  <!-- VIP QUEEN -->
+  <button aria-selected="false"
+          class="msc-tab"
+          data-filter="VIP Queen Combo"
+          role="tab"
+          type="button">
+    <span class="msc-tab-icon">♕</span>
+    <span>
+      <b>VIP Queen</b>
+      <small>
+        <strong class="msc-tab-price">₹15,000</strong> · 35 products (52 Items)
+      </small>
+    </span>
+  </button>
+
+  <!-- LITTLE PRINCESS -->
+  <button aria-selected="false"
+          class="msc-tab little-princess-tab"
+          data-filter="Little Princess Combo"
+          role="tab"
+          type="button">
+    <span class="msc-tab-icon">👑</span>
+    <span>
+      <b>Little Princess</b>
+      <small>
+        <strong class="msc-tab-price">₹7,000</strong> · 30 products
+      </small>
+    </span>
+  </button>
+
+  <!-- ALL PRODUCTS -->
+  <button aria-selected="false"
+          class="msc-tab msc-tab-all"
+          data-filter="all"
+          role="tab"
+          type="button">
+    <span class="msc-tab-icon">✦</span>
+    <span>
+      <b>All Products</b>
+    </span>
+  </button>
+
 </div>
+
 <div class="msc-toolbar msc-toolbar-premium">
 <div class="msc-search-wrap">
 <span>⌕</span>
