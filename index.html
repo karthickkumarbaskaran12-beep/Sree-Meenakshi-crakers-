@@ -448,7 +448,15 @@ footer a{color:#fff !important}
 #littlePrincessModal .vip-product-image{width:100%;min-height:205px;height:205px;display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
 #littlePrincessModal .vip-product-image img{width:100%;max-width:360px;height:190px;object-fit:contain;display:block;transform:scale(1.08);transform-origin:center}
 #littlePrincessModal .vip-product-info h3{font-size:clamp(1.45rem,2.2vw,2rem)}
-.little-princess-theme{background:linear-gradient(135deg,rgba(73,32,18,.98),rgba(36,17,63,.98))}
+.little-princess-theme{background:linear-gradient(135deg,#3d1d70 0%,#8d146f 100%)}
+/* Little Princess popup uses the same premium dark product treatment as VIP King */
+#littlePrincessModal .combo-modal-box{background:#11101b;color:#fff}
+#littlePrincessModal .vip-king-products{background:#11101b}
+#littlePrincessModal .vip-product{background:rgba(255,255,255,.02);border-color:rgba(232,191,85,.30)}
+#littlePrincessModal .vip-product-info h3{color:#f7d774}
+#littlePrincessModal .vip-product-info span{color:#e8bf55}
+#littlePrincessModal .vip-product-image{background:rgba(255,255,255,.02);border-radius:10px}
+#littlePrincessModal .combo-modal-close{background:#090812;color:#ffd96b;border-color:rgba(232,191,85,.4)}
 .little-princess-choice.selected{border-color:rgba(255,217,107,.75)!important;box-shadow:0 0 0 1px rgba(255,217,107,.25) inset}
 @media(max-width:700px){#littlePrincessModal .vip-product{grid-template-columns:1fr;min-height:0}#littlePrincessModal .vip-product-image{width:100%;min-height:220px;height:220px}#littlePrincessModal .vip-product-image img{width:100%;max-width:92%;height:210px}#littlePrincessModal .vip-product-info{text-align:center;padding-bottom:18px}}
 </style>
@@ -1632,11 +1640,11 @@ document.addEventListener("keydown", function(event) {
 ========================= -->
 <div aria-hidden="true" class="combo-modal" id="littlePrincessModal">
 <div class="combo-modal-backdrop" onclick="closeLittlePrincessModal()"></div>
-<div aria-labelledby="littlePrincessModalTitle" aria-modal="true" class="combo-modal-box vip-king-box little-princess-box" role="dialog">
+<div aria-labelledby="littlePrincessModalTitle" aria-modal="true" class="combo-modal-box vip-king-box" role="dialog">
 <button aria-label="Close" class="combo-modal-close" onclick="closeLittlePrincessModal()" type="button">
       ×
     </button>
-<div class="vip-combo-top little-princess-theme">
+<div class="vip-combo-top king-theme">
   <div class="vip-combo-badge">
     <span class="vip-combo-icon">👑</span>
     <span>NEW COMBO</span>
