@@ -83,14 +83,27 @@
   }
 }
 
-/* My Enquiry: keep the proceed action visible */
+/* My Enquiry: scroll the combo choices + selected combos, keep actions visible */
+.msc-cart{
+  overflow:hidden !important;
+}
+.msc-cart-scroll-body{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+  scrollbar-width:thin;
+  padding-bottom:8px;
+}
 .msc-cart-foot{
-  position:sticky !important;
-  bottom:0 !important;
-  z-index:50 !important;
+  position:relative !important;
+  flex:0 0 auto !important;
+  bottom:auto !important;
+  z-index:20 !important;
   background:#fff !important;
-  padding:16px 0 10px !important;
-  margin-top:12px !important;
+  padding:16px 20px 12px !important;
+  margin-top:0 !important;
   border-top:1px solid rgba(212, 0, 92, .18) !important;
   box-shadow:0 -8px 20px rgba(30, 20, 45, .10) !important;
 }
@@ -111,7 +124,6 @@
 .msc-clear{
   margin-top:8px !important;
 }
-
 </style>
 <style id="combo-large-product-images">
 /* VIP King + VIP Queen – large, premium product display */
@@ -1379,6 +1391,7 @@ SONNY Grand Sky Combo
   </button>
 
 </div>
+<div class="msc-cart-scroll-body">
 <!-- COMBO SELECTION -->
 <div class="msc-combo-selector">
 <div class="msc-combo-selector-head">
@@ -1464,6 +1477,7 @@ SONNY Grand Sky Combo
     or any combination.
 
   </div>
+</div>
 <!-- FOOTER -->
 <div class="msc-cart-foot">
 <div class="msc-cart-summary">
