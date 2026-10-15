@@ -699,6 +699,38 @@ footer a{color:#fff !important}
 @media(max-width:600px){.notice-popup{padding:16px}.notice-box{padding:34px 22px 28px}.notice-box h2{font-size:26px;margin-bottom:24px}.notice-box .notice-title{font-size:17px}.notice-box p:not(.notice-title){font-size:15px}}
 </style>
 
+
+<style id="combo-offers-floating-final-fix">
+/* FINAL: Combo Offers must stay fixed to the viewport like My Enquiry */
+html body > #mscFloatingComboButton,
+body > .msc-floating-combo{
+  position:fixed !important;
+  left:24px !important;
+  right:auto !important;
+  bottom:24px !important;
+  top:auto !important;
+  width:auto !important;
+  min-width:178px !important;
+  max-width:calc(100vw - 48px) !important;
+  margin:0 !important;
+  z-index:2147483000 !important;
+  transform:none;
+}
+html body > #mscFloatingComboButton:hover,
+body > .msc-floating-combo:hover{
+  transform:translateY(-3px) scale(1.01) !important;
+}
+@media (max-width:620px){
+  html body > #mscFloatingComboButton,
+  body > .msc-floating-combo{
+    left:14px !important;
+    bottom:14px !important;
+    min-width:0 !important;
+    max-width:calc(100vw - 28px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <!-- =========================================
