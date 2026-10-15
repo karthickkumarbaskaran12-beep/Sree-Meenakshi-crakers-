@@ -82,6 +82,36 @@
     padding-bottom: 18px;
   }
 }
+
+/* My Enquiry: keep the proceed action visible */
+.msc-cart-foot{
+  position:sticky !important;
+  bottom:0 !important;
+  z-index:50 !important;
+  background:#fff !important;
+  padding:16px 0 10px !important;
+  margin-top:12px !important;
+  border-top:1px solid rgba(212, 0, 92, .18) !important;
+  box-shadow:0 -8px 20px rgba(30, 20, 45, .10) !important;
+}
+.msc-whatsapp{
+  display:flex !important;
+  width:100% !important;
+  justify-content:center !important;
+  align-items:center !important;
+  min-height:52px !important;
+  font-weight:800 !important;
+  font-size:16px !important;
+  cursor:pointer !important;
+}
+.msc-whatsapp::after{
+  content:"  →";
+  font-size:20px;
+}
+.msc-clear{
+  margin-top:8px !important;
+}
+
 </style>
 <style id="combo-large-product-images">
 /* VIP King + VIP Queen – large, premium product display */
@@ -1442,11 +1472,15 @@ SONNY Grand Sky Combo
         0
       </strong>
 </div>
+<div id="mscProceedHint" style="text-align:center;font-size:13px;font-weight:700;color:#6b6680;margin:4px 0 8px;">
+  Select your combo(s), then proceed to submit the enquiry.
+</div>
 <button
   class="msc-whatsapp"
+  id="mscProceedToEnquiry"
   onclick="mscContinueToEnquiry()"
   type="button">
-  ✨ Continue to Enquiry
+  ✨ Proceed to Submit Enquiry
 </button>
 <button class="msc-clear" onclick="mscClearCart()" type="button">
 
@@ -3625,10 +3659,12 @@ function mscContinueToEnquiry() {
 
   if (enquirySection) {
 
-    enquirySection.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    setTimeout(function () {
+      enquirySection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 120);
 
   }
 
