@@ -731,6 +731,22 @@ body > .msc-floating-combo:hover{
 }
 </style>
 
+
+<style id="combo-offers-notice-layer-fix">
+/* Keep floating controls behind the mandatory notice popup until it is closed */
+html body > #mscFloatingComboButton,
+body > .msc-floating-combo{
+  z-index:119900 !important;
+}
+html body > #mscFloatingCartButton,
+body > .msc-floating-cart{
+  z-index:119900 !important;
+}
+.notice-popup{
+  z-index:200000 !important;
+}
+</style>
+
 </head>
 <body>
   <!-- =========================================
