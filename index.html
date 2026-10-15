@@ -3395,7 +3395,7 @@ function mscRenderProducts(){
         <div class="msc-product-number"><span>${String(displayNo).padStart(2,'0')}</span></div>
         <span class="msc-combo-tag">${mscEsc(p.combo)}</span>
         <h3>${mscEsc(p.name)}</h3>
-        <p class="msc-pack">${p.price ? `₹${mscEsc(p.price)}` : mscEsc(p.pack)}</p>
+        <p class="msc-pack">${p.combo === 'The Prince Combo' ? 'Included in complete combo' : (p.price ? `₹${mscEsc(p.price)}` : mscEsc(p.pack))}</p>
         <div class="msc-catalogue-only"><span>Included in complete combo</span></div>
       </div>
     </article>`;
