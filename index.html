@@ -584,7 +584,7 @@ footer a{color:#fff !important}
 
 <style>
 /* FULL-SCREEN ENQUIRY NOTICE */
-.notice-popup{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;background:rgba(8,7,15,.82);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);z-index:200000!important}
+.notice-popup{display:flex!important;position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;background:rgba(8,7,15,.82);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);z-index:200000!important}
 .notice-box{position:relative;width:min(500px,92vw);box-sizing:border-box;padding:42px 34px 36px;text-align:center;background:#11101b;border:1px solid rgba(232,191,85,.75);border-radius:16px;box-shadow:0 30px 100px rgba(0,0,0,.7)}
 .notice-box .notice-icon{font-size:38px;line-height:1;margin-bottom:22px}.notice-box h2{margin:0 0 30px;color:#f5c84b;font-family:"Cormorant Garamond",serif;font-size:30px}.notice-box .notice-title{margin:0 0 16px;color:#ff3b30;font-weight:800;font-size:19px}.notice-box p:not(.notice-title){margin:0 auto 30px;max-width:390px;color:#fff;font-size:17px;line-height:1.5}.notice-box button{border:0;border-radius:6px;padding:14px 38px;background:#ffd24d;color:#17130a;font-size:16px;font-weight:800;cursor:pointer}.notice-box button:hover{transform:translateY(-1px)}body.notice-open{overflow:hidden}
 @media(max-width:600px){.notice-popup{padding:16px}.notice-box{padding:34px 22px 28px}.notice-box h2{font-size:26px;margin-bottom:24px}.notice-box .notice-title{font-size:17px}.notice-box p:not(.notice-title){font-size:15px}}
@@ -1573,36 +1573,11 @@ function closeNotice() {
   document.getElementById("noticePopup").style.display = "none";
   document.body.classList.remove("notice-open");
 
-  localStorage.setItem(
-    "meenkshiNoticeAccepted",
-    "true"
-  );
 
 }
 
 
-window.addEventListener(
-  "DOMContentLoaded",
-  function () {
-
-    if (
-      localStorage.getItem(
-        "meenkshiNoticeAccepted"
-      ) === "true"
-    ) {
-
-      document.getElementById(
-        "noticePopup"
-      ).style.display = "none";
-      document.body.classList.remove("notice-open");
-
-    } else {
-      document.body.classList.add("notice-open");
-
-    }
-
-  }
-);
+document.body.classList.add("notice-open");
 
 
 document
